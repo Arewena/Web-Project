@@ -4,17 +4,21 @@
 
 <script>
     import { Link } from 'svelte-routing';
+	import Navbar from "../Navbar.svelte";
 	let baseUrl = document.baseURI;
     let logoSrc = `${baseUrl}routes/logo.png`;
 </script>
 
 
 <body class="MypageBody">
-	<nav class="nav">
-		<img src={logoSrc} height="45px">
-		<a class="nav-link" href="/mypage">MyPage</a>
-		<a class="nav-link" href="/">Club List</a>
-	</nav>
+	<header class="p-3" style="height: 100px;">
+		<div style="height: auto;">
+		  <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
+			<li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+			<li><a href="/mypage" class="nav-link px-2 text-black" style="font-weight: bold;">MyPage</a></li>
+		  </ul>
+		</div>
+	</header>
 	<div class="Mboard">
 		<div class = "Mprofile">
 			profile image

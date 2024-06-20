@@ -2,6 +2,7 @@
 <script>
     import { isLoggedIn } from './store';
     import { onMount } from 'svelte';
+    import { Link } from 'svelte-routing';
 
     let loggedIn;
 
@@ -27,21 +28,11 @@
         margin-right: 10px;
     }
 </style>
-
-{#if loggedIn}
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/logout">Logout</a></li>
+<header class="p-3" style="height: 100px;">
+      <div style="height: auto;">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-black">Home</a></li>
+          <li><a href="/mypage" class="nav-link px-2 text-secondary">MyPage</a></li>
         </ul>
-    </nav>
-{:else}
-<ul class="nav nav-tabs">
-    <li><a href="/">Home</a></li>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/signup">Sign Up</a></li>
-</ul>
-
-{/if}
-
+      </div>
+  </header>

@@ -89,6 +89,8 @@ button {
     font-size: 25px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
 }
 
 /* div {
@@ -100,10 +102,10 @@ table {
 }
 
 .card-body {
-    display: flex; 
+    /* display: flex; 
     flex-direction: column; 
     justify-content: space-between; 
-    height: 100%; 
+    height: 100%;  */
 }
 
 .signin-card {
@@ -182,7 +184,25 @@ table {
     width: 45%;
 }
 
-.float {
-    float: left;
+.button-container {
+    justify-content: center;
     display: flex;
+    gap: 10px;
+}
+
+.card {
+    height: 250px;
+    background-color: #133757;
+}
+
+.card-inner-body {
+    background-color: #e9eef1;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #7b7c7d;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

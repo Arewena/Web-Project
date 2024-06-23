@@ -3,73 +3,148 @@
 	import Navbar from "../Navbar.svelte";
 	let baseUrl = document.baseURI;
 </script>
+
 <body>
-<header class="p-3" style="height: 100px;">
-	<div style="height: auto;">
-	  <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
-		<li><img src={'images/logo.png'} alt="logo" style="height: 50px;" /></li>
-		<li><a href="/" class="nav-link px-2 text-black" style="font-weight: bold;">Home</a></li>
-		<li><a href="/mypage" class="nav-link px-2 text-secondary">MyPage</a></li>
-	  </ul>
+	<header class="p-3" style="height: 100px;">
+		<div style="height: auto;">
+			<ul
+				class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0"
+			>
+				<li>
+					<img
+						src={"images/logo.png"}
+						alt="logo"
+						style="height: 50px;"
+					/>
+				</li>
+				<li>
+					<a
+						href="/"
+						class="nav-link px-2 text-black"
+						style="font-weight: bold;">Home</a
+					>
+				</li>
+				<li>
+					<a href="/mypage" class="nav-link px-2 text-secondary"
+						>MyPage</a
+					>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="home_image">
+		<div class="home_inner">
+			<div class="home_title">Club Management Website</div>
+			<div class="home_description">
+				A website that people can use to communicate and make a club for
+				school.
+			</div>
+			<div
+				class="home_button"
+				onclick="document.getElementById('home_detail').scrollIntoView();"
+			>
+				Get Started
+			</div>
+		</div>
 	</div>
-</header>
-<div class="home_image">
-	<div class="home_inner">
-		<div class="home_title">
-			Club Management Website
-		</div>
-		<div class="home_description">
-			A website that people can use to communicate and make a club for school.
-		</div>
-		<div class="home_button" onclick="document.getElementById('home_detail').scrollIntoView();">
-			Get Started
-		</div>
-	</div>
-</div>
 
-<h1 class="middle">Clubs</h1>
+	<div style="padding: 50px;" id="home_detail">
+		<h1 class="middle">Clubs</h1>
 
-<div class="row row-cols-1 row-cols-md-3 g-4 float">
-	<div class="col">
-	  <div class="card">
-		<img src="" class="card-img-top" alt="...">
-		<div class="card-body">
-		  <h5 class="card-title">Club A</h5>
-		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-		  <button type="button float" class="btn btn-primary width">Primary</button>
-		  <button type="button" class="btn btn-primary width">Primary</button>
+		<div class="row row-cols-1 row-cols-md-3 g-4 float">
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Club A</h5>
+						<div class="card-inner-body">
+							<p class="card-text">
+								This is a longer card with supporting text below as
+								a natural lead-in to additional content. This
+								content is a little bit longer.
+							</p>
+							<div class="button-container">
+								<button
+									type="button"
+									class="btn btn-primary width">Apply</button
+								>
+								<button type="button" class="btn btn-secondary width"
+									>Details</button
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Club B</h5>
+						<div class="card-inner-body">
+							<p class="card-text">
+								This is a longer card with supporting text below as
+								a natural lead-in to additional content. This
+								content is a little bit longer.
+							</p>
+							<div class="button-container">
+								<button
+									type="button"
+									class="btn btn-primary width">Apply</button
+								>
+								<button type="button" class="btn btn-secondary width"
+									>Details</button
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Club C</h5>
+						<div class="card-inner-body">
+							<p class="card-text">
+								This is a longer card with supporting text below as
+								a natural lead-in to additional content.
+							</p>
+							<div class="button-container">
+								<button
+									type="button"
+									class="btn btn-primary width">Apply</button
+								>
+								<button type="button" class="btn btn-secondary width"
+									>Details</button
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Club D</h5>
+						<div class="card-inner-body">
+							<p class="card-text">
+								This is a longer card with supporting text below as
+								a natural lead-in to additional content. This
+								content is a little bit longer.
+							</p>
+							<div class="button-container">
+								<button
+									type="button"
+									class="btn btn-primary width">Apply</button
+								>
+								<button type="button" class="btn btn-secondary width"
+									>Details</button
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	  </div>
 	</div>
-	<div class="col">
-	  <div class="card">
-		<img src="..." class="card-img-top" alt="...">
-		<div class="card-body">
-		  <h5 class="card-title">Club B</h5>
-		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-		</div>
-	  </div>
-	</div>
-	<div class="col">
-	  <div class="card">
-		<img src="..." class="card-img-top" alt="...">
-		<div class="card-body">
-		  <h5 class="card-title">Club C</h5>
-		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-		</div>
-	  </div>
-	</div>
-	<div class="col">
-	  <div class="card">
-		<img src="..." class="card-img-top" alt="...">
-		<div class="card-body">
-		  <h5 class="card-title">Club D</h5>
-		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-		</div>
-	  </div>
-	</div>
-  </div>
-
 </body>
 
 <!-- src/App.svelte -->

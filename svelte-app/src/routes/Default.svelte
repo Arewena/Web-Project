@@ -26,146 +26,50 @@
 		</div>
 	</div>
 </div>
-<div id="home_detail">
-	<div class="details">
-		<h1>details</h1>
-	</div>
 
-	<div style="overflow:scroll; height:100%">
-		<table>
-			<tr>
-				<div class="card_list">
-					<img
-						src="https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg"
-						class="img-thumbnail"
-						alt="..."
-					/>
-					<div class="card-body">
-						<h5 class="card-title">Club A</h5>
-						<p class="card-text">
-							This is a awsome Club A. We have wonderful things
-							and unique ideas.
-						</p>
-						<div class="button-group">
-							<button
-								type="button"
-								class="btn btn-outline-primary">Apply</button
-							>
-							<button
-								type="button"
-								class="btn btn-outline-primary">Detail</button
-							>
-						</div>
-					</div>
-				</div>
-			</tr>
-			<tr>
-				<div class="card_list">
-					<img
-						src="https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg"
-						class="img-thumbnail"
-						alt="..."
-					/>
-					<div class="card-body">
-						<h5 class="card-title">Club B</h5>
-						<p class="card-text">
-							This is a awsome Club B. We have wonderful things
-							and unique ideas.
-						</p>
-						<div class="button-group">
-							<button
-								type="button"
-								class="btn btn-outline-primary">Apply</button
-							>
-							<button
-								type="button"
-								class="btn btn-outline-primary">Detail</button
-							>
-						</div>
-					</div>
-				</div>
-			</tr>
-			<tr>
-				<div class="card_list">
-					<img
-						src="https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg"
-						class="img-thumbnail"
-						alt="..."
-					/>
-					<div class="card-body">
-						<h5 class="card-title">Club C</h5>
-						<p class="card-text">
-							This is a awsome Club C. We have wonderful things
-							and unique ideas.
-						</p>
-						<div class="button-group">
-							<button
-								type="button"
-								class="btn btn-outline-primary">Apply</button
-							>
-							<button
-								type="button"
-								class="btn btn-outline-primary">Detail</button
-							>
-						</div>
-					</div>
-				</div>
-			</tr>
-			<tr>
-				<div class="card_list">
-					<img
-						src="https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg"
-						class="img-thumbnail"
-						alt="..."
-					/>
-					<div class="card-body">
-						<h5 class="card-title">Club D</h5>
-						<p class="card-text">
-							This is a awsome Club D. We have wonderful things
-							and unique ideas.
-						</p>
-						<div class="button-group">
-							<button
-								type="button"
-								class="btn btn-outline-primary">Apply</button
-							>
-							<button
-								type="button"
-								class="btn btn-outline-primary">Detail</button
-							>
-						</div>
-					</div>
-				</div>
-			</tr>
-			<tr>
-				<div class="card_list">
-					<img
-						src="https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg"
-						class="img-thumbnail"
-						alt="..."
-					/>
-					<div class="card-body">
-						<h5 class="card-title">Club E</h5>
-						<p class="card-text">
-							This is a awsome Club E. We have wonderful things
-							and unique ideas.
-						</p>
-						<div class="button-group">
-							<button
-								type="button"
-								class="btn btn-outline-primary">Apply</button
-							>
-							<button
-								type="button"
-								class="btn btn-outline-primary">Detail</button
-							>
-						</div>
-					</div>
-				</div>
-			</tr>
-		</table>
+<h1 class="middle">Clubs</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 float">
+	<div class="col">
+	  <div class="card">
+		<img src="" class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h5 class="card-title">Club A</h5>
+		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		  <button type="button float" class="btn btn-primary width">Primary</button>
+		  <button type="button" class="btn btn-primary width">Primary</button>
+		</div>
+	  </div>
 	</div>
-</div>
+	<div class="col">
+	  <div class="card">
+		<img src="..." class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h5 class="card-title">Club B</h5>
+		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="col">
+	  <div class="card">
+		<img src="..." class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h5 class="card-title">Club C</h5>
+		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="col">
+	  <div class="card">
+		<img src="..." class="card-img-top" alt="...">
+		<div class="card-body">
+		  <h5 class="card-title">Club D</h5>
+		  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+		</div>
+	  </div>
+	</div>
+  </div>
+
 </body>
 
 <!-- src/App.svelte -->

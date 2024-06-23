@@ -169,3 +169,20 @@ table {
     margin-top: 100px;
     cursor: pointer;
 }
+
+
+.middle {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.width {
+    width: 45%;
+}
+
+.float {
+    float: left;
+    display: flex;
+}

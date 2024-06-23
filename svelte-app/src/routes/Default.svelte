@@ -13,11 +13,20 @@
 	  </ul>
 	</div>
 </header>
-<div>
-	<img src={'images/club.jpg'} alt="club" class="home_image"  />
+<div class="home_image">
+	<div class="home_inner">
+		<div class="home_title">
+			Club Management Website
+		</div>
+		<div class="home_description">
+			A website that people can use to communicate and make a club for school.
+		</div>
+		<div class="home_button" onclick="document.getElementById('home_detail').scrollIntoView();">
+			Get Started
+		</div>
+	</div>
 </div>
-<div>
-
+<div id="home_detail">
 	<div class="details">
 		<h1>details</h1>
 	</div>

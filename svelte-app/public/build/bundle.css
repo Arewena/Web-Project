@@ -141,7 +141,43 @@ table {
 }
 
 .home_image {
+    height: 550px;
+    background-position: center;
+    background-image: url(../images/club.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home_inner {
     width: 100%;
-    height: 700px;
-    object-fit: cover;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.home_title {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 80px;
+}
+
+.home_description {
+    font-size: 25px;
+    color: white;
+}
+
+.home_button {
+    background-color: #9d2434;
+    color: white;
+    width: 180px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    cursor: pointer;
 }

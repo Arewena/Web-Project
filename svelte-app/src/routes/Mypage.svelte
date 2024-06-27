@@ -53,6 +53,9 @@
 			<div class="col-sm">
 				<div class="profile_background">
 					<div class="profile_sub_title">Upcoming Meetings</div>
+					<div class="profile_meeting_inner">
+
+					</div>
 				</div>
 			</div>
 			<div class="col-sm">

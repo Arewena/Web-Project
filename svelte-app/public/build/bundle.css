@@ -247,3 +247,10 @@ table {
 .profile_sub_inner {
     margin-bottom: 10px;
 }
+
+.profile_meeting_inner {
+    border: 1px solid #dcdee5;
+    height: 80px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

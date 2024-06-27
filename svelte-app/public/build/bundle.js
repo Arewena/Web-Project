@@ -3934,7 +3934,7 @@ var app = (function () {
     const file$1 = "src/routes/Mypage.svelte";
 
     function create_fragment$2(ctx) {
-    	let div16;
+    	let div17;
     	let header;
     	let div0;
     	let ul;
@@ -3952,8 +3952,8 @@ var app = (function () {
     	let t5;
     	let span0;
     	let t7;
+    	let div16;
     	let div15;
-    	let div14;
     	let div7;
     	let div6;
     	let div2;
@@ -3967,17 +3967,19 @@ var app = (function () {
     	let span2;
     	let t14;
     	let t15;
+    	let div11;
     	let div10;
-    	let div9;
     	let div8;
     	let t17;
+    	let div9;
+    	let t18;
+    	let div14;
     	let div13;
     	let div12;
-    	let div11;
 
     	const block = {
     		c: function create() {
-    			div16 = element("div");
+    			div17 = element("div");
     			header = element("header");
     			div0 = element("div");
     			ul = element("ul");
@@ -3997,8 +3999,8 @@ var app = (function () {
     			span0 = element("span");
     			span0.textContent = "Daniel";
     			t7 = space();
+    			div16 = element("div");
     			div15 = element("div");
-    			div14 = element("div");
     			div7 = element("div");
     			div6 = element("div");
     			div2 = element("div");
@@ -4015,15 +4017,17 @@ var app = (function () {
     			span2.textContent = "Name:";
     			t14 = text(" Daniel Kim");
     			t15 = space();
+    			div11 = element("div");
     			div10 = element("div");
-    			div9 = element("div");
     			div8 = element("div");
     			div8.textContent = "Upcoming Meetings";
     			t17 = space();
+    			div9 = element("div");
+    			t18 = space();
+    			div14 = element("div");
     			div13 = element("div");
     			div12 = element("div");
-    			div11 = element("div");
-    			div11.textContent = "My Clubs";
+    			div12.textContent = "My Clubs";
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
@@ -4068,29 +4072,31 @@ var app = (function () {
     			add_location(div7, file$1, 39, 3, 947);
     			attr_dev(div8, "class", "profile_sub_title");
     			add_location(div8, file$1, 54, 5, 1452);
-    			attr_dev(div9, "class", "profile_background");
-    			add_location(div9, file$1, 53, 4, 1413);
-    			attr_dev(div10, "class", "col-sm");
-    			add_location(div10, file$1, 52, 3, 1387);
-    			attr_dev(div11, "class", "profile_sub_title");
-    			add_location(div11, file$1, 59, 5, 1599);
-    			attr_dev(div12, "class", "profile_background");
-    			add_location(div12, file$1, 58, 4, 1560);
-    			attr_dev(div13, "class", "col-sm");
-    			add_location(div13, file$1, 57, 3, 1534);
-    			attr_dev(div14, "class", "row");
-    			add_location(div14, file$1, 38, 2, 925);
-    			attr_dev(div15, "class", "container-fluid");
-    			add_location(div15, file$1, 37, 1, 892);
-    			attr_dev(div16, "class", "MypageBody");
-    			add_location(div16, file$1, 7, 0, 184);
+    			attr_dev(div9, "class", "profile_meeting_inner");
+    			add_location(div9, file$1, 55, 5, 1513);
+    			attr_dev(div10, "class", "profile_background");
+    			add_location(div10, file$1, 53, 4, 1413);
+    			attr_dev(div11, "class", "col-sm");
+    			add_location(div11, file$1, 52, 3, 1387);
+    			attr_dev(div12, "class", "profile_sub_title");
+    			add_location(div12, file$1, 62, 5, 1656);
+    			attr_dev(div13, "class", "profile_background");
+    			add_location(div13, file$1, 61, 4, 1617);
+    			attr_dev(div14, "class", "col-sm");
+    			add_location(div14, file$1, 60, 3, 1591);
+    			attr_dev(div15, "class", "row");
+    			add_location(div15, file$1, 38, 2, 925);
+    			attr_dev(div16, "class", "container-fluid");
+    			add_location(div16, file$1, 37, 1, 892);
+    			attr_dev(div17, "class", "MypageBody");
+    			add_location(div17, file$1, 7, 0, 184);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div16, anchor);
-    			append_dev(div16, header);
+    			insert_dev(target, div17, anchor);
+    			append_dev(div17, header);
     			append_dev(header, div0);
     			append_dev(div0, ul);
     			append_dev(ul, li0);
@@ -4101,14 +4107,14 @@ var app = (function () {
     			append_dev(ul, t2);
     			append_dev(ul, li2);
     			append_dev(li2, a1);
-    			append_dev(div16, t4);
-    			append_dev(div16, div1);
+    			append_dev(div17, t4);
+    			append_dev(div17, div1);
     			append_dev(div1, t5);
     			append_dev(div1, span0);
-    			append_dev(div16, t7);
+    			append_dev(div17, t7);
+    			append_dev(div17, div16);
     			append_dev(div16, div15);
-    			append_dev(div15, div14);
-    			append_dev(div14, div7);
+    			append_dev(div15, div7);
     			append_dev(div7, div6);
     			append_dev(div6, div2);
     			append_dev(div6, t9);
@@ -4120,20 +4126,22 @@ var app = (function () {
     			append_dev(div5, div4);
     			append_dev(div4, span2);
     			append_dev(div4, t14);
-    			append_dev(div14, t15);
-    			append_dev(div14, div10);
+    			append_dev(div15, t15);
+    			append_dev(div15, div11);
+    			append_dev(div11, div10);
+    			append_dev(div10, div8);
+    			append_dev(div10, t17);
     			append_dev(div10, div9);
-    			append_dev(div9, div8);
-    			append_dev(div14, t17);
+    			append_dev(div15, t18);
+    			append_dev(div15, div14);
     			append_dev(div14, div13);
     			append_dev(div13, div12);
-    			append_dev(div12, div11);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div16);
+    			if (detaching) detach_dev(div17);
     		}
     	};
 

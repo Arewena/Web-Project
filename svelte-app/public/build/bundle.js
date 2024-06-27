@@ -3039,7 +3039,7 @@ var app = (function () {
     const file$4 = "src/routes/Default.svelte";
 
     function create_fragment$5(ctx) {
-    	let body;
+    	let div28;
     	let header;
     	let div0;
     	let ul;
@@ -3116,10 +3116,27 @@ var app = (function () {
     	let button6;
     	let t42;
     	let button7;
+    	let t44;
+    	let div34;
+    	let div33;
+    	let div32;
+    	let div29;
+    	let h54;
+    	let t46;
+    	let button8;
+    	let t47;
+    	let div30;
+    	let t49;
+    	let div31;
+    	let button9;
+    	let t51;
+    	let button10;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
-    			body = element("body");
+    			div28 = element("div");
     			header = element("header");
     			div0 = element("div");
     			ul = element("ul");
@@ -3217,133 +3234,196 @@ var app = (function () {
     			t42 = space();
     			button7 = element("button");
     			button7.textContent = "Details";
+    			t44 = space();
+    			div34 = element("div");
+    			div33 = element("div");
+    			div32 = element("div");
+    			div29 = element("div");
+    			h54 = element("h5");
+    			h54.textContent = "Details";
+    			t46 = space();
+    			button8 = element("button");
+    			t47 = space();
+    			div30 = element("div");
+    			div30.textContent = "...";
+    			t49 = space();
+    			div31 = element("div");
+    			button9 = element("button");
+    			button9.textContent = "Close";
+    			t51 = space();
+    			button10 = element("button");
+    			button10.textContent = "Apply";
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
-    			add_location(img, file$4, 13, 5, 335);
-    			add_location(li0, file$4, 12, 4, 324);
+    			add_location(img, file$4, 18, 5, 479);
+    			add_location(li0, file$4, 17, 4, 468);
     			attr_dev(a0, "href", "/");
     			attr_dev(a0, "class", "nav-link px-2 text-black");
     			set_style(a0, "font-weight", "bold");
-    			add_location(a0, file$4, 20, 5, 454);
-    			add_location(li1, file$4, 19, 4, 443);
+    			add_location(a0, file$4, 25, 5, 598);
+    			add_location(li1, file$4, 24, 4, 587);
     			attr_dev(a1, "href", "/mypage");
     			attr_dev(a1, "class", "nav-link px-2 text-secondary");
-    			add_location(a1, file$4, 27, 5, 590);
-    			add_location(li2, file$4, 26, 4, 579);
+    			add_location(a1, file$4, 32, 5, 734);
+    			add_location(li2, file$4, 31, 4, 723);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
-    			add_location(ul, file$4, 9, 3, 227);
+    			set_style(ul, "align-items", "center");
+    			add_location(ul, file$4, 13, 3, 338);
     			set_style(div0, "height", "auto");
-    			add_location(div0, file$4, 8, 2, 195);
+    			add_location(div0, file$4, 12, 2, 306);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$4, 7, 1, 148);
+    			add_location(header, file$4, 11, 1, 259);
     			attr_dev(div1, "class", "home_title");
-    			add_location(div1, file$4, 36, 3, 773);
+    			add_location(div1, file$4, 41, 3, 917);
     			attr_dev(div2, "class", "home_description");
-    			add_location(div2, file$4, 37, 3, 831);
+    			add_location(div2, file$4, 42, 3, 975);
     			attr_dev(div3, "class", "home_button");
     			attr_dev(div3, "onclick", "document.getElementById('home_detail').scrollIntoView();");
-    			add_location(div3, file$4, 41, 3, 960);
+    			add_location(div3, file$4, 46, 3, 1104);
     			attr_dev(div4, "class", "home_inner");
-    			add_location(div4, file$4, 35, 2, 744);
+    			add_location(div4, file$4, 40, 2, 888);
     			attr_dev(div5, "class", "home_image");
-    			add_location(div5, file$4, 34, 1, 716);
+    			add_location(div5, file$4, 39, 1, 860);
     			attr_dev(h1, "class", "middle");
-    			add_location(h1, file$4, 51, 2, 1168);
+    			add_location(h1, file$4, 56, 2, 1312);
     			attr_dev(h50, "class", "card-title");
-    			add_location(h50, file$4, 57, 6, 1339);
+    			add_location(h50, file$4, 62, 6, 1493);
     			attr_dev(p0, "class", "card-text");
-    			add_location(p0, file$4, 59, 7, 1419);
+    			add_location(p0, file$4, 64, 7, 1573);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary width");
-    			add_location(button0, file$4, 65, 8, 1659);
+    			add_location(button0, file$4, 70, 8, 1813);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary width");
-    			add_location(button1, file$4, 69, 8, 1765);
+    			attr_dev(button1, "data-bs-toggle", "modal");
+    			attr_dev(button1, "data-bs-target", "#staticBackdrop");
+    			add_location(button1, file$4, 74, 8, 1919);
     			attr_dev(div6, "class", "button-container");
-    			add_location(div6, file$4, 64, 7, 1619);
+    			add_location(div6, file$4, 69, 7, 1773);
     			attr_dev(div7, "class", "card-inner-body");
-    			add_location(div7, file$4, 58, 6, 1381);
+    			add_location(div7, file$4, 63, 6, 1535);
     			attr_dev(div8, "class", "card-body");
-    			add_location(div8, file$4, 56, 5, 1308);
-    			attr_dev(div9, "class", "card");
-    			add_location(div9, file$4, 55, 4, 1283);
+    			add_location(div8, file$4, 61, 5, 1462);
+    			attr_dev(div9, "class", "card home-card");
+    			add_location(div9, file$4, 60, 4, 1427);
     			attr_dev(div10, "class", "col");
-    			add_location(div10, file$4, 54, 3, 1260);
+    			add_location(div10, file$4, 59, 3, 1404);
     			attr_dev(h51, "class", "card-title");
-    			add_location(h51, file$4, 80, 6, 2005);
+    			add_location(h51, file$4, 91, 6, 2327);
     			attr_dev(p1, "class", "card-text");
-    			add_location(p1, file$4, 82, 7, 2085);
+    			add_location(p1, file$4, 93, 7, 2407);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-primary width");
-    			add_location(button2, file$4, 88, 8, 2325);
+    			add_location(button2, file$4, 99, 8, 2647);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary width");
-    			add_location(button3, file$4, 92, 8, 2431);
+    			attr_dev(button3, "data-bs-toggle", "modal");
+    			attr_dev(button3, "data-bs-target", "#staticBackdrop");
+    			add_location(button3, file$4, 103, 8, 2753);
     			attr_dev(div11, "class", "button-container");
-    			add_location(div11, file$4, 87, 7, 2285);
+    			add_location(div11, file$4, 98, 7, 2607);
     			attr_dev(div12, "class", "card-inner-body");
-    			add_location(div12, file$4, 81, 6, 2047);
+    			add_location(div12, file$4, 92, 6, 2369);
     			attr_dev(div13, "class", "card-body");
-    			add_location(div13, file$4, 79, 5, 1974);
-    			attr_dev(div14, "class", "card");
-    			add_location(div14, file$4, 78, 4, 1949);
+    			add_location(div13, file$4, 90, 5, 2296);
+    			attr_dev(div14, "class", "card home-card");
+    			add_location(div14, file$4, 89, 4, 2261);
     			attr_dev(div15, "class", "col");
-    			add_location(div15, file$4, 77, 3, 1926);
+    			add_location(div15, file$4, 88, 3, 2238);
     			attr_dev(h52, "class", "card-title");
-    			add_location(h52, file$4, 103, 6, 2671);
+    			add_location(h52, file$4, 120, 6, 3161);
     			attr_dev(p2, "class", "card-text");
-    			add_location(p2, file$4, 105, 7, 2751);
+    			add_location(p2, file$4, 122, 7, 3241);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn btn-primary width");
-    			add_location(button4, file$4, 110, 8, 2945);
+    			add_location(button4, file$4, 127, 8, 3435);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary width");
-    			add_location(button5, file$4, 114, 8, 3051);
+    			attr_dev(button5, "data-bs-toggle", "modal");
+    			attr_dev(button5, "data-bs-target", "#staticBackdrop");
+    			add_location(button5, file$4, 131, 8, 3541);
     			attr_dev(div16, "class", "button-container");
-    			add_location(div16, file$4, 109, 7, 2905);
+    			add_location(div16, file$4, 126, 7, 3395);
     			attr_dev(div17, "class", "card-inner-body");
-    			add_location(div17, file$4, 104, 6, 2713);
+    			add_location(div17, file$4, 121, 6, 3203);
     			attr_dev(div18, "class", "card-body");
-    			add_location(div18, file$4, 102, 5, 2640);
-    			attr_dev(div19, "class", "card");
-    			add_location(div19, file$4, 101, 4, 2615);
+    			add_location(div18, file$4, 119, 5, 3130);
+    			attr_dev(div19, "class", "card home-card");
+    			add_location(div19, file$4, 118, 4, 3095);
     			attr_dev(div20, "class", "col");
-    			add_location(div20, file$4, 100, 3, 2592);
+    			add_location(div20, file$4, 117, 3, 3072);
     			attr_dev(h53, "class", "card-title");
-    			add_location(h53, file$4, 125, 6, 3291);
+    			add_location(h53, file$4, 148, 6, 3949);
     			attr_dev(p3, "class", "card-text");
-    			add_location(p3, file$4, 127, 7, 3371);
+    			add_location(p3, file$4, 150, 7, 4029);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn btn-primary width");
-    			add_location(button6, file$4, 133, 8, 3611);
+    			add_location(button6, file$4, 156, 8, 4269);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "btn btn-secondary width");
-    			add_location(button7, file$4, 137, 8, 3717);
+    			attr_dev(button7, "data-bs-toggle", "modal");
+    			attr_dev(button7, "data-bs-target", "#staticBackdrop");
+    			add_location(button7, file$4, 160, 8, 4375);
     			attr_dev(div21, "class", "button-container");
-    			add_location(div21, file$4, 132, 7, 3571);
+    			add_location(div21, file$4, 155, 7, 4229);
     			attr_dev(div22, "class", "card-inner-body");
-    			add_location(div22, file$4, 126, 6, 3333);
+    			add_location(div22, file$4, 149, 6, 3991);
     			attr_dev(div23, "class", "card-body");
-    			add_location(div23, file$4, 124, 5, 3260);
-    			attr_dev(div24, "class", "card");
-    			add_location(div24, file$4, 123, 4, 3235);
+    			add_location(div23, file$4, 147, 5, 3918);
+    			attr_dev(div24, "class", "card home-card");
+    			add_location(div24, file$4, 146, 4, 3883);
     			attr_dev(div25, "class", "col");
-    			add_location(div25, file$4, 122, 3, 3212);
+    			add_location(div25, file$4, 145, 3, 3860);
     			attr_dev(div26, "class", "row row-cols-1 row-cols-md-3 g-4 float");
-    			add_location(div26, file$4, 53, 2, 1203);
+    			add_location(div26, file$4, 58, 2, 1347);
     			set_style(div27, "padding", "50px");
     			attr_dev(div27, "id", "home_detail");
-    			add_location(div27, file$4, 50, 1, 1119);
-    			add_location(body, file$4, 6, 0, 139);
+    			add_location(div27, file$4, 55, 1, 1263);
+    			attr_dev(div28, "class", "home-body");
+    			add_location(div28, file$4, 10, 0, 233);
+    			attr_dev(h54, "class", "modal-title");
+    			attr_dev(h54, "id", "staticBackdropLabel");
+    			add_location(h54, file$4, 183, 4, 4999);
+    			attr_dev(button8, "type", "button");
+    			attr_dev(button8, "class", "btn-close");
+    			attr_dev(button8, "data-bs-dismiss", "modal");
+    			attr_dev(button8, "aria-label", "Close");
+    			add_location(button8, file$4, 184, 4, 5066);
+    			attr_dev(div29, "class", "modal-header");
+    			add_location(div29, file$4, 182, 2, 4967);
+    			attr_dev(div30, "class", "modal-body");
+    			attr_dev(div30, "id", "modal-body");
+    			add_location(div30, file$4, 186, 2, 5172);
+    			attr_dev(button9, "type", "button");
+    			attr_dev(button9, "class", "btn btn-secondary");
+    			attr_dev(button9, "data-bs-dismiss", "modal");
+    			add_location(button9, file$4, 190, 4, 5267);
+    			attr_dev(button10, "type", "button");
+    			attr_dev(button10, "class", "btn btn-primary");
+    			add_location(button10, file$4, 191, 4, 5359);
+    			attr_dev(div31, "class", "modal-footer");
+    			add_location(div31, file$4, 189, 2, 5235);
+    			attr_dev(div32, "class", "modal-content");
+    			add_location(div32, file$4, 181, 3, 4936);
+    			attr_dev(div33, "class", "modal-dialog");
+    			add_location(div33, file$4, 180, 1, 4905);
+    			attr_dev(div34, "class", "modal fade");
+    			attr_dev(div34, "id", "staticBackdrop");
+    			attr_dev(div34, "data-bs-backdrop", "static");
+    			attr_dev(div34, "data-bs-keyboard", "false");
+    			attr_dev(div34, "tabindex", "-1");
+    			attr_dev(div34, "aria-labelledby", "staticBackdropLabel");
+    			attr_dev(div34, "aria-hidden", "true");
+    			add_location(div34, file$4, 179, 0, 4736);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, body, anchor);
-    			append_dev(body, header);
+    			insert_dev(target, div28, anchor);
+    			append_dev(div28, header);
     			append_dev(header, div0);
     			append_dev(div0, ul);
     			append_dev(ul, li0);
@@ -3354,16 +3434,16 @@ var app = (function () {
     			append_dev(ul, t2);
     			append_dev(ul, li2);
     			append_dev(li2, a1);
-    			append_dev(body, t4);
-    			append_dev(body, div5);
+    			append_dev(div28, t4);
+    			append_dev(div28, div5);
     			append_dev(div5, div4);
     			append_dev(div4, div1);
     			append_dev(div4, t6);
     			append_dev(div4, div2);
     			append_dev(div4, t8);
     			append_dev(div4, div3);
-    			append_dev(body, t10);
-    			append_dev(body, div27);
+    			append_dev(div28, t10);
+    			append_dev(div28, div27);
     			append_dev(div27, h1);
     			append_dev(div27, t12);
     			append_dev(div27, div26);
@@ -3418,12 +3498,42 @@ var app = (function () {
     			append_dev(div21, button6);
     			append_dev(div21, t42);
     			append_dev(div21, button7);
+    			insert_dev(target, t44, anchor);
+    			insert_dev(target, div34, anchor);
+    			append_dev(div34, div33);
+    			append_dev(div33, div32);
+    			append_dev(div32, div29);
+    			append_dev(div29, h54);
+    			append_dev(div29, t46);
+    			append_dev(div29, button8);
+    			append_dev(div32, t47);
+    			append_dev(div32, div30);
+    			append_dev(div32, t49);
+    			append_dev(div32, div31);
+    			append_dev(div31, button9);
+    			append_dev(div31, t51);
+    			append_dev(div31, button10);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(button1, "click", /*click_handler*/ ctx[0], false, false, false, false),
+    					listen_dev(button3, "click", /*click_handler_1*/ ctx[1], false, false, false, false),
+    					listen_dev(button5, "click", /*click_handler_2*/ ctx[2], false, false, false, false),
+    					listen_dev(button7, "click", /*click_handler_3*/ ctx[3], false, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(body);
+    			if (detaching) detach_dev(div28);
+    			if (detaching) detach_dev(t44);
+    			if (detaching) detach_dev(div34);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -3438,6 +3548,10 @@ var app = (function () {
     	return block;
     }
 
+    function openModal(text) {
+    	document.getElementById("modal-body").innerHTML = text;
+    }
+
     function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Default', slots, []);
@@ -3448,7 +3562,23 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Default> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Link, Navbar, baseUrl });
+    	const click_handler = () => {
+    		openModal("Card 1");
+    	};
+
+    	const click_handler_1 = () => {
+    		openModal("Card 2");
+    	};
+
+    	const click_handler_2 = () => {
+    		openModal("Card 3");
+    	};
+
+    	const click_handler_3 = () => {
+    		openModal("Card 4");
+    	};
+
+    	$$self.$capture_state = () => ({ Link, Navbar, baseUrl, openModal });
 
     	$$self.$inject_state = $$props => {
     		if ('baseUrl' in $$props) baseUrl = $$props.baseUrl;
@@ -3458,7 +3588,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [];
+    	return [click_handler, click_handler_1, click_handler_2, click_handler_3];
     }
 
     class Default extends SvelteComponentDev {
@@ -3804,414 +3934,206 @@ var app = (function () {
     const file$1 = "src/routes/Mypage.svelte";
 
     function create_fragment$2(ctx) {
-    	let body;
+    	let div16;
     	let header;
     	let div0;
     	let ul;
     	let li0;
-    	let a0;
-    	let t1;
+    	let img;
+    	let img_src_value;
+    	let t0;
     	let li1;
+    	let a0;
+    	let t2;
+    	let li2;
     	let a1;
-    	let t3;
-    	let div3;
+    	let t4;
     	let div1;
     	let t5;
-    	let div2;
+    	let span0;
     	let t7;
-    	let h10;
-    	let t9;
-    	let div4;
-    	let t10;
-    	let h11;
-    	let t12;
-    	let div20;
-    	let table;
-    	let tr0;
-    	let div7;
-    	let img0;
-    	let img0_src_value;
-    	let t13;
-    	let div6;
-    	let h50;
-    	let t15;
-    	let p0;
-    	let t17;
-    	let div5;
-    	let button0;
-    	let t19;
-    	let tr1;
-    	let div10;
-    	let img1;
-    	let img1_src_value;
-    	let t20;
-    	let div9;
-    	let h51;
-    	let t22;
-    	let p1;
-    	let t24;
-    	let div8;
-    	let button1;
-    	let t26;
-    	let tr2;
-    	let div13;
-    	let img2;
-    	let img2_src_value;
-    	let t27;
-    	let div12;
-    	let h52;
-    	let t29;
-    	let p2;
-    	let t31;
-    	let div11;
-    	let button2;
-    	let t33;
-    	let tr3;
-    	let div16;
-    	let img3;
-    	let img3_src_value;
-    	let t34;
     	let div15;
-    	let h53;
-    	let t36;
-    	let p3;
-    	let t38;
     	let div14;
-    	let button3;
-    	let t40;
-    	let tr4;
-    	let div19;
-    	let img4;
-    	let img4_src_value;
-    	let t41;
-    	let div18;
-    	let h54;
-    	let t43;
-    	let p4;
-    	let t45;
-    	let div17;
-    	let button4;
+    	let div7;
+    	let div6;
+    	let div2;
+    	let t9;
+    	let div5;
+    	let div3;
+    	let span1;
+    	let t11;
+    	let t12;
+    	let div4;
+    	let span2;
+    	let t14;
+    	let t15;
+    	let div10;
+    	let div9;
+    	let div8;
+    	let t17;
+    	let div13;
+    	let div12;
+    	let div11;
 
     	const block = {
     		c: function create() {
-    			body = element("body");
+    			div16 = element("div");
     			header = element("header");
     			div0 = element("div");
     			ul = element("ul");
     			li0 = element("li");
+    			img = element("img");
+    			t0 = space();
+    			li1 = element("li");
     			a0 = element("a");
     			a0.textContent = "Home";
-    			t1 = space();
-    			li1 = element("li");
+    			t2 = space();
+    			li2 = element("li");
     			a1 = element("a");
     			a1.textContent = "MyPage";
-    			t3 = space();
-    			div3 = element("div");
+    			t4 = space();
     			div1 = element("div");
-    			div1.textContent = "profile image";
-    			t5 = space();
-    			div2 = element("div");
-    			div2.textContent = "Student info";
+    			t5 = text("Hello ");
+    			span0 = element("span");
+    			span0.textContent = "Daniel";
     			t7 = space();
-    			h10 = element("h1");
-    			h10.textContent = "Upcoming Mettings:";
-    			t9 = space();
-    			div4 = element("div");
-    			t10 = space();
-    			h11 = element("h1");
-    			h11.textContent = "Your Clubs:";
-    			t12 = space();
-    			div20 = element("div");
-    			table = element("table");
-    			tr0 = element("tr");
-    			div7 = element("div");
-    			img0 = element("img");
-    			t13 = space();
-    			div6 = element("div");
-    			h50 = element("h5");
-    			h50.textContent = "Club A";
-    			t15 = space();
-    			p0 = element("p");
-    			p0.textContent = "This is a awsome Club A. We have wonderful things and unique ideas.";
-    			t17 = space();
-    			div5 = element("div");
-    			button0 = element("button");
-    			button0.textContent = "Go";
-    			t19 = space();
-    			tr1 = element("tr");
-    			div10 = element("div");
-    			img1 = element("img");
-    			t20 = space();
-    			div9 = element("div");
-    			h51 = element("h5");
-    			h51.textContent = "Club B";
-    			t22 = space();
-    			p1 = element("p");
-    			p1.textContent = "This is a awsome Club B. We have wonderful things and unique ideas.";
-    			t24 = space();
-    			div8 = element("div");
-    			button1 = element("button");
-    			button1.textContent = "Go";
-    			t26 = space();
-    			tr2 = element("tr");
-    			div13 = element("div");
-    			img2 = element("img");
-    			t27 = space();
-    			div12 = element("div");
-    			h52 = element("h5");
-    			h52.textContent = "Club C";
-    			t29 = space();
-    			p2 = element("p");
-    			p2.textContent = "This is a awsome Club C. We have wonderful things and unique ideas.";
-    			t31 = space();
-    			div11 = element("div");
-    			button2 = element("button");
-    			button2.textContent = "Go";
-    			t33 = space();
-    			tr3 = element("tr");
-    			div16 = element("div");
-    			img3 = element("img");
-    			t34 = space();
     			div15 = element("div");
-    			h53 = element("h5");
-    			h53.textContent = "Club D";
-    			t36 = space();
-    			p3 = element("p");
-    			p3.textContent = "This is a awsome Club D. We have wonderful things and unique ideas.";
-    			t38 = space();
     			div14 = element("div");
-    			button3 = element("button");
-    			button3.textContent = "Go";
-    			t40 = space();
-    			tr4 = element("tr");
-    			div19 = element("div");
-    			img4 = element("img");
-    			t41 = space();
-    			div18 = element("div");
-    			h54 = element("h5");
-    			h54.textContent = "Club E";
-    			t43 = space();
-    			p4 = element("p");
-    			p4.textContent = "This is a awsome Club E. We have wonderful things and unique ideas.";
-    			t45 = space();
-    			div17 = element("div");
-    			button4 = element("button");
-    			button4.textContent = "Go";
+    			div7 = element("div");
+    			div6 = element("div");
+    			div2 = element("div");
+    			div2.textContent = "Student Info";
+    			t9 = space();
+    			div5 = element("div");
+    			div3 = element("div");
+    			span1 = element("span");
+    			span1.textContent = "Email:";
+    			t11 = text(" jingee@logncoding.com");
+    			t12 = space();
+    			div4 = element("div");
+    			span2 = element("span");
+    			span2.textContent = "Name:";
+    			t14 = text(" Daniel Kim");
+    			t15 = space();
+    			div10 = element("div");
+    			div9 = element("div");
+    			div8 = element("div");
+    			div8.textContent = "Upcoming Meetings";
+    			t17 = space();
+    			div13 = element("div");
+    			div12 = element("div");
+    			div11 = element("div");
+    			div11.textContent = "My Clubs";
+    			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "logo");
+    			set_style(img, "height", "50px");
+    			add_location(img, file$1, 15, 5, 432);
+    			add_location(li0, file$1, 14, 4, 421);
     			attr_dev(a0, "href", "/");
     			attr_dev(a0, "class", "nav-link px-2 text-secondary");
-    			add_location(a0, file$1, 16, 7, 435);
-    			add_location(li0, file$1, 16, 3, 431);
+    			add_location(a0, file$1, 22, 5, 551);
+    			add_location(li1, file$1, 21, 4, 540);
     			attr_dev(a1, "href", "/mypage");
     			attr_dev(a1, "class", "nav-link px-2 text-black");
     			set_style(a1, "font-weight", "bold");
-    			add_location(a1, file$1, 17, 7, 506);
-    			add_location(li1, file$1, 17, 3, 502);
+    			add_location(a1, file$1, 25, 5, 636);
+    			add_location(li2, file$1, 24, 4, 625);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
-    			add_location(ul, file$1, 15, 4, 345);
+    			set_style(ul, "align-items", "center");
+    			add_location(ul, file$1, 10, 3, 290);
     			set_style(div0, "height", "auto");
-    			add_location(div0, file$1, 14, 2, 312);
+    			add_location(div0, file$1, 9, 2, 258);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$1, 13, 1, 265);
-    			attr_dev(div1, "class", "Mprofile");
-    			add_location(div1, file$1, 22, 2, 659);
-    			attr_dev(div2, "class", "Minfo");
-    			add_location(div2, file$1, 25, 2, 715);
-    			attr_dev(div3, "class", "Mboard");
-    			add_location(div3, file$1, 21, 1, 635);
-    			add_location(h10, file$1, 29, 1, 775);
-    			attr_dev(div4, "class", "Mbox");
-    			add_location(div4, file$1, 30, 1, 805);
-    			add_location(h11, file$1, 31, 1, 832);
-    			if (!src_url_equal(img0.src, img0_src_value = "https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "class", "img-thumbnail");
-    			attr_dev(img0, "alt", "...");
-    			add_location(img0, file$1, 36, 5, 953);
-    			attr_dev(h50, "class", "card-title");
-    			add_location(h50, file$1, 38, 6, 1160);
-    			attr_dev(p0, "class", "card-text");
-    			add_location(p0, file$1, 39, 6, 1202);
-    			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "class", "btn btn-outline-primary");
-    			add_location(button0, file$1, 41, 7, 1337);
-    			attr_dev(div5, "class", "button-group");
-    			add_location(div5, file$1, 40, 6, 1302);
-    			attr_dev(div6, "class", "card-body");
-    			add_location(div6, file$1, 37, 5, 1129);
-    			attr_dev(div7, "class", "card_list");
-    			add_location(div7, file$1, 35, 4, 923);
-    			add_location(tr0, file$1, 34, 3, 913);
-    			if (!src_url_equal(img1.src, img1_src_value = "https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "class", "img-thumbnail");
-    			attr_dev(img1, "alt", "...");
-    			add_location(img1, file$1, 48, 5, 1496);
-    			attr_dev(h51, "class", "card-title");
-    			add_location(h51, file$1, 50, 6, 1703);
-    			attr_dev(p1, "class", "card-text");
-    			add_location(p1, file$1, 51, 6, 1745);
-    			attr_dev(button1, "type", "button");
-    			attr_dev(button1, "class", "btn btn-outline-primary");
-    			add_location(button1, file$1, 53, 7, 1880);
-    			attr_dev(div8, "class", "button-group");
-    			add_location(div8, file$1, 52, 6, 1845);
-    			attr_dev(div9, "class", "card-body");
-    			add_location(div9, file$1, 49, 5, 1672);
-    			attr_dev(div10, "class", "card_list");
-    			add_location(div10, file$1, 47, 4, 1466);
-    			add_location(tr1, file$1, 46, 3, 1456);
-    			if (!src_url_equal(img2.src, img2_src_value = "https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg")) attr_dev(img2, "src", img2_src_value);
-    			attr_dev(img2, "class", "img-thumbnail");
-    			attr_dev(img2, "alt", "...");
-    			add_location(img2, file$1, 61, 5, 2048);
-    			attr_dev(h52, "class", "card-title");
-    			add_location(h52, file$1, 63, 6, 2255);
-    			attr_dev(p2, "class", "card-text");
-    			add_location(p2, file$1, 64, 6, 2297);
-    			attr_dev(button2, "type", "button");
-    			attr_dev(button2, "class", "btn btn-outline-primary");
-    			add_location(button2, file$1, 66, 7, 2432);
-    			attr_dev(div11, "class", "button-group");
-    			add_location(div11, file$1, 65, 6, 2397);
-    			attr_dev(div12, "class", "card-body");
-    			add_location(div12, file$1, 62, 5, 2224);
-    			attr_dev(div13, "class", "card_list");
-    			add_location(div13, file$1, 60, 4, 2018);
-    			add_location(tr2, file$1, 59, 3, 2008);
-    			if (!src_url_equal(img3.src, img3_src_value = "https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg")) attr_dev(img3, "src", img3_src_value);
-    			attr_dev(img3, "class", "img-thumbnail");
-    			attr_dev(img3, "alt", "...");
-    			add_location(img3, file$1, 73, 5, 2591);
-    			attr_dev(h53, "class", "card-title");
-    			add_location(h53, file$1, 75, 6, 2798);
-    			attr_dev(p3, "class", "card-text");
-    			add_location(p3, file$1, 76, 6, 2840);
-    			attr_dev(button3, "type", "button");
-    			attr_dev(button3, "class", "btn btn-outline-primary");
-    			add_location(button3, file$1, 78, 7, 2975);
-    			attr_dev(div14, "class", "button-group");
-    			add_location(div14, file$1, 77, 6, 2940);
-    			attr_dev(div15, "class", "card-body");
-    			add_location(div15, file$1, 74, 5, 2767);
-    			attr_dev(div16, "class", "card_list");
-    			add_location(div16, file$1, 72, 4, 2561);
-    			add_location(tr3, file$1, 71, 3, 2551);
-    			if (!src_url_equal(img4.src, img4_src_value = "https://m.media-amazon.com/images/M/MV5BNDc4OGU0MGYtODdlYy00ODZmLTgxMmMtM2QyNzM3Y2VhZjViXkEyXkFqcGdeQXVyNTMyMzg4ODA@._V1_.jpg")) attr_dev(img4, "src", img4_src_value);
-    			attr_dev(img4, "class", "img-thumbnail");
-    			attr_dev(img4, "alt", "...");
-    			add_location(img4, file$1, 85, 5, 3134);
-    			attr_dev(h54, "class", "card-title");
-    			add_location(h54, file$1, 87, 6, 3341);
-    			attr_dev(p4, "class", "card-text");
-    			add_location(p4, file$1, 88, 6, 3383);
-    			attr_dev(button4, "type", "button");
-    			attr_dev(button4, "class", "btn btn-outline-primary");
-    			add_location(button4, file$1, 90, 7, 3518);
-    			attr_dev(div17, "class", "button-group");
-    			add_location(div17, file$1, 89, 6, 3483);
-    			attr_dev(div18, "class", "card-body");
-    			add_location(div18, file$1, 86, 5, 3310);
-    			attr_dev(div19, "class", "card_list");
-    			add_location(div19, file$1, 84, 4, 3104);
-    			add_location(tr4, file$1, 83, 3, 3094);
-    			add_location(table, file$1, 33, 2, 901);
-    			set_style(div20, "overflow", "scroll");
-    			set_style(div20, "height", "100%");
-    			add_location(div20, file$1, 32, 1, 855);
-    			attr_dev(body, "class", "MypageBody");
-    			add_location(body, file$1, 12, 0, 237);
+    			add_location(header, file$1, 8, 1, 211);
+    			set_style(span0, "font-weight", "bold");
+    			add_location(span0, file$1, 35, 8, 834);
+    			attr_dev(div1, "class", "profile_name");
+    			add_location(div1, file$1, 34, 1, 798);
+    			attr_dev(div2, "class", "profile_sub_title");
+    			add_location(div2, file$1, 41, 5, 1012);
+    			set_style(span1, "font-weight", "bold");
+    			add_location(span1, file$1, 44, 7, 1146);
+    			attr_dev(div3, "class", "profile_sub_inner");
+    			add_location(div3, file$1, 43, 6, 1106);
+    			set_style(span2, "font-weight", "bold");
+    			add_location(span2, file$1, 47, 7, 1276);
+    			attr_dev(div4, "class", "profile_sub_inner");
+    			add_location(div4, file$1, 46, 6, 1236);
+    			attr_dev(div5, "class", "profile_sub_body");
+    			add_location(div5, file$1, 42, 5, 1068);
+    			attr_dev(div6, "class", "profile_background");
+    			add_location(div6, file$1, 40, 4, 973);
+    			attr_dev(div7, "class", "col-sm");
+    			add_location(div7, file$1, 39, 3, 947);
+    			attr_dev(div8, "class", "profile_sub_title");
+    			add_location(div8, file$1, 54, 5, 1452);
+    			attr_dev(div9, "class", "profile_background");
+    			add_location(div9, file$1, 53, 4, 1413);
+    			attr_dev(div10, "class", "col-sm");
+    			add_location(div10, file$1, 52, 3, 1387);
+    			attr_dev(div11, "class", "profile_sub_title");
+    			add_location(div11, file$1, 59, 5, 1599);
+    			attr_dev(div12, "class", "profile_background");
+    			add_location(div12, file$1, 58, 4, 1560);
+    			attr_dev(div13, "class", "col-sm");
+    			add_location(div13, file$1, 57, 3, 1534);
+    			attr_dev(div14, "class", "row");
+    			add_location(div14, file$1, 38, 2, 925);
+    			attr_dev(div15, "class", "container-fluid");
+    			add_location(div15, file$1, 37, 1, 892);
+    			attr_dev(div16, "class", "MypageBody");
+    			add_location(div16, file$1, 7, 0, 184);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, body, anchor);
-    			append_dev(body, header);
+    			insert_dev(target, div16, anchor);
+    			append_dev(div16, header);
     			append_dev(header, div0);
     			append_dev(div0, ul);
     			append_dev(ul, li0);
-    			append_dev(li0, a0);
-    			append_dev(ul, t1);
+    			append_dev(li0, img);
+    			append_dev(ul, t0);
     			append_dev(ul, li1);
-    			append_dev(li1, a1);
-    			append_dev(body, t3);
-    			append_dev(body, div3);
-    			append_dev(div3, div1);
-    			append_dev(div3, t5);
-    			append_dev(div3, div2);
-    			append_dev(body, t7);
-    			append_dev(body, h10);
-    			append_dev(body, t9);
-    			append_dev(body, div4);
-    			append_dev(body, t10);
-    			append_dev(body, h11);
-    			append_dev(body, t12);
-    			append_dev(body, div20);
-    			append_dev(div20, table);
-    			append_dev(table, tr0);
-    			append_dev(tr0, div7);
-    			append_dev(div7, img0);
-    			append_dev(div7, t13);
-    			append_dev(div7, div6);
-    			append_dev(div6, h50);
-    			append_dev(div6, t15);
-    			append_dev(div6, p0);
-    			append_dev(div6, t17);
-    			append_dev(div6, div5);
-    			append_dev(div5, button0);
-    			append_dev(table, t19);
-    			append_dev(table, tr1);
-    			append_dev(tr1, div10);
-    			append_dev(div10, img1);
-    			append_dev(div10, t20);
-    			append_dev(div10, div9);
-    			append_dev(div9, h51);
-    			append_dev(div9, t22);
-    			append_dev(div9, p1);
-    			append_dev(div9, t24);
-    			append_dev(div9, div8);
-    			append_dev(div8, button1);
-    			append_dev(table, t26);
-    			append_dev(table, tr2);
-    			append_dev(tr2, div13);
-    			append_dev(div13, img2);
-    			append_dev(div13, t27);
-    			append_dev(div13, div12);
-    			append_dev(div12, h52);
-    			append_dev(div12, t29);
-    			append_dev(div12, p2);
-    			append_dev(div12, t31);
-    			append_dev(div12, div11);
-    			append_dev(div11, button2);
-    			append_dev(table, t33);
-    			append_dev(table, tr3);
-    			append_dev(tr3, div16);
-    			append_dev(div16, img3);
-    			append_dev(div16, t34);
+    			append_dev(li1, a0);
+    			append_dev(ul, t2);
+    			append_dev(ul, li2);
+    			append_dev(li2, a1);
+    			append_dev(div16, t4);
+    			append_dev(div16, div1);
+    			append_dev(div1, t5);
+    			append_dev(div1, span0);
+    			append_dev(div16, t7);
     			append_dev(div16, div15);
-    			append_dev(div15, h53);
-    			append_dev(div15, t36);
-    			append_dev(div15, p3);
-    			append_dev(div15, t38);
     			append_dev(div15, div14);
-    			append_dev(div14, button3);
-    			append_dev(table, t40);
-    			append_dev(table, tr4);
-    			append_dev(tr4, div19);
-    			append_dev(div19, img4);
-    			append_dev(div19, t41);
-    			append_dev(div19, div18);
-    			append_dev(div18, h54);
-    			append_dev(div18, t43);
-    			append_dev(div18, p4);
-    			append_dev(div18, t45);
-    			append_dev(div18, div17);
-    			append_dev(div17, button4);
+    			append_dev(div14, div7);
+    			append_dev(div7, div6);
+    			append_dev(div6, div2);
+    			append_dev(div6, t9);
+    			append_dev(div6, div5);
+    			append_dev(div5, div3);
+    			append_dev(div3, span1);
+    			append_dev(div3, t11);
+    			append_dev(div5, t12);
+    			append_dev(div5, div4);
+    			append_dev(div4, span2);
+    			append_dev(div4, t14);
+    			append_dev(div14, t15);
+    			append_dev(div14, div10);
+    			append_dev(div10, div9);
+    			append_dev(div9, div8);
+    			append_dev(div14, t17);
+    			append_dev(div14, div13);
+    			append_dev(div13, div12);
+    			append_dev(div12, div11);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(body);
+    			if (detaching) detach_dev(div16);
     		}
     	};
 
@@ -4274,9 +4196,9 @@ var app = (function () {
     	let img;
     	let img_src_value;
     	let t0;
+    	let div9;
     	let div8;
     	let div7;
-    	let div6;
     	let div1;
     	let t2;
     	let div2;
@@ -4288,10 +4210,13 @@ var app = (function () {
     	let div4;
     	let input2;
     	let t5;
-    	let button;
-    	let t7;
     	let div5;
+    	let input3;
+    	let t6;
+    	let button;
     	let t8;
+    	let div6;
+    	let t9;
     	let span;
     	let mounted;
     	let dispose;
@@ -4301,9 +4226,9 @@ var app = (function () {
     			div0 = element("div");
     			img = element("img");
     			t0 = space();
+    			div9 = element("div");
     			div8 = element("div");
     			div7 = element("div");
-    			div6 = element("div");
     			div1 = element("div");
     			div1.textContent = "Sign Up";
     			t2 = space();
@@ -4316,58 +4241,69 @@ var app = (function () {
     			div4 = element("div");
     			input2 = element("input");
     			t5 = space();
+    			div5 = element("div");
+    			input3 = element("input");
+    			t6 = space();
     			button = element("button");
     			button.textContent = "Sign Up";
-    			t7 = space();
-    			div5 = element("div");
-    			t8 = text("Already have an account? ");
+    			t8 = space();
+    			div6 = element("div");
+    			t9 = text("Already have an account? ");
     			span = element("span");
     			span.textContent = "Signin";
     			if (!src_url_equal(img.src, img_src_value = "https://cdn.koreaconsumer.or.kr/news/photo/202306/642_1408_3024.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			add_location(img, file, 25, 8, 562);
+    			add_location(img, file, 26, 8, 577);
     			attr_dev(div0, "class", "signin-logo");
-    			add_location(div0, file, 22, 0, 512);
+    			add_location(div0, file, 23, 0, 527);
     			attr_dev(div1, "class", "signin-title");
-    			add_location(div1, file, 31, 12, 790);
+    			add_location(div1, file, 32, 12, 805);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "placeholder", "Email");
     			attr_dev(input0, "aria-label", "Sizing example input");
     			attr_dev(input0, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input0, file, 37, 16, 1053);
+    			add_location(input0, file, 38, 16, 1068);
     			attr_dev(div2, "class", "input-group mb-3 mt-3");
-    			add_location(div2, file, 35, 12, 877);
-    			attr_dev(input1, "type", "password");
-    			attr_dev(input1, "placeholder", "Password");
+    			add_location(div2, file, 36, 12, 892);
+    			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "form-control");
+    			attr_dev(input1, "placeholder", "Name");
     			attr_dev(input1, "aria-label", "Sizing example input");
     			attr_dev(input1, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input1, file, 42, 16, 1418);
-    			attr_dev(div3, "class", "input-group mb-3");
-    			add_location(div3, file, 40, 12, 1244);
+    			add_location(input1, file, 43, 16, 1435);
+    			attr_dev(div3, "class", "input-group mb-3 mt-3");
+    			add_location(div3, file, 41, 12, 1259);
     			attr_dev(input2, "type", "password");
+    			attr_dev(input2, "placeholder", "Password");
     			attr_dev(input2, "class", "form-control");
-    			attr_dev(input2, "placeholder", "Confirm Password");
     			attr_dev(input2, "aria-label", "Sizing example input");
     			attr_dev(input2, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input2, file, 47, 16, 1804);
+    			add_location(input2, file, 48, 16, 1801);
     			attr_dev(div4, "class", "input-group mb-3");
-    			add_location(div4, file, 45, 12, 1622);
+    			add_location(div4, file, 46, 12, 1627);
+    			attr_dev(input3, "type", "password");
+    			attr_dev(input3, "class", "form-control");
+    			attr_dev(input3, "placeholder", "Confirm Password");
+    			attr_dev(input3, "aria-label", "Sizing example input");
+    			attr_dev(input3, "aria-describedby", "inputGroup-sizing-default");
+    			add_location(input3, file, 53, 16, 2187);
+    			attr_dev(div5, "class", "input-group mb-3");
+    			add_location(div5, file, 51, 12, 2005);
     			attr_dev(button, "class", "btn btn-primary margin");
-    			add_location(button, file, 50, 12, 1994);
+    			add_location(button, file, 56, 12, 2377);
     			set_style(span, "font-weight", "bold");
     			set_style(span, "cursor", "pointer");
     			attr_dev(span, "onclick", "window.location.href='http://localhost:8080/signin'");
-    			add_location(span, file, 54, 41, 2210);
-    			set_style(div5, "text-align", "center");
-    			add_location(div5, file, 51, 12, 2104);
-    			attr_dev(div6, "class", "card-body");
-    			add_location(div6, file, 29, 8, 739);
-    			attr_dev(div7, "class", "header");
-    			add_location(div7, file, 28, 4, 709);
-    			attr_dev(div8, "class", "card align signin-card");
-    			add_location(div8, file, 27, 0, 667);
+    			add_location(span, file, 60, 41, 2593);
+    			set_style(div6, "text-align", "center");
+    			add_location(div6, file, 57, 12, 2487);
+    			attr_dev(div7, "class", "card-body");
+    			add_location(div7, file, 30, 8, 754);
+    			attr_dev(div8, "class", "header");
+    			add_location(div8, file, 29, 4, 724);
+    			attr_dev(div9, "class", "card align signin-card");
+    			add_location(div9, file, 28, 0, 682);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4376,33 +4312,38 @@ var app = (function () {
     			insert_dev(target, div0, anchor);
     			append_dev(div0, img);
     			insert_dev(target, t0, anchor);
-    			insert_dev(target, div8, anchor);
+    			insert_dev(target, div9, anchor);
+    			append_dev(div9, div8);
     			append_dev(div8, div7);
-    			append_dev(div7, div6);
-    			append_dev(div6, div1);
-    			append_dev(div6, t2);
-    			append_dev(div6, div2);
+    			append_dev(div7, div1);
+    			append_dev(div7, t2);
+    			append_dev(div7, div2);
     			append_dev(div2, input0);
     			set_input_value(input0, /*id*/ ctx[0]);
-    			append_dev(div6, t3);
-    			append_dev(div6, div3);
+    			append_dev(div7, t3);
+    			append_dev(div7, div3);
     			append_dev(div3, input1);
-    			set_input_value(input1, /*password*/ ctx[1]);
-    			append_dev(div6, t4);
-    			append_dev(div6, div4);
+    			set_input_value(input1, /*name*/ ctx[2]);
+    			append_dev(div7, t4);
+    			append_dev(div7, div4);
     			append_dev(div4, input2);
-    			append_dev(div6, t5);
-    			append_dev(div6, button);
-    			append_dev(div6, t7);
-    			append_dev(div6, div5);
-    			append_dev(div5, t8);
-    			append_dev(div5, span);
+    			set_input_value(input2, /*password*/ ctx[1]);
+    			append_dev(div7, t5);
+    			append_dev(div7, div5);
+    			append_dev(div5, input3);
+    			append_dev(div7, t6);
+    			append_dev(div7, button);
+    			append_dev(div7, t8);
+    			append_dev(div7, div6);
+    			append_dev(div6, t9);
+    			append_dev(div6, span);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[3]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[4]),
-    					listen_dev(button, "click", /*click_handler*/ ctx[5], false, false, false, false)
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[4]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[5]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[6]),
+    					listen_dev(button, "click", /*click_handler*/ ctx[7], false, false, false, false)
     				];
 
     				mounted = true;
@@ -4413,8 +4354,12 @@ var app = (function () {
     				set_input_value(input0, /*id*/ ctx[0]);
     			}
 
-    			if (dirty & /*password*/ 2 && input1.value !== /*password*/ ctx[1]) {
-    				set_input_value(input1, /*password*/ ctx[1]);
+    			if (dirty & /*name*/ 4 && input1.value !== /*name*/ ctx[2]) {
+    				set_input_value(input1, /*name*/ ctx[2]);
+    			}
+
+    			if (dirty & /*password*/ 2 && input2.value !== /*password*/ ctx[1]) {
+    				set_input_value(input2, /*password*/ ctx[1]);
     			}
     		},
     		i: noop,
@@ -4422,7 +4367,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div8);
+    			if (detaching) detach_dev(div9);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -4444,6 +4389,7 @@ var app = (function () {
     	validate_slots('Signup', slots, []);
     	let id;
     	let password;
+    	let name;
 
     	const doRequest = async (id, password) => {
     		await fetch("http://127.0.0.1:8000/api/signup", {
@@ -4465,16 +4411,22 @@ var app = (function () {
     	}
 
     	function input1_input_handler() {
+    		name = this.value;
+    		$$invalidate(2, name);
+    	}
+
+    	function input2_input_handler() {
     		password = this.value;
     		$$invalidate(1, password);
     	}
 
     	const click_handler = () => doRequest(id, password);
-    	$$self.$capture_state = () => ({ id, password, doRequest });
+    	$$self.$capture_state = () => ({ id, password, name, doRequest });
 
     	$$self.$inject_state = $$props => {
     		if ('id' in $$props) $$invalidate(0, id = $$props.id);
     		if ('password' in $$props) $$invalidate(1, password = $$props.password);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -4484,9 +4436,11 @@ var app = (function () {
     	return [
     		id,
     		password,
+    		name,
     		doRequest,
     		input0_input_handler,
     		input1_input_handler,
+    		input2_input_handler,
     		click_handler
     	];
     }

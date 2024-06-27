@@ -2,13 +2,18 @@
 	import { Link } from "svelte-routing";
 	import Navbar from "../Navbar.svelte";
 	let baseUrl = document.baseURI;
+
+	function openModal(text) {
+		document.getElementById("modal-body").innerHTML = text;
+	}
 </script>
 
-<body>
+<div class="home-body">
 	<header class="p-3" style="height: 100px;">
 		<div style="height: auto;">
 			<ul
 				class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0"
+				style="align-items: center"
 			>
 				<li>
 					<img
@@ -53,7 +58,7 @@
 
 		<div class="row row-cols-1 row-cols-md-3 g-4 float">
 			<div class="col">
-				<div class="card">
+				<div class="card home-card">
 					<div class="card-body">
 						<h5 class="card-title">Club A</h5>
 						<div class="card-inner-body">
@@ -67,16 +72,22 @@
 									type="button"
 									class="btn btn-primary width">Apply</button
 								>
-								<button type="button" class="btn btn-secondary width" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-									>Details</button
+								<button 
+									type="button"
+									class="btn btn-secondary width" 
+									data-bs-toggle="modal" 
+									data-bs-target="#staticBackdrop"
+									on:click={() => {openModal("Card 1")}}
 								>
+									Details
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card">
+				<div class="card home-card">
 					<div class="card-body">
 						<h5 class="card-title">Club B</h5>
 						<div class="card-inner-body">
@@ -90,16 +101,22 @@
 									type="button"
 									class="btn btn-primary width">Apply</button
 								>
-								<button type="button" class="btn btn-secondary width" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-									>Details</button
+								<button 
+									type="button"
+									class="btn btn-secondary width" 
+									data-bs-toggle="modal" 
+									data-bs-target="#staticBackdrop"
+									on:click={() => {openModal("Card 2")}}
 								>
+									Details
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card">
+				<div class="card home-card">
 					<div class="card-body">
 						<h5 class="card-title">Club C</h5>
 						<div class="card-inner-body">
@@ -112,16 +129,22 @@
 									type="button"
 									class="btn btn-primary width">Apply</button
 								>
-								<button type="button" class="btn btn-secondary width" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-									>Details</button
+								<button 
+									type="button"
+									class="btn btn-secondary width" 
+									data-bs-toggle="modal" 
+									data-bs-target="#staticBackdrop"
+									on:click={() => {openModal("Card 3")}}
 								>
+									Details
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card">
+				<div class="card home-card">
 					<div class="card-body">
 						<h5 class="card-title">Club D</h5>
 						<div class="card-inner-body">
@@ -135,9 +158,15 @@
 									type="button"
 									class="btn btn-primary width">Apply</button
 								>
-								<button type="button" class="btn btn-secondary width" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-									>Details</button
+								<button 
+									type="button"
+									class="btn btn-secondary width" 
+									data-bs-toggle="modal" 
+									data-bs-target="#staticBackdrop"
+									on:click={() => {openModal("Card 4")}}
 								>
+									Details
+								</button>
 							</div>
 						</div>
 					</div>
@@ -145,7 +174,7 @@
 			</div>
 		</div>
 	</div>
-</body>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -155,7 +184,7 @@
 		  <h5 class="modal-title" id="staticBackdropLabel">Details</h5>
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
-		<div class="modal-body">
+		<div class="modal-body" id="modal-body">
 		  ...
 		</div>
 		<div class="modal-footer">

@@ -1,25 +1,69 @@
-<style>
-	@import '../app.css';
-</style>
-
 <script>
-    import { Link } from 'svelte-routing';
+	import { Link } from "svelte-routing";
 	import Navbar from "../Navbar.svelte";
 	let baseUrl = document.baseURI;
-    let logoSrc = `${baseUrl}routes/logo.png`;
+	let logoSrc = `${baseUrl}routes/logo.png`;
 </script>
 
-
-<body class="MypageBody">
+<div class="MypageBody">
 	<header class="p-3" style="height: 100px;">
 		<div style="height: auto;">
-		  <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0">
-			<li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
-			<li><a href="/mypage" class="nav-link px-2 text-black" style="font-weight: bold;">MyPage</a></li>
-		  </ul>
+			<ul
+				class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0"
+				style="align-items: center;"
+			>
+				<li>
+					<img
+						src={"images/logo.png"}
+						alt="logo"
+						style="height: 50px;"
+					/>
+				</li>
+				<li>
+					<a href="/" class="nav-link px-2 text-secondary">Home</a>
+				</li>
+				<li>
+					<a
+						href="/mypage"
+						class="nav-link px-2 text-black"
+						style="font-weight: bold;">MyPage</a
+					>
+				</li>
+			</ul>
 		</div>
 	</header>
-	<div class="Mboard">
+	<div class="profile_name">
+		Hello <span style="font-weight: bold;">Daniel</span>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm">
+				<div class="profile_background">
+					<div class="profile_sub_title">Student Info</div>
+					<div class="profile_sub_body">
+						<div class="profile_sub_inner">
+							<span style="font-weight: bold;">Email:</span> jingee@logncoding.com
+						</div>
+						<div class="profile_sub_inner">
+							<span style="font-weight: bold;">Name:</span> Daniel Kim
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="profile_background">
+					<div class="profile_sub_title">Upcoming Meetings</div>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="profile_background">
+					<div class="profile_sub_title">My Clubs</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="Mboard">
 		<div class = "Mprofile">
 			profile image
 		</div>
@@ -94,6 +138,8 @@
 				</div>
 			</tr>
 		</table>	
-	</div>
-</body>
+	</div> -->
 
+<style>
+	@import "../app.css";
+</style>

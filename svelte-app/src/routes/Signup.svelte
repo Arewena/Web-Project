@@ -5,6 +5,7 @@
 <script>
     let id;
     let password;
+    let name;
 
     const doRequest = async (id, password) => {
     const returnValue = await fetch("http://127.0.0.1:8000/api/signup", {
@@ -36,6 +37,11 @@
             <div class="input-group mb-3 mt-3">
                 <!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
                 <input bind:value={id} type="text" class="form-control" placeholder="Email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="input-group mb-3 mt-3">
+                <!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
+                <input bind:value={name} type="text" class="form-control" placeholder="Name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
 
             <div class="input-group mb-3">

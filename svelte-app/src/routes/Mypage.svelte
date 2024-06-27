@@ -54,7 +54,10 @@
 				<div class="profile_background">
 					<div class="profile_sub_title">Upcoming Meetings</div>
 					<div class="profile_meeting_inner">
-
+						<div><strong>Club Meeting 1</strong></div>
+						<div><strong>Date</strong>: 6/24 15:00 ~ 15:30</div>
+						<div><strong>At</strong>: School Building</div>
+						<div><strong>Google Meeting</strong>:</div>
 					</div>
 				</div>
 			</div>

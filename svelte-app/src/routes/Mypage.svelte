@@ -54,10 +54,19 @@
 				<div class="profile_background">
 					<div class="profile_sub_title">Upcoming Meetings</div>
 					<div class="profile_meeting_inner">
-						<div><strong>Club Meeting 1</strong></div>
-						<div><strong>Date</strong>: 6/24 15:00 ~ 15:30</div>
-						<div><strong>At</strong>: School Building</div>
-						<div><strong>Google Meeting</strong>:</div>
+						<div style="font-size: 17px; font-weight: bold;">Club Meeting 1</div>
+						<div style="font-size: 14px; color: gray;">2024/06/24 15:00 ~ 15:30</div>
+						<div style="margin-top: 5px; font-size: 14px;"><span style="font-weight: bold;">Location:</span> School Building</div>
+					</div>
+					<div class="profile_meeting_inner">
+						<div style="font-size: 17px; font-weight: bold;">Club Meeting 1</div>
+						<div style="font-size: 14px; color: gray;">2024/06/24 15:00 ~ 15:30</div>
+						<div style="margin-top: 5px; font-size: 14px;"><span style="font-weight: bold;">Location:</span> School Building</div>
+					</div>
+					<div class="profile_meeting_inner">
+						<div style="font-size: 17px; font-weight: bold;">Club Meeting 1</div>
+						<div style="font-size: 14px; color: gray;">2024/06/24 15:00 ~ 15:30</div>
+						<div style="margin-top: 5px; font-size: 14px;"><span style="font-weight: bold;">Location:</span> School Building</div>
 					</div>
 				</div>
 			</div>

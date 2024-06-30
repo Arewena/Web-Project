@@ -249,8 +249,12 @@ table {
 }
 
 .profile_meeting_inner {
-    border: 1px solid #dcdee5;
-    height: 80px;
+    /* border: 1px solid #dcdee5; */
     border-radius: 10px;
     margin-top: 20px;
+    padding: 5px;
+    background-color: #edf2f4;
 }
+
+
+

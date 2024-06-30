@@ -88,7 +88,7 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="card maypage-card">
+						<div class="card mypage-card">
 							<div class="card-body">
 								<h5 class="card-title">Club B</h5>
 								<div class="mypage-inner-body">

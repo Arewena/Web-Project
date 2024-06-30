@@ -64,6 +64,33 @@
 			<div class="col-sm">
 				<div class="profile_background">
 					<div class="profile_sub_title">My Clubs</div>
+
+					<div class="col">
+						<div class="card mypage-card">
+							<div class="card-body">
+								<h5 class="card-title">Club A</h5>
+								<div class="mypage-inner-body">
+									<p class="card-text">
+										This is a longer card with supporting text below as
+										a natural lead-in to additional content.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card maypage-card">
+							<div class="card-body">
+								<h5 class="card-title">Club B</h5>
+								<div class="mypage-inner-body">
+									<p class="card-text">
+										This is a longer card with supporting text below as
+										a natural lead-in to additional content.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -3,16 +3,45 @@
 </style>
 
 <script>
-    let id;
+    import { auth } from "../firebase/firebase";
+    import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+    import { onMount } from 'svelte';
+    let email;
     let password;
 
-    const doRequest = async (id, password) => {
-    const returnValue = await fetch("http://127.0.0.1:8000/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({id, password})
+    onMount(() => {
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            const uid = user.uid;
+            console.log(uid)
+            // ...
+        } else {
+            // User is signed out
+            // ...
+            console.log("logged out")
+        }
+        });
+    })
 
-    })}
+    const doRequest = async (email, password) => {
+        document.getElementById("button_loading").style.display = "inline-block"
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            window.location.href='http://localhost:8080/'
+            document.getElementById("button_loading").style.display = "none"
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            document.getElementById("button_loading").style.display = "none"
+            alert(errorMessage)
+        });
+        }
 
 </script>
 
@@ -35,7 +64,7 @@
                 </div>
                 <div class="input-group mb-3 mt-3">
                     <!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
-                    <input bind:value={id} type="text" placeholder="Email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input bind:value={email} type="text" placeholder="Email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
                     <!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Password</span> -->
@@ -47,7 +76,10 @@
                         Remember this account?
                     </label>
                 </div>
-                <button on:click={() => doRequest(id, password)} class="btn btn-primary margin">Log in</button>
+                <button on:click={() => doRequest(email, password)} class="btn btn-primary margin">
+                    <span id="button_loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                    Log in
+                </button>
                 <div
                     style="text-align: center"
                 >

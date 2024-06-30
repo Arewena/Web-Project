@@ -1,16 +1,27 @@
 <script>
 	import { Link } from "svelte-routing";
+    import { signOut } from "firebase/auth";
+	import { auth } from "../firebase/firebase";
 	import Navbar from "../Navbar.svelte";
 	let baseUrl = document.baseURI;
 
 	function openModal(text) {
 		document.getElementById("modal-body").innerHTML = text;
 	}
+
+	const logout = () => {
+		signOut(auth).then(() => {
+			window.location.href='http://localhost:8080/signin'
+		}).catch((error) => {
+		// An error happened.
+		});
+	}
+
 </script>
 
 <div class="home-body">
 	<header class="p-3" style="height: 100px;">
-		<div style="height: auto;">
+		<div style="height: auto; display: flex; align-items: center">
 			<ul
 				class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0"
 				style="align-items: center"
@@ -35,6 +46,12 @@
 					>
 				</li>
 			</ul>
+			<div
+				class="px-2 text-secondary"
+				on:click={() => {logout()}}
+			>
+				Signout
+			</div>
 		</div>
 	</header>
 	<div class="home_image">

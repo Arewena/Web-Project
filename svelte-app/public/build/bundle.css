@@ -256,5 +256,22 @@ table {
     background-color: #edf2f4;
 }
 
+.mypage-card {
+    margin-top: 20px;
+    height: 150px;
+    background-color: #133757;
+}
+
+.mypage-inner-body {
+    background-color: #e9eef1;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #7b7c7d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 

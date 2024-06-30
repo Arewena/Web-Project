@@ -3,17 +3,30 @@
 </style>
 
 <script>
-    let id;
+    import { auth } from "../firebase/firebase";
+    import { createUserWithEmailAndPassword } from "firebase/auth";
+
+    let email;
     let password;
     let name;
+    const doRequest = async (email, password) => {
+        document.getElementById("button_loading").style.display = "inline-block"
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            window.location.href='http://localhost:8080/signin'
+            document.getElementById("button_loading").style.display = "none"
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            document.getElementById("button_loading").style.display = "none"
 
-    const doRequest = async (id, password) => {
-    const returnValue = await fetch("http://127.0.0.1:8000/api/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({id, password})
-
-    })}
+            // ..
+        });
+    }
 
 </script>
 
@@ -36,7 +49,7 @@
 
             <div class="input-group mb-3 mt-3">
                 <!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
-                <input bind:value={id} type="text" class="form-control" placeholder="Email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input bind:value={email} type="text" class="form-control" placeholder="Email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
 
             <div class="input-group mb-3 mt-3">
@@ -54,7 +67,10 @@
                 <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
 
-            <button on:click={() => doRequest(id, password)} class="btn btn-primary margin">Sign Up</button>
+            <button on:click={() => doRequest(email, password)} class="btn btn-primary margin">
+                <span id="button_loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                Sign Up
+            </button>
             <div
                 style="text-align: center"
             >

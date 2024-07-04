@@ -1,13 +1,32 @@
 <script>
 	import { Link } from "svelte-routing";
 	import Navbar from "../Navbar.svelte";
+    import { signOut } from "firebase/auth";
+	import { auth } from "../firebase/firebase";
+    import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+    import { onMount } from 'svelte';
+
+	onMount(() => {
+		onAuthStateChanged(auth, (user) => {
+		if (user) {
+			// User is signed in, see docs for a list of available properties
+			// https://firebase.google.com/docs/reference/js/auth.user
+			const uid = user.uid;
+			// ...
+		} else {
+			// User is signed out
+			// ...
+			window.location.href='http://localhost:8080/signin'
+		}
+		});
+	})
 	let baseUrl = document.baseURI;
 	let logoSrc = `${baseUrl}routes/logo.png`;
 </script>
 
 <div class="MypageBody">
 	<header class="p-3" style="height: 100px;">
-		<div style="height: auto;">
+		<div style="height: auto; display: flex; align-items: center">
 			<ul
 				class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0"
 				style="align-items: center;"
@@ -30,6 +49,13 @@
 					>
 				</li>
 			</ul>
+			<div
+				class="px-2 text-secondary"
+				style="cursor:pointer"
+				on:click={() => {logout()}}
+			>
+				Sign Out
+			</div>
 		</div>
 	</header>
 	<div class="profile_name">

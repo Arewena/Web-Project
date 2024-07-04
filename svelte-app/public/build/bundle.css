@@ -273,5 +273,16 @@ table {
     justify-content: space-between;
 }
 
+.login_button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 230px;
+}
 
-
+.signup_button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 230px;
+}

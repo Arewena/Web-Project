@@ -4,8 +4,24 @@
 
 <script>
     import { auth } from "../firebase/firebase";
-    import { createUserWithEmailAndPassword } from "firebase/auth";
+    import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+    import { onMount } from 'svelte';
 
+    onMount(() => {
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            const uid = user.uid;
+            window.location.href='http://localhost:8080/'
+            // ...
+        } else {
+            // User is signed out
+            // ...
+            console.log("logged out")
+        }
+        });
+    })
     let email;
     let password;
     let name;
@@ -23,7 +39,7 @@
             const errorCode = error.code;
             const errorMessage = error.message;
             document.getElementById("button_loading").style.display = "none"
-
+            alert(errorMessage)
             // ..
         });
     }
@@ -67,7 +83,7 @@
                 <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             </div>
 
-            <button on:click={() => doRequest(email, password)} class="btn btn-primary margin">
+            <button on:click={() => doRequest(email, password)} class="btn btn-primary margin signup_button">
                 <span id="button_loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
                 Sign Up
             </button>

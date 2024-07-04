@@ -14743,7 +14743,7 @@ var app = (function () {
     			a1.textContent = "MyPage";
     			t4 = space();
     			div0 = element("div");
-    			div0.textContent = "Signout";
+    			div0.textContent = "Sign Out";
     			t6 = space();
     			div6 = element("div");
     			div5 = element("div");
@@ -14850,163 +14850,164 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
-    			add_location(img, file$4, 29, 5, 783);
-    			add_location(li0, file$4, 28, 4, 772);
+    			add_location(img, file$4, 46, 5, 1274);
+    			add_location(li0, file$4, 45, 4, 1263);
     			attr_dev(a0, "href", "/");
     			attr_dev(a0, "class", "nav-link px-2 text-black");
     			set_style(a0, "font-weight", "bold");
-    			add_location(a0, file$4, 36, 5, 902);
-    			add_location(li1, file$4, 35, 4, 891);
+    			add_location(a0, file$4, 53, 5, 1393);
+    			add_location(li1, file$4, 52, 4, 1382);
     			attr_dev(a1, "href", "/mypage");
     			attr_dev(a1, "class", "nav-link px-2 text-secondary");
-    			add_location(a1, file$4, 43, 5, 1038);
-    			add_location(li2, file$4, 42, 4, 1027);
+    			add_location(a1, file$4, 60, 5, 1529);
+    			add_location(li2, file$4, 59, 4, 1518);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
     			set_style(ul, "align-items", "center");
-    			add_location(ul, file$4, 24, 3, 642);
+    			add_location(ul, file$4, 41, 3, 1133);
     			attr_dev(div0, "class", "px-2 text-secondary");
-    			add_location(div0, file$4, 48, 3, 1144);
+    			set_style(div0, "cursor", "pointer");
+    			add_location(div0, file$4, 65, 3, 1635);
     			set_style(div1, "height", "auto");
     			set_style(div1, "display", "flex");
     			set_style(div1, "align-items", "center");
-    			add_location(div1, file$4, 23, 2, 575);
+    			add_location(div1, file$4, 40, 2, 1066);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$4, 22, 1, 528);
+    			add_location(header, file$4, 39, 1, 1019);
     			attr_dev(div2, "class", "home_title");
-    			add_location(div2, file$4, 58, 3, 1326);
+    			add_location(div2, file$4, 76, 3, 1846);
     			attr_dev(div3, "class", "home_description");
-    			add_location(div3, file$4, 59, 3, 1384);
+    			add_location(div3, file$4, 77, 3, 1904);
     			attr_dev(div4, "class", "home_button");
     			attr_dev(div4, "onclick", "document.getElementById('home_detail').scrollIntoView();");
-    			add_location(div4, file$4, 63, 3, 1513);
+    			add_location(div4, file$4, 81, 3, 2033);
     			attr_dev(div5, "class", "home_inner");
-    			add_location(div5, file$4, 57, 2, 1297);
+    			add_location(div5, file$4, 75, 2, 1817);
     			attr_dev(div6, "class", "home_image");
-    			add_location(div6, file$4, 56, 1, 1269);
+    			add_location(div6, file$4, 74, 1, 1789);
     			attr_dev(h1, "class", "middle");
-    			add_location(h1, file$4, 73, 2, 1721);
+    			add_location(h1, file$4, 91, 2, 2241);
     			attr_dev(h50, "class", "card-title");
-    			add_location(h50, file$4, 79, 6, 1902);
+    			add_location(h50, file$4, 97, 6, 2422);
     			attr_dev(p0, "class", "card-text");
-    			add_location(p0, file$4, 81, 7, 1982);
+    			add_location(p0, file$4, 99, 7, 2502);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary width");
-    			add_location(button0, file$4, 87, 8, 2222);
+    			add_location(button0, file$4, 105, 8, 2742);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary width");
     			attr_dev(button1, "data-bs-toggle", "modal");
     			attr_dev(button1, "data-bs-target", "#staticBackdrop");
-    			add_location(button1, file$4, 91, 8, 2328);
+    			add_location(button1, file$4, 109, 8, 2848);
     			attr_dev(div7, "class", "button-container");
-    			add_location(div7, file$4, 86, 7, 2182);
+    			add_location(div7, file$4, 104, 7, 2702);
     			attr_dev(div8, "class", "card-inner-body");
-    			add_location(div8, file$4, 80, 6, 1944);
+    			add_location(div8, file$4, 98, 6, 2464);
     			attr_dev(div9, "class", "card-body");
-    			add_location(div9, file$4, 78, 5, 1871);
+    			add_location(div9, file$4, 96, 5, 2391);
     			attr_dev(div10, "class", "card home-card");
-    			add_location(div10, file$4, 77, 4, 1836);
+    			add_location(div10, file$4, 95, 4, 2356);
     			attr_dev(div11, "class", "col");
-    			add_location(div11, file$4, 76, 3, 1813);
+    			add_location(div11, file$4, 94, 3, 2333);
     			attr_dev(h51, "class", "card-title");
-    			add_location(h51, file$4, 108, 6, 2736);
+    			add_location(h51, file$4, 126, 6, 3256);
     			attr_dev(p1, "class", "card-text");
-    			add_location(p1, file$4, 110, 7, 2816);
+    			add_location(p1, file$4, 128, 7, 3336);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-primary width");
-    			add_location(button2, file$4, 116, 8, 3056);
+    			add_location(button2, file$4, 134, 8, 3576);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary width");
     			attr_dev(button3, "data-bs-toggle", "modal");
     			attr_dev(button3, "data-bs-target", "#staticBackdrop");
-    			add_location(button3, file$4, 120, 8, 3162);
+    			add_location(button3, file$4, 138, 8, 3682);
     			attr_dev(div12, "class", "button-container");
-    			add_location(div12, file$4, 115, 7, 3016);
+    			add_location(div12, file$4, 133, 7, 3536);
     			attr_dev(div13, "class", "card-inner-body");
-    			add_location(div13, file$4, 109, 6, 2778);
+    			add_location(div13, file$4, 127, 6, 3298);
     			attr_dev(div14, "class", "card-body");
-    			add_location(div14, file$4, 107, 5, 2705);
+    			add_location(div14, file$4, 125, 5, 3225);
     			attr_dev(div15, "class", "card home-card");
-    			add_location(div15, file$4, 106, 4, 2670);
+    			add_location(div15, file$4, 124, 4, 3190);
     			attr_dev(div16, "class", "col");
-    			add_location(div16, file$4, 105, 3, 2647);
+    			add_location(div16, file$4, 123, 3, 3167);
     			attr_dev(h52, "class", "card-title");
-    			add_location(h52, file$4, 137, 6, 3570);
+    			add_location(h52, file$4, 155, 6, 4090);
     			attr_dev(p2, "class", "card-text");
-    			add_location(p2, file$4, 139, 7, 3650);
+    			add_location(p2, file$4, 157, 7, 4170);
     			attr_dev(button4, "type", "button");
     			attr_dev(button4, "class", "btn btn-primary width");
-    			add_location(button4, file$4, 144, 8, 3844);
+    			add_location(button4, file$4, 162, 8, 4364);
     			attr_dev(button5, "type", "button");
     			attr_dev(button5, "class", "btn btn-secondary width");
     			attr_dev(button5, "data-bs-toggle", "modal");
     			attr_dev(button5, "data-bs-target", "#staticBackdrop");
-    			add_location(button5, file$4, 148, 8, 3950);
+    			add_location(button5, file$4, 166, 8, 4470);
     			attr_dev(div17, "class", "button-container");
-    			add_location(div17, file$4, 143, 7, 3804);
+    			add_location(div17, file$4, 161, 7, 4324);
     			attr_dev(div18, "class", "card-inner-body");
-    			add_location(div18, file$4, 138, 6, 3612);
+    			add_location(div18, file$4, 156, 6, 4132);
     			attr_dev(div19, "class", "card-body");
-    			add_location(div19, file$4, 136, 5, 3539);
+    			add_location(div19, file$4, 154, 5, 4059);
     			attr_dev(div20, "class", "card home-card");
-    			add_location(div20, file$4, 135, 4, 3504);
+    			add_location(div20, file$4, 153, 4, 4024);
     			attr_dev(div21, "class", "col");
-    			add_location(div21, file$4, 134, 3, 3481);
+    			add_location(div21, file$4, 152, 3, 4001);
     			attr_dev(h53, "class", "card-title");
-    			add_location(h53, file$4, 165, 6, 4358);
+    			add_location(h53, file$4, 183, 6, 4878);
     			attr_dev(p3, "class", "card-text");
-    			add_location(p3, file$4, 167, 7, 4438);
+    			add_location(p3, file$4, 185, 7, 4958);
     			attr_dev(button6, "type", "button");
     			attr_dev(button6, "class", "btn btn-primary width");
-    			add_location(button6, file$4, 173, 8, 4678);
+    			add_location(button6, file$4, 191, 8, 5198);
     			attr_dev(button7, "type", "button");
     			attr_dev(button7, "class", "btn btn-secondary width");
     			attr_dev(button7, "data-bs-toggle", "modal");
     			attr_dev(button7, "data-bs-target", "#staticBackdrop");
-    			add_location(button7, file$4, 177, 8, 4784);
+    			add_location(button7, file$4, 195, 8, 5304);
     			attr_dev(div22, "class", "button-container");
-    			add_location(div22, file$4, 172, 7, 4638);
+    			add_location(div22, file$4, 190, 7, 5158);
     			attr_dev(div23, "class", "card-inner-body");
-    			add_location(div23, file$4, 166, 6, 4400);
+    			add_location(div23, file$4, 184, 6, 4920);
     			attr_dev(div24, "class", "card-body");
-    			add_location(div24, file$4, 164, 5, 4327);
+    			add_location(div24, file$4, 182, 5, 4847);
     			attr_dev(div25, "class", "card home-card");
-    			add_location(div25, file$4, 163, 4, 4292);
+    			add_location(div25, file$4, 181, 4, 4812);
     			attr_dev(div26, "class", "col");
-    			add_location(div26, file$4, 162, 3, 4269);
+    			add_location(div26, file$4, 180, 3, 4789);
     			attr_dev(div27, "class", "row row-cols-1 row-cols-md-3 g-4 float");
-    			add_location(div27, file$4, 75, 2, 1756);
+    			add_location(div27, file$4, 93, 2, 2276);
     			set_style(div28, "padding", "50px");
     			attr_dev(div28, "id", "home_detail");
-    			add_location(div28, file$4, 72, 1, 1672);
+    			add_location(div28, file$4, 90, 1, 2192);
     			attr_dev(div29, "class", "home-body");
-    			add_location(div29, file$4, 21, 0, 502);
+    			add_location(div29, file$4, 38, 0, 993);
     			attr_dev(h54, "class", "modal-title");
     			attr_dev(h54, "id", "staticBackdropLabel");
-    			add_location(h54, file$4, 200, 4, 5408);
+    			add_location(h54, file$4, 218, 4, 5928);
     			attr_dev(button8, "type", "button");
     			attr_dev(button8, "class", "btn-close");
     			attr_dev(button8, "data-bs-dismiss", "modal");
     			attr_dev(button8, "aria-label", "Close");
-    			add_location(button8, file$4, 201, 4, 5475);
+    			add_location(button8, file$4, 219, 4, 5995);
     			attr_dev(div30, "class", "modal-header");
-    			add_location(div30, file$4, 199, 2, 5376);
+    			add_location(div30, file$4, 217, 2, 5896);
     			attr_dev(div31, "class", "modal-body");
     			attr_dev(div31, "id", "modal-body");
-    			add_location(div31, file$4, 203, 2, 5581);
+    			add_location(div31, file$4, 221, 2, 6101);
     			attr_dev(button9, "type", "button");
     			attr_dev(button9, "class", "btn btn-secondary");
     			attr_dev(button9, "data-bs-dismiss", "modal");
-    			add_location(button9, file$4, 207, 4, 5676);
+    			add_location(button9, file$4, 225, 4, 6196);
     			attr_dev(button10, "type", "button");
     			attr_dev(button10, "class", "btn btn-primary");
-    			add_location(button10, file$4, 208, 4, 5768);
+    			add_location(button10, file$4, 226, 4, 6288);
     			attr_dev(div32, "class", "modal-footer");
-    			add_location(div32, file$4, 206, 2, 5644);
+    			add_location(div32, file$4, 224, 2, 6164);
     			attr_dev(div33, "class", "modal-content");
-    			add_location(div33, file$4, 198, 3, 5345);
+    			add_location(div33, file$4, 216, 3, 5865);
     			attr_dev(div34, "class", "modal-dialog");
-    			add_location(div34, file$4, 197, 1, 5314);
+    			add_location(div34, file$4, 215, 1, 5834);
     			attr_dev(div35, "class", "modal fade");
     			attr_dev(div35, "id", "staticBackdrop");
     			attr_dev(div35, "data-bs-backdrop", "static");
@@ -15014,7 +15015,7 @@ var app = (function () {
     			attr_dev(div35, "tabindex", "-1");
     			attr_dev(div35, "aria-labelledby", "staticBackdropLabel");
     			attr_dev(div35, "aria-hidden", "true");
-    			add_location(div35, file$4, 196, 0, 5145);
+    			add_location(div35, file$4, 214, 0, 5665);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15158,6 +15159,20 @@ var app = (function () {
     	validate_slots('Default', slots, []);
     	let baseUrl = document.baseURI;
 
+    	onMount(() => {
+    		onAuthStateChanged(auth, user => {
+    			if (user) {
+    				// User is signed in, see docs for a list of available properties
+    				// https://firebase.google.com/docs/reference/js/auth.user
+    				user.uid;
+    			} else {
+    				// User is signed out
+    				// ...
+    				window.location.href = 'http://localhost:8080/signin'; // ...
+    			}
+    		});
+    	});
+
     	const logout = () => {
     		signOut(auth).then(() => {
     			window.location.href = 'http://localhost:8080/signin';
@@ -15197,6 +15212,9 @@ var app = (function () {
     		signOut,
     		auth,
     		Navbar,
+    		signInWithEmailAndPassword,
+    		onAuthStateChanged,
+    		onMount,
     		baseUrl,
     		openModal,
     		logout
@@ -15310,7 +15328,7 @@ var app = (function () {
 
     /* src/routes/Signin.svelte generated by Svelte v3.59.2 */
 
-    const { console: console_1 } = globals;
+    const { console: console_1$1 } = globals;
     const file$2 = "src/routes/Signin.svelte";
 
     function create_fragment$3(ctx) {
@@ -15379,58 +15397,58 @@ var app = (function () {
     			span1.textContent = "Signup";
     			if (!src_url_equal(img.src, img_src_value = "https://cdn.koreaconsumer.or.kr/news/photo/202306/642_1408_3024.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			add_location(img, file$2, 56, 8, 1689);
+    			add_location(img, file$2, 56, 8, 1718);
     			attr_dev(div0, "class", "signin-logo");
-    			add_location(div0, file$2, 53, 4, 1639);
+    			add_location(div0, file$2, 53, 4, 1668);
     			attr_dev(div1, "class", "signin-title");
-    			add_location(div1, file$2, 61, 16, 1919);
+    			add_location(div1, file$2, 61, 16, 1948);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Email");
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "aria-label", "Sizing example input");
     			attr_dev(input0, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input0, file$2, 66, 20, 2200);
+    			add_location(input0, file$2, 66, 20, 2229);
     			attr_dev(div2, "class", "input-group mb-3 mt-3");
-    			add_location(div2, file$2, 64, 16, 2016);
+    			add_location(div2, file$2, 64, 16, 2045);
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "placeholder", "Password");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "aria-label", "Sizing example input");
     			attr_dev(input1, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input1, file$2, 70, 20, 2582);
+    			add_location(input1, file$2, 70, 20, 2611);
     			attr_dev(div3, "class", "input-group mb-3");
-    			add_location(div3, file$2, 68, 16, 2400);
+    			add_location(div3, file$2, 68, 16, 2429);
     			attr_dev(input2, "class", "form-check-input");
     			attr_dev(input2, "type", "checkbox");
     			input2.value = "";
     			attr_dev(input2, "id", "flexCheckDefault");
-    			add_location(input2, file$2, 73, 20, 2843);
+    			add_location(input2, file$2, 73, 20, 2872);
     			attr_dev(label, "class", "form-check-label");
     			attr_dev(label, "for", "flexCheckDefault");
-    			add_location(label, file$2, 74, 20, 2944);
+    			add_location(label, file$2, 74, 20, 2973);
     			attr_dev(div4, "class", "form-check mb-5");
-    			add_location(div4, file$2, 72, 16, 2792);
+    			add_location(div4, file$2, 72, 16, 2821);
     			attr_dev(span0, "id", "button_loading");
     			attr_dev(span0, "class", "spinner-border spinner-border-sm");
     			attr_dev(span0, "role", "status");
     			attr_dev(span0, "aria-hidden", "true");
     			set_style(span0, "display", "none");
-    			add_location(span0, file$2, 79, 20, 3224);
-    			attr_dev(button, "class", "btn btn-primary margin");
-    			add_location(button, file$2, 78, 16, 3119);
+    			add_location(span0, file$2, 79, 20, 3266);
+    			attr_dev(button, "class", "btn btn-primary margin login_button");
+    			add_location(button, file$2, 78, 16, 3148);
     			set_style(span1, "font-weight", "bold");
     			set_style(span1, "cursor", "pointer");
     			attr_dev(span1, "onclick", "window.location.href='http://localhost:8080/signup'");
-    			add_location(span1, file$2, 85, 43, 3543);
+    			add_location(span1, file$2, 85, 43, 3585);
     			set_style(div5, "text-align", "center");
-    			add_location(div5, file$2, 82, 16, 3427);
+    			add_location(div5, file$2, 82, 16, 3469);
     			attr_dev(div6, "class", "card-body");
-    			add_location(div6, file$2, 60, 12, 1878);
+    			add_location(div6, file$2, 60, 12, 1907);
     			attr_dev(div7, "class", "header");
-    			add_location(div7, file$2, 59, 8, 1844);
+    			add_location(div7, file$2, 59, 8, 1873);
     			attr_dev(div8, "class", "card align signin-card");
-    			add_location(div8, file$2, 58, 4, 1798);
-    			add_location(body, file$2, 48, 0, 1482);
+    			add_location(div8, file$2, 58, 4, 1827);
+    			add_location(body, file$2, 48, 0, 1511);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15516,9 +15534,9 @@ var app = (function () {
     			if (user) {
     				// User is signed in, see docs for a list of available properties
     				// https://firebase.google.com/docs/reference/js/auth.user
-    				const uid = user.uid;
+    				user.uid;
 
-    				console.log(uid);
+    				window.location.href = 'http://localhost:8080/';
     			} else {
     				// User is signed out
     				// ...
@@ -15547,7 +15565,7 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Signin> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Signin> was created with unknown prop '${key}'`);
     	});
 
     	function input0_input_handler() {
@@ -15609,9 +15627,9 @@ var app = (function () {
     const file$1 = "src/routes/Mypage.svelte";
 
     function create_fragment$2(ctx) {
-    	let div36;
+    	let div37;
     	let header;
-    	let div0;
+    	let div1;
     	let ul;
     	let li0;
     	let img;
@@ -15623,81 +15641,85 @@ var app = (function () {
     	let li2;
     	let a1;
     	let t4;
-    	let div1;
-    	let t5;
-    	let span0;
-    	let t7;
-    	let div35;
-    	let div34;
-    	let div7;
-    	let div6;
+    	let div0;
+    	let t6;
     	let div2;
+    	let t7;
+    	let span0;
     	let t9;
-    	let div5;
-    	let div3;
-    	let span1;
-    	let t11;
-    	let t12;
-    	let div4;
-    	let span2;
-    	let t14;
-    	let t15;
-    	let div22;
-    	let div21;
+    	let div36;
+    	let div35;
     	let div8;
+    	let div7;
+    	let div3;
+    	let t11;
+    	let div6;
+    	let div4;
+    	let span1;
+    	let t13;
+    	let t14;
+    	let div5;
+    	let span2;
+    	let t16;
     	let t17;
-    	let div12;
+    	let div23;
+    	let div22;
     	let div9;
     	let t19;
+    	let div13;
     	let div10;
     	let t21;
     	let div11;
-    	let span3;
     	let t23;
-    	let t24;
-    	let div16;
-    	let div13;
+    	let div12;
+    	let span3;
+    	let t25;
     	let t26;
+    	let div17;
     	let div14;
     	let t28;
     	let div15;
-    	let span4;
     	let t30;
-    	let t31;
-    	let div20;
-    	let div17;
+    	let div16;
+    	let span4;
+    	let t32;
     	let t33;
+    	let div21;
     	let div18;
     	let t35;
     	let div19;
-    	let span5;
     	let t37;
-    	let t38;
-    	let div33;
-    	let div32;
-    	let div23;
+    	let div20;
+    	let span5;
+    	let t39;
     	let t40;
+    	let div34;
+    	let div33;
+    	let div24;
+    	let t42;
+    	let div28;
     	let div27;
     	let div26;
-    	let div25;
     	let h50;
-    	let t42;
-    	let div24;
-    	let p0;
     	let t44;
+    	let div25;
+    	let p0;
+    	let t46;
+    	let div32;
     	let div31;
     	let div30;
-    	let div29;
     	let h51;
-    	let t46;
-    	let div28;
+    	let t48;
+    	let div29;
     	let p1;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
-    			div36 = element("div");
+    			div37 = element("div");
     			header = element("header");
-    			div0 = element("div");
+    			div1 = element("div");
     			ul = element("ul");
     			li0 = element("li");
     			img = element("img");
@@ -15710,226 +15732,234 @@ var app = (function () {
     			a1 = element("a");
     			a1.textContent = "MyPage";
     			t4 = space();
-    			div1 = element("div");
-    			t5 = text("Hello ");
+    			div0 = element("div");
+    			div0.textContent = "Sign Out";
+    			t6 = space();
+    			div2 = element("div");
+    			t7 = text("Hello ");
     			span0 = element("span");
     			span0.textContent = "Daniel";
-    			t7 = space();
-    			div35 = element("div");
-    			div34 = element("div");
-    			div7 = element("div");
-    			div6 = element("div");
-    			div2 = element("div");
-    			div2.textContent = "Student Info";
     			t9 = space();
-    			div5 = element("div");
+    			div36 = element("div");
+    			div35 = element("div");
+    			div8 = element("div");
+    			div7 = element("div");
     			div3 = element("div");
+    			div3.textContent = "Student Info";
+    			t11 = space();
+    			div6 = element("div");
+    			div4 = element("div");
     			span1 = element("span");
     			span1.textContent = "Email:";
-    			t11 = text(" jingee@logncoding.com");
-    			t12 = space();
-    			div4 = element("div");
+    			t13 = text(" jingee@logncoding.com");
+    			t14 = space();
+    			div5 = element("div");
     			span2 = element("span");
     			span2.textContent = "Name:";
-    			t14 = text(" Daniel Kim");
-    			t15 = space();
-    			div22 = element("div");
-    			div21 = element("div");
-    			div8 = element("div");
-    			div8.textContent = "Upcoming Meetings";
+    			t16 = text(" Daniel Kim");
     			t17 = space();
-    			div12 = element("div");
+    			div23 = element("div");
+    			div22 = element("div");
     			div9 = element("div");
-    			div9.textContent = "Club Meeting 1";
+    			div9.textContent = "Upcoming Meetings";
     			t19 = space();
+    			div13 = element("div");
     			div10 = element("div");
-    			div10.textContent = "2024/06/24 15:00 ~ 15:30";
+    			div10.textContent = "Club Meeting 1";
     			t21 = space();
     			div11 = element("div");
+    			div11.textContent = "2024/06/24 15:00 ~ 15:30";
+    			t23 = space();
+    			div12 = element("div");
     			span3 = element("span");
     			span3.textContent = "Location:";
-    			t23 = text(" School Building");
-    			t24 = space();
-    			div16 = element("div");
-    			div13 = element("div");
-    			div13.textContent = "Club Meeting 1";
+    			t25 = text(" School Building");
     			t26 = space();
+    			div17 = element("div");
     			div14 = element("div");
-    			div14.textContent = "2024/06/24 15:00 ~ 15:30";
+    			div14.textContent = "Club Meeting 1";
     			t28 = space();
     			div15 = element("div");
+    			div15.textContent = "2024/06/24 15:00 ~ 15:30";
+    			t30 = space();
+    			div16 = element("div");
     			span4 = element("span");
     			span4.textContent = "Location:";
-    			t30 = text(" School Building");
-    			t31 = space();
-    			div20 = element("div");
-    			div17 = element("div");
-    			div17.textContent = "Club Meeting 1";
+    			t32 = text(" School Building");
     			t33 = space();
+    			div21 = element("div");
     			div18 = element("div");
-    			div18.textContent = "2024/06/24 15:00 ~ 15:30";
+    			div18.textContent = "Club Meeting 1";
     			t35 = space();
     			div19 = element("div");
+    			div19.textContent = "2024/06/24 15:00 ~ 15:30";
+    			t37 = space();
+    			div20 = element("div");
     			span5 = element("span");
     			span5.textContent = "Location:";
-    			t37 = text(" School Building");
-    			t38 = space();
-    			div33 = element("div");
-    			div32 = element("div");
-    			div23 = element("div");
-    			div23.textContent = "My Clubs";
+    			t39 = text(" School Building");
     			t40 = space();
+    			div34 = element("div");
+    			div33 = element("div");
+    			div24 = element("div");
+    			div24.textContent = "My Clubs";
+    			t42 = space();
+    			div28 = element("div");
     			div27 = element("div");
     			div26 = element("div");
-    			div25 = element("div");
     			h50 = element("h5");
     			h50.textContent = "Club A";
-    			t42 = space();
-    			div24 = element("div");
+    			t44 = space();
+    			div25 = element("div");
     			p0 = element("p");
     			p0.textContent = "This is a longer card with supporting text below as\r\n\t\t\t\t\t\t\t\t\t\ta natural lead-in to additional content.";
-    			t44 = space();
+    			t46 = space();
+    			div32 = element("div");
     			div31 = element("div");
     			div30 = element("div");
-    			div29 = element("div");
     			h51 = element("h5");
     			h51.textContent = "Club B";
-    			t46 = space();
-    			div28 = element("div");
+    			t48 = space();
+    			div29 = element("div");
     			p1 = element("p");
     			p1.textContent = "This is a longer card with supporting text below as\r\n\t\t\t\t\t\t\t\t\t\ta natural lead-in to additional content.";
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
-    			add_location(img, file$1, 15, 5, 432);
-    			add_location(li0, file$1, 14, 4, 421);
+    			add_location(img, file$1, 34, 5, 1051);
+    			add_location(li0, file$1, 33, 4, 1040);
     			attr_dev(a0, "href", "/");
     			attr_dev(a0, "class", "nav-link px-2 text-secondary");
-    			add_location(a0, file$1, 22, 5, 551);
-    			add_location(li1, file$1, 21, 4, 540);
+    			add_location(a0, file$1, 41, 5, 1170);
+    			add_location(li1, file$1, 40, 4, 1159);
     			attr_dev(a1, "href", "/mypage");
     			attr_dev(a1, "class", "nav-link px-2 text-black");
     			set_style(a1, "font-weight", "bold");
-    			add_location(a1, file$1, 25, 5, 636);
-    			add_location(li2, file$1, 24, 4, 625);
+    			add_location(a1, file$1, 44, 5, 1255);
+    			add_location(li2, file$1, 43, 4, 1244);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
     			set_style(ul, "align-items", "center");
-    			add_location(ul, file$1, 10, 3, 290);
-    			set_style(div0, "height", "auto");
-    			add_location(div0, file$1, 9, 2, 258);
+    			add_location(ul, file$1, 29, 3, 909);
+    			attr_dev(div0, "class", "px-2 text-secondary");
+    			set_style(div0, "cursor", "pointer");
+    			add_location(div0, file$1, 51, 3, 1397);
+    			set_style(div1, "height", "auto");
+    			set_style(div1, "display", "flex");
+    			set_style(div1, "align-items", "center");
+    			add_location(div1, file$1, 28, 2, 842);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$1, 8, 1, 211);
+    			add_location(header, file$1, 27, 1, 795);
     			set_style(span0, "font-weight", "bold");
-    			add_location(span0, file$1, 35, 8, 834);
-    			attr_dev(div1, "class", "profile_name");
-    			add_location(div1, file$1, 34, 1, 798);
-    			attr_dev(div2, "class", "profile_sub_title");
-    			add_location(div2, file$1, 41, 5, 1012);
+    			add_location(span0, file$1, 61, 8, 1587);
+    			attr_dev(div2, "class", "profile_name");
+    			add_location(div2, file$1, 60, 1, 1551);
+    			attr_dev(div3, "class", "profile_sub_title");
+    			add_location(div3, file$1, 67, 5, 1765);
     			set_style(span1, "font-weight", "bold");
-    			add_location(span1, file$1, 44, 7, 1146);
-    			attr_dev(div3, "class", "profile_sub_inner");
-    			add_location(div3, file$1, 43, 6, 1106);
-    			set_style(span2, "font-weight", "bold");
-    			add_location(span2, file$1, 47, 7, 1276);
+    			add_location(span1, file$1, 70, 7, 1899);
     			attr_dev(div4, "class", "profile_sub_inner");
-    			add_location(div4, file$1, 46, 6, 1236);
-    			attr_dev(div5, "class", "profile_sub_body");
-    			add_location(div5, file$1, 42, 5, 1068);
-    			attr_dev(div6, "class", "profile_background");
-    			add_location(div6, file$1, 40, 4, 973);
-    			attr_dev(div7, "class", "col-sm");
-    			add_location(div7, file$1, 39, 3, 947);
-    			attr_dev(div8, "class", "profile_sub_title");
-    			add_location(div8, file$1, 54, 5, 1452);
-    			set_style(div9, "font-size", "17px");
-    			set_style(div9, "font-weight", "bold");
-    			add_location(div9, file$1, 56, 6, 1556);
-    			set_style(div10, "font-size", "14px");
-    			set_style(div10, "color", "gray");
-    			add_location(div10, file$1, 57, 6, 1633);
-    			set_style(span3, "font-weight", "bold");
-    			add_location(span3, file$1, 58, 53, 1761);
-    			set_style(div11, "margin-top", "5px");
+    			add_location(div4, file$1, 69, 6, 1859);
+    			set_style(span2, "font-weight", "bold");
+    			add_location(span2, file$1, 73, 7, 2029);
+    			attr_dev(div5, "class", "profile_sub_inner");
+    			add_location(div5, file$1, 72, 6, 1989);
+    			attr_dev(div6, "class", "profile_sub_body");
+    			add_location(div6, file$1, 68, 5, 1821);
+    			attr_dev(div7, "class", "profile_background");
+    			add_location(div7, file$1, 66, 4, 1726);
+    			attr_dev(div8, "class", "col-sm");
+    			add_location(div8, file$1, 65, 3, 1700);
+    			attr_dev(div9, "class", "profile_sub_title");
+    			add_location(div9, file$1, 80, 5, 2205);
+    			set_style(div10, "font-size", "17px");
+    			set_style(div10, "font-weight", "bold");
+    			add_location(div10, file$1, 82, 6, 2309);
     			set_style(div11, "font-size", "14px");
-    			add_location(div11, file$1, 58, 6, 1714);
-    			attr_dev(div12, "class", "profile_meeting_inner");
-    			add_location(div12, file$1, 55, 5, 1513);
-    			set_style(div13, "font-size", "17px");
-    			set_style(div13, "font-weight", "bold");
-    			add_location(div13, file$1, 61, 6, 1895);
-    			set_style(div14, "font-size", "14px");
-    			set_style(div14, "color", "gray");
-    			add_location(div14, file$1, 62, 6, 1972);
-    			set_style(span4, "font-weight", "bold");
-    			add_location(span4, file$1, 63, 53, 2100);
-    			set_style(div15, "margin-top", "5px");
+    			set_style(div11, "color", "gray");
+    			add_location(div11, file$1, 83, 6, 2386);
+    			set_style(span3, "font-weight", "bold");
+    			add_location(span3, file$1, 84, 53, 2514);
+    			set_style(div12, "margin-top", "5px");
+    			set_style(div12, "font-size", "14px");
+    			add_location(div12, file$1, 84, 6, 2467);
+    			attr_dev(div13, "class", "profile_meeting_inner");
+    			add_location(div13, file$1, 81, 5, 2266);
+    			set_style(div14, "font-size", "17px");
+    			set_style(div14, "font-weight", "bold");
+    			add_location(div14, file$1, 87, 6, 2648);
     			set_style(div15, "font-size", "14px");
-    			add_location(div15, file$1, 63, 6, 2053);
-    			attr_dev(div16, "class", "profile_meeting_inner");
-    			add_location(div16, file$1, 60, 5, 1852);
-    			set_style(div17, "font-size", "17px");
-    			set_style(div17, "font-weight", "bold");
-    			add_location(div17, file$1, 66, 6, 2234);
-    			set_style(div18, "font-size", "14px");
-    			set_style(div18, "color", "gray");
-    			add_location(div18, file$1, 67, 6, 2311);
-    			set_style(span5, "font-weight", "bold");
-    			add_location(span5, file$1, 68, 53, 2439);
-    			set_style(div19, "margin-top", "5px");
+    			set_style(div15, "color", "gray");
+    			add_location(div15, file$1, 88, 6, 2725);
+    			set_style(span4, "font-weight", "bold");
+    			add_location(span4, file$1, 89, 53, 2853);
+    			set_style(div16, "margin-top", "5px");
+    			set_style(div16, "font-size", "14px");
+    			add_location(div16, file$1, 89, 6, 2806);
+    			attr_dev(div17, "class", "profile_meeting_inner");
+    			add_location(div17, file$1, 86, 5, 2605);
+    			set_style(div18, "font-size", "17px");
+    			set_style(div18, "font-weight", "bold");
+    			add_location(div18, file$1, 92, 6, 2987);
     			set_style(div19, "font-size", "14px");
-    			add_location(div19, file$1, 68, 6, 2392);
-    			attr_dev(div20, "class", "profile_meeting_inner");
-    			add_location(div20, file$1, 65, 5, 2191);
-    			attr_dev(div21, "class", "profile_background");
-    			add_location(div21, file$1, 53, 4, 1413);
-    			attr_dev(div22, "class", "col-sm");
-    			add_location(div22, file$1, 52, 3, 1387);
-    			attr_dev(div23, "class", "profile_sub_title");
-    			add_location(div23, file$1, 74, 5, 2616);
+    			set_style(div19, "color", "gray");
+    			add_location(div19, file$1, 93, 6, 3064);
+    			set_style(span5, "font-weight", "bold");
+    			add_location(span5, file$1, 94, 53, 3192);
+    			set_style(div20, "margin-top", "5px");
+    			set_style(div20, "font-size", "14px");
+    			add_location(div20, file$1, 94, 6, 3145);
+    			attr_dev(div21, "class", "profile_meeting_inner");
+    			add_location(div21, file$1, 91, 5, 2944);
+    			attr_dev(div22, "class", "profile_background");
+    			add_location(div22, file$1, 79, 4, 2166);
+    			attr_dev(div23, "class", "col-sm");
+    			add_location(div23, file$1, 78, 3, 2140);
+    			attr_dev(div24, "class", "profile_sub_title");
+    			add_location(div24, file$1, 100, 5, 3369);
     			attr_dev(h50, "class", "card-title");
-    			add_location(h50, file$1, 79, 8, 2767);
+    			add_location(h50, file$1, 105, 8, 3520);
     			attr_dev(p0, "class", "card-text");
-    			add_location(p0, file$1, 81, 9, 2853);
-    			attr_dev(div24, "class", "mypage-inner-body");
-    			add_location(div24, file$1, 80, 8, 2811);
-    			attr_dev(div25, "class", "card-body");
-    			add_location(div25, file$1, 78, 7, 2734);
-    			attr_dev(div26, "class", "card mypage-card");
-    			add_location(div26, file$1, 77, 6, 2695);
-    			attr_dev(div27, "class", "col");
-    			add_location(div27, file$1, 76, 5, 2670);
+    			add_location(p0, file$1, 107, 9, 3606);
+    			attr_dev(div25, "class", "mypage-inner-body");
+    			add_location(div25, file$1, 106, 8, 3564);
+    			attr_dev(div26, "class", "card-body");
+    			add_location(div26, file$1, 104, 7, 3487);
+    			attr_dev(div27, "class", "card mypage-card");
+    			add_location(div27, file$1, 103, 6, 3448);
+    			attr_dev(div28, "class", "col");
+    			add_location(div28, file$1, 102, 5, 3423);
     			attr_dev(h51, "class", "card-title");
-    			add_location(h51, file$1, 92, 8, 3166);
+    			add_location(h51, file$1, 118, 8, 3919);
     			attr_dev(p1, "class", "card-text");
-    			add_location(p1, file$1, 94, 9, 3252);
-    			attr_dev(div28, "class", "mypage-inner-body");
-    			add_location(div28, file$1, 93, 8, 3210);
-    			attr_dev(div29, "class", "card-body");
-    			add_location(div29, file$1, 91, 7, 3133);
-    			attr_dev(div30, "class", "card mypage-card");
-    			add_location(div30, file$1, 90, 6, 3094);
-    			attr_dev(div31, "class", "col");
-    			add_location(div31, file$1, 89, 5, 3069);
-    			attr_dev(div32, "class", "profile_background");
-    			add_location(div32, file$1, 73, 4, 2577);
-    			attr_dev(div33, "class", "col-sm");
-    			add_location(div33, file$1, 72, 3, 2551);
-    			attr_dev(div34, "class", "row");
-    			add_location(div34, file$1, 38, 2, 925);
-    			attr_dev(div35, "class", "container-fluid");
-    			add_location(div35, file$1, 37, 1, 892);
-    			attr_dev(div36, "class", "MypageBody");
-    			add_location(div36, file$1, 7, 0, 184);
+    			add_location(p1, file$1, 120, 9, 4005);
+    			attr_dev(div29, "class", "mypage-inner-body");
+    			add_location(div29, file$1, 119, 8, 3963);
+    			attr_dev(div30, "class", "card-body");
+    			add_location(div30, file$1, 117, 7, 3886);
+    			attr_dev(div31, "class", "card mypage-card");
+    			add_location(div31, file$1, 116, 6, 3847);
+    			attr_dev(div32, "class", "col");
+    			add_location(div32, file$1, 115, 5, 3822);
+    			attr_dev(div33, "class", "profile_background");
+    			add_location(div33, file$1, 99, 4, 3330);
+    			attr_dev(div34, "class", "col-sm");
+    			add_location(div34, file$1, 98, 3, 3304);
+    			attr_dev(div35, "class", "row");
+    			add_location(div35, file$1, 64, 2, 1678);
+    			attr_dev(div36, "class", "container-fluid");
+    			add_location(div36, file$1, 63, 1, 1645);
+    			attr_dev(div37, "class", "MypageBody");
+    			add_location(div37, file$1, 26, 0, 768);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div36, anchor);
-    			append_dev(div36, header);
-    			append_dev(header, div0);
-    			append_dev(div0, ul);
+    			insert_dev(target, div37, anchor);
+    			append_dev(div37, header);
+    			append_dev(header, div1);
+    			append_dev(div1, ul);
     			append_dev(ul, li0);
     			append_dev(li0, img);
     			append_dev(ul, t0);
@@ -15938,82 +15968,91 @@ var app = (function () {
     			append_dev(ul, t2);
     			append_dev(ul, li2);
     			append_dev(li2, a1);
-    			append_dev(div36, t4);
-    			append_dev(div36, div1);
-    			append_dev(div1, t5);
-    			append_dev(div1, span0);
-    			append_dev(div36, t7);
+    			append_dev(div1, t4);
+    			append_dev(div1, div0);
+    			append_dev(div37, t6);
+    			append_dev(div37, div2);
+    			append_dev(div2, t7);
+    			append_dev(div2, span0);
+    			append_dev(div37, t9);
+    			append_dev(div37, div36);
     			append_dev(div36, div35);
-    			append_dev(div35, div34);
-    			append_dev(div34, div7);
+    			append_dev(div35, div8);
+    			append_dev(div8, div7);
+    			append_dev(div7, div3);
+    			append_dev(div7, t11);
     			append_dev(div7, div6);
-    			append_dev(div6, div2);
-    			append_dev(div6, t9);
+    			append_dev(div6, div4);
+    			append_dev(div4, span1);
+    			append_dev(div4, t13);
+    			append_dev(div6, t14);
     			append_dev(div6, div5);
-    			append_dev(div5, div3);
-    			append_dev(div3, span1);
-    			append_dev(div3, t11);
-    			append_dev(div5, t12);
-    			append_dev(div5, div4);
-    			append_dev(div4, span2);
-    			append_dev(div4, t14);
-    			append_dev(div34, t15);
-    			append_dev(div34, div22);
+    			append_dev(div5, span2);
+    			append_dev(div5, t16);
+    			append_dev(div35, t17);
+    			append_dev(div35, div23);
+    			append_dev(div23, div22);
+    			append_dev(div22, div9);
+    			append_dev(div22, t19);
+    			append_dev(div22, div13);
+    			append_dev(div13, div10);
+    			append_dev(div13, t21);
+    			append_dev(div13, div11);
+    			append_dev(div13, t23);
+    			append_dev(div13, div12);
+    			append_dev(div12, span3);
+    			append_dev(div12, t25);
+    			append_dev(div22, t26);
+    			append_dev(div22, div17);
+    			append_dev(div17, div14);
+    			append_dev(div17, t28);
+    			append_dev(div17, div15);
+    			append_dev(div17, t30);
+    			append_dev(div17, div16);
+    			append_dev(div16, span4);
+    			append_dev(div16, t32);
+    			append_dev(div22, t33);
     			append_dev(div22, div21);
-    			append_dev(div21, div8);
-    			append_dev(div21, t17);
-    			append_dev(div21, div12);
-    			append_dev(div12, div9);
-    			append_dev(div12, t19);
-    			append_dev(div12, div10);
-    			append_dev(div12, t21);
-    			append_dev(div12, div11);
-    			append_dev(div11, span3);
-    			append_dev(div11, t23);
-    			append_dev(div21, t24);
-    			append_dev(div21, div16);
-    			append_dev(div16, div13);
-    			append_dev(div16, t26);
-    			append_dev(div16, div14);
-    			append_dev(div16, t28);
-    			append_dev(div16, div15);
-    			append_dev(div15, span4);
-    			append_dev(div15, t30);
-    			append_dev(div21, t31);
+    			append_dev(div21, div18);
+    			append_dev(div21, t35);
+    			append_dev(div21, div19);
+    			append_dev(div21, t37);
     			append_dev(div21, div20);
-    			append_dev(div20, div17);
-    			append_dev(div20, t33);
-    			append_dev(div20, div18);
-    			append_dev(div20, t35);
-    			append_dev(div20, div19);
-    			append_dev(div19, span5);
-    			append_dev(div19, t37);
-    			append_dev(div34, t38);
+    			append_dev(div20, span5);
+    			append_dev(div20, t39);
+    			append_dev(div35, t40);
+    			append_dev(div35, div34);
     			append_dev(div34, div33);
-    			append_dev(div33, div32);
-    			append_dev(div32, div23);
-    			append_dev(div32, t40);
-    			append_dev(div32, div27);
+    			append_dev(div33, div24);
+    			append_dev(div33, t42);
+    			append_dev(div33, div28);
+    			append_dev(div28, div27);
     			append_dev(div27, div26);
+    			append_dev(div26, h50);
+    			append_dev(div26, t44);
     			append_dev(div26, div25);
-    			append_dev(div25, h50);
-    			append_dev(div25, t42);
-    			append_dev(div25, div24);
-    			append_dev(div24, p0);
-    			append_dev(div32, t44);
+    			append_dev(div25, p0);
+    			append_dev(div33, t46);
+    			append_dev(div33, div32);
     			append_dev(div32, div31);
     			append_dev(div31, div30);
+    			append_dev(div30, h51);
+    			append_dev(div30, t48);
     			append_dev(div30, div29);
-    			append_dev(div29, h51);
-    			append_dev(div29, t46);
-    			append_dev(div29, div28);
-    			append_dev(div28, p1);
+    			append_dev(div29, p1);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div0, "click", /*click_handler*/ ctx[0], false, false, false, false);
+    				mounted = true;
+    			}
     		},
     		p: noop$1,
     		i: noop$1,
     		o: noop$1,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div36);
+    			if (detaching) detach_dev(div37);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -16031,6 +16070,21 @@ var app = (function () {
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Mypage', slots, []);
+
+    	onMount(() => {
+    		onAuthStateChanged(auth, user => {
+    			if (user) {
+    				// User is signed in, see docs for a list of available properties
+    				// https://firebase.google.com/docs/reference/js/auth.user
+    				user.uid;
+    			} else {
+    				// User is signed out
+    				// ...
+    				window.location.href = 'http://localhost:8080/signin'; // ...
+    			}
+    		});
+    	});
+
     	let baseUrl = document.baseURI;
     	let logoSrc = `${baseUrl}routes/logo.png`;
     	const writable_props = [];
@@ -16039,7 +16093,21 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Mypage> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Link, Navbar, baseUrl, logoSrc });
+    	const click_handler = () => {
+    		logout();
+    	};
+
+    	$$self.$capture_state = () => ({
+    		Link,
+    		Navbar,
+    		signOut,
+    		auth,
+    		signInWithEmailAndPassword,
+    		onAuthStateChanged,
+    		onMount,
+    		baseUrl,
+    		logoSrc
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('baseUrl' in $$props) baseUrl = $$props.baseUrl;
@@ -16050,7 +16118,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [];
+    	return [click_handler];
     }
 
     class Mypage extends SvelteComponentDev {
@@ -16068,6 +16136,8 @@ var app = (function () {
     }
 
     /* src/routes/Signup.svelte generated by Svelte v3.59.2 */
+
+    const { console: console_1 } = globals;
     const file = "src/routes/Signup.svelte";
 
     function create_fragment$1(ctx) {
@@ -16135,63 +16205,63 @@ var app = (function () {
     			span1.textContent = "Signin";
     			if (!src_url_equal(img.src, img_src_value = "https://cdn.koreaconsumer.or.kr/news/photo/202306/642_1408_3024.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			add_location(img, file, 39, 8, 1158);
+    			add_location(img, file, 55, 8, 1745);
     			attr_dev(div0, "class", "signin-logo");
-    			add_location(div0, file, 36, 0, 1108);
+    			add_location(div0, file, 52, 0, 1695);
     			attr_dev(div1, "class", "signin-title");
-    			add_location(div1, file, 45, 12, 1386);
+    			add_location(div1, file, 61, 12, 1973);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "placeholder", "Email");
     			attr_dev(input0, "aria-label", "Sizing example input");
     			attr_dev(input0, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input0, file, 51, 16, 1649);
+    			add_location(input0, file, 67, 16, 2236);
     			attr_dev(div2, "class", "input-group mb-3 mt-3");
-    			add_location(div2, file, 49, 12, 1473);
+    			add_location(div2, file, 65, 12, 2060);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "placeholder", "Name");
     			attr_dev(input1, "aria-label", "Sizing example input");
     			attr_dev(input1, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input1, file, 56, 16, 2019);
+    			add_location(input1, file, 72, 16, 2606);
     			attr_dev(div3, "class", "input-group mb-3 mt-3");
-    			add_location(div3, file, 54, 12, 1843);
+    			add_location(div3, file, 70, 12, 2430);
     			attr_dev(input2, "type", "password");
     			attr_dev(input2, "placeholder", "Password");
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "aria-label", "Sizing example input");
     			attr_dev(input2, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input2, file, 61, 16, 2385);
+    			add_location(input2, file, 77, 16, 2972);
     			attr_dev(div4, "class", "input-group mb-3");
-    			add_location(div4, file, 59, 12, 2211);
+    			add_location(div4, file, 75, 12, 2798);
     			attr_dev(input3, "type", "password");
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "placeholder", "Confirm Password");
     			attr_dev(input3, "aria-label", "Sizing example input");
     			attr_dev(input3, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input3, file, 66, 16, 2771);
+    			add_location(input3, file, 82, 16, 3358);
     			attr_dev(div5, "class", "input-group mb-3");
-    			add_location(div5, file, 64, 12, 2589);
+    			add_location(div5, file, 80, 12, 3176);
     			attr_dev(span0, "id", "button_loading");
     			attr_dev(span0, "class", "spinner-border spinner-border-sm");
     			attr_dev(span0, "role", "status");
     			attr_dev(span0, "aria-hidden", "true");
     			set_style(span0, "display", "none");
-    			add_location(span0, file, 70, 16, 3062);
-    			attr_dev(button, "class", "btn btn-primary margin");
-    			add_location(button, file, 69, 12, 2961);
+    			add_location(span0, file, 86, 16, 3663);
+    			attr_dev(button, "class", "btn btn-primary margin signup_button");
+    			add_location(button, file, 85, 12, 3548);
     			set_style(span1, "font-weight", "bold");
     			set_style(span1, "cursor", "pointer");
     			attr_dev(span1, "onclick", "window.location.href='http://localhost:8080/signin'");
-    			add_location(span1, file, 76, 41, 3360);
+    			add_location(span1, file, 92, 41, 3961);
     			set_style(div6, "text-align", "center");
-    			add_location(div6, file, 73, 12, 3254);
+    			add_location(div6, file, 89, 12, 3855);
     			attr_dev(div7, "class", "card-body");
-    			add_location(div7, file, 43, 8, 1335);
+    			add_location(div7, file, 59, 8, 1922);
     			attr_dev(div8, "class", "header");
-    			add_location(div8, file, 42, 4, 1305);
+    			add_location(div8, file, 58, 4, 1892);
     			attr_dev(div9, "class", "card align signin-card");
-    			add_location(div9, file, 41, 0, 1263);
+    			add_location(div9, file, 57, 0, 1850);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16277,6 +16347,23 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Signup', slots, []);
+
+    	onMount(() => {
+    		onAuthStateChanged(auth, user => {
+    			if (user) {
+    				// User is signed in, see docs for a list of available properties
+    				// https://firebase.google.com/docs/reference/js/auth.user
+    				user.uid;
+
+    				window.location.href = 'http://localhost:8080/';
+    			} else {
+    				// User is signed out
+    				// ...
+    				console.log("logged out"); // ...
+    			}
+    		});
+    	});
+
     	let email;
     	let password;
     	let name;
@@ -16292,15 +16379,16 @@ var app = (function () {
     			document.getElementById("button_loading").style.display = "none";
     		}).catch(error => {
     			error.code; // ...
-    			error.message;
+    			const errorMessage = error.message;
     			document.getElementById("button_loading").style.display = "none";
+    			alert(errorMessage);
     		}); // ..
     	};
 
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Signup> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Signup> was created with unknown prop '${key}'`);
     	});
 
     	function input0_input_handler() {
@@ -16323,6 +16411,8 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		auth,
     		createUserWithEmailAndPassword,
+    		onAuthStateChanged,
+    		onMount,
     		email,
     		password,
     		name,

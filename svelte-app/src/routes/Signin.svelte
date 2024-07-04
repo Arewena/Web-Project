@@ -15,7 +15,7 @@
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user
             const uid = user.uid;
-            console.log(uid)
+            window.location.href='http://localhost:8080/'
             // ...
         } else {
             // User is signed out
@@ -76,7 +76,7 @@
                         Remember this account?
                     </label>
                 </div>
-                <button on:click={() => doRequest(email, password)} class="btn btn-primary margin">
+                <button on:click={() => doRequest(email, password)} class="btn btn-primary margin login_button">
                     <span id="button_loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
                     Log in
                 </button>

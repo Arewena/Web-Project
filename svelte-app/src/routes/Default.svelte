@@ -3,7 +3,24 @@
     import { signOut } from "firebase/auth";
 	import { auth } from "../firebase/firebase";
 	import Navbar from "../Navbar.svelte";
+    import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+    import { onMount } from 'svelte';
 	let baseUrl = document.baseURI;
+
+	onMount(() => {
+		onAuthStateChanged(auth, (user) => {
+		if (user) {
+			// User is signed in, see docs for a list of available properties
+			// https://firebase.google.com/docs/reference/js/auth.user
+			const uid = user.uid;
+			// ...
+		} else {
+			// User is signed out
+			// ...
+			window.location.href='http://localhost:8080/signin'
+		}
+		});
+	})
 
 	function openModal(text) {
 		document.getElementById("modal-body").innerHTML = text;
@@ -48,9 +65,10 @@
 			</ul>
 			<div
 				class="px-2 text-secondary"
+				style="cursor:pointer"
 				on:click={() => {logout()}}
 			>
-				Signout
+				Sign Out
 			</div>
 		</div>
 	</header>

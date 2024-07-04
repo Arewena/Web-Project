@@ -6,6 +6,24 @@
     import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
     import { onMount } from 'svelte';
 
+	function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
+
+	let email = getCookie('email')
+	let name = getCookie('name')
 	onMount(() => {
 		onAuthStateChanged(auth, (user) => {
 		if (user) {
@@ -59,7 +77,7 @@
 		</div>
 	</header>
 	<div class="profile_name">
-		Hello <span style="font-weight: bold;">Daniel</span>
+		Hello <span style="font-weight: bold;">{name}</span>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
@@ -68,10 +86,10 @@
 					<div class="profile_sub_title">Student Info</div>
 					<div class="profile_sub_body">
 						<div class="profile_sub_inner">
-							<span style="font-weight: bold;">Email:</span> jingee@logncoding.com
+							<span style="font-weight: bold;">Email:</span> {email}
 						</div>
 						<div class="profile_sub_inner">
-							<span style="font-weight: bold;">Name:</span> Daniel Kim
+							<span style="font-weight: bold;">Name:</span> {name}
 						</div>
 					</div>
 				</div>

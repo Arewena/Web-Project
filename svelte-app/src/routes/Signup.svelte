@@ -3,17 +3,47 @@
 </style>
 
 <script>
-    import { auth } from "../firebase/firebase";
-    import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+    import { auth, db } from "../firebase/firebase";
+    import { createUserWithEmailAndPassword, onAuthStateChanged, getAuth } from "firebase/auth";
+    import { doc, setDoc, getDoc } from "firebase/firestore"; 
     import { onMount } from 'svelte';
 
+    function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
+
     onMount(() => {
-        onAuthStateChanged(auth, (user) => {
+        onAuthStateChanged(auth, async(user) => {
         if (user) {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user
             const uid = user.uid;
-            window.location.href='http://localhost:8080/'
+            var cookieEmail = getCookie('email')
+            if(user.email == cookieEmail)
+            {
+                window.location.href='http://localhost:8080/'
+            }
+            else
+            {
+                signOut(auth).then(() => {
+                }).catch((error) => {
+                // An error happened.
+                });
+            }
+
+            
             // ...
         } else {
             // User is signed out
@@ -25,13 +55,20 @@
     let email;
     let password;
     let name;
-    const doRequest = async (email, password) => {
+    const doRequest = (email, password) => {
         document.getElementById("button_loading").style.display = "inline-block"
         createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then(async(userCredential) => {
             // Signed up 
             const user = userCredential.user;
-            window.location.href='http://localhost:8080/signin'
+            
+            await setDoc(doc(db, "users", email), {
+                name: name,
+                email: email
+            });
+            document.cookie = "email="+email;
+            document.cookie = "name="+name;
+            window.location.href='http://localhost:8080/'
             document.getElementById("button_loading").style.display = "none"
             // ...
         })

@@ -13,6 +13,25 @@
 	var clubs = []
 	var clubLoading = false
 
+	function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
+
+	let email = getCookie('email')
+	let name = getCookie('name')
+
 	const getClubs = async() => {
 		clubLoading = true
 		const querySnapshot = await getDocs(collection(db, "clubs"));
@@ -96,6 +115,9 @@
 			</div>
 		</div>
 	</header>
+	<div class="profile_name">
+		Hello <span style="font-weight: bold;">{name}</span>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm">

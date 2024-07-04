@@ -6,6 +6,7 @@
 	import Mypage from './routes/Mypage.svelte';
 	import Signup from './routes/Signup.svelte';
 	import Admin from './routes/admin.svelte';
+	import ClubAdmin from './routes/club_admin.svelte';
 
 
 </script>
@@ -21,4 +22,5 @@
 		<Route path="/signin" component={Signin} />
 		<Route path="/signup" component={Signup} />
 		<Route path="/admin" component={Admin} />
+		<Route path="/club_admin" component={ClubAdmin} />
 </Router>

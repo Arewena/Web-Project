@@ -9,13 +9,39 @@
     let email;
     let password;
 
+    function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
+    
     onMount(() => {
         onAuthStateChanged(auth, (user) => {
         if (user) {
-            // User is signed in, see docs for a list of available properties
-            // https://firebase.google.com/docs/reference/js/auth.user
+
             const uid = user.uid;
-            window.location.href='http://localhost:8080/'
+            var cookieEmail = getCookie('email')
+            if(user.email == cookieEmail)
+            {
+                window.location.href='http://localhost:8080/'
+            }
+            else
+            {
+                signOut(auth).then(() => {
+                }).catch((error) => {
+                // An error happened.
+                });
+            }
             // ...
         } else {
             // User is signed out

@@ -1,11 +1,25 @@
 <script>
 	import { Link } from "svelte-routing";
     import { signOut } from "firebase/auth";
-	import { auth } from "../firebase/firebase";
+	import { auth, db } from "../firebase/firebase";
+	import { collection, getDocs } from "firebase/firestore";
 	import Navbar from "../Navbar.svelte";
     import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
     import { onMount } from 'svelte';
 	let baseUrl = document.baseURI;
+	var clubs = []
+	var loading = false
+
+	const getClubs = async() => {
+		loading = true
+		const querySnapshot = await getDocs(collection(db, "clubs"));
+		querySnapshot.forEach((doc) => {
+		// doc.data() is never undefined for query doc snapshots
+			clubs.push(doc.data())
+			clubs = clubs;
+		})
+		loading = false
+	}
 
 	onMount(() => {
 		onAuthStateChanged(auth, (user) => {
@@ -20,6 +34,7 @@
 			window.location.href='http://localhost:8080/signin'
 		}
 		});
+		getClubs();
 	})
 
 	function openModal(text) {
@@ -90,123 +105,42 @@
 
 	<div style="padding: 50px;" id="home_detail">
 		<h1 class="middle">Clubs</h1>
-
+		{#if loading == true}
+			<div class="spinner-border" role="status" style="margin-left: auto; margin-right: auto; display: block; margin-top: 50px;">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		{/if}
 		<div class="row row-cols-1 row-cols-md-3 g-4 float">
-			<div class="col">
-				<div class="card home-card">
-					<div class="card-body">
-						<h5 class="card-title">Club A</h5>
-						<div class="card-inner-body">
-							<p class="card-text">
-								This is a longer card with supporting text below as
-								a natural lead-in to additional content. This
-								content is a little bit longer.
-							</p>
-							<div class="button-container">
-								<button
-									type="button"
-									class="btn btn-primary width">Apply</button
-								>
-								<button 
-									type="button"
-									class="btn btn-secondary width" 
-									data-bs-toggle="modal" 
-									data-bs-target="#staticBackdrop"
-									on:click={() => {openModal("Card 1")}}
-								>
-									Details
-								</button>
+			
+			{#each clubs as club}
+				<div class="col">
+					<div class="card home-card">
+						<div class="card-body">
+							<h5 class="card-title">{club.name}</h5>
+							<div class="card-inner-body">
+								<p class="card-text">
+									{club.short_description}
+								</p>
+								<div class="button-container">
+									<button
+										type="button"
+										class="btn btn-primary width">Apply</button
+									>
+									<button 
+										type="button"
+										class="btn btn-secondary width" 
+										data-bs-toggle="modal" 
+										data-bs-target="#staticBackdrop"
+										on:click={() => {openModal(club.long_description)}}
+									>
+										Details
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col">
-				<div class="card home-card">
-					<div class="card-body">
-						<h5 class="card-title">Club B</h5>
-						<div class="card-inner-body">
-							<p class="card-text">
-								This is a longer card with supporting text below as
-								a natural lead-in to additional content. This
-								content is a little bit longer.
-							</p>
-							<div class="button-container">
-								<button
-									type="button"
-									class="btn btn-primary width">Apply</button
-								>
-								<button 
-									type="button"
-									class="btn btn-secondary width" 
-									data-bs-toggle="modal" 
-									data-bs-target="#staticBackdrop"
-									on:click={() => {openModal("Card 2")}}
-								>
-									Details
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card home-card">
-					<div class="card-body">
-						<h5 class="card-title">Club C</h5>
-						<div class="card-inner-body">
-							<p class="card-text">
-								This is a longer card with supporting text below as
-								a natural lead-in to additional content.
-							</p>
-							<div class="button-container">
-								<button
-									type="button"
-									class="btn btn-primary width">Apply</button
-								>
-								<button 
-									type="button"
-									class="btn btn-secondary width" 
-									data-bs-toggle="modal" 
-									data-bs-target="#staticBackdrop"
-									on:click={() => {openModal("Card 3")}}
-								>
-									Details
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card home-card">
-					<div class="card-body">
-						<h5 class="card-title">Club D</h5>
-						<div class="card-inner-body">
-							<p class="card-text">
-								This is a longer card with supporting text below as
-								a natural lead-in to additional content. This
-								content is a little bit longer.
-							</p>
-							<div class="button-container">
-								<button
-									type="button"
-									class="btn btn-primary width">Apply</button
-								>
-								<button 
-									type="button"
-									class="btn btn-secondary width" 
-									data-bs-toggle="modal" 
-									data-bs-target="#staticBackdrop"
-									on:click={() => {openModal("Card 4")}}
-								>
-									Details
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			{/each}
 		</div>
 	</div>
 </div>

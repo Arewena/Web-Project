@@ -3,6 +3,7 @@ nav ul.svelte-1931dmp li.svelte-1931dmp{display:inline;margin-right:10px}
 @import '../app.css';
 @import "../app.css";
 @import '../app.css';
+@import "../app.css";
 @import './main.css';
 @charset "UTF-8";/*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
@@ -208,7 +209,7 @@ table {
 }
 
 .home-card {
-    height: 250px;
+    height: 300px;
     background-color: #133757;
 }
 
@@ -218,7 +219,7 @@ table {
     margin-top: 20px;
     border-radius: 5px;
     color: #7b7c7d;
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

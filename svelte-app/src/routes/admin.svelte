@@ -3,7 +3,7 @@
 	import Navbar from "../Navbar.svelte";
     import { signOut } from "firebase/auth";
 	import { auth, db } from "../firebase/firebase";
-	import { collection, getDocs } from "firebase/firestore";
+	import { collection, getDocs, addDoc } from "firebase/firestore";
     import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 	import { onMount } from 'svelte';
 	let baseUrl = document.baseURI;
@@ -16,6 +16,20 @@
 	let short_description;
 	let long_description;
 	let club_name;
+
+	const addClub = async () => {
+		var shouldAdd = confirm("Are you sure you would like to add this club?")
+		if(shouldAdd)
+		{
+			const docRef = await addDoc(collection(db, "applications"), {
+				name: club_name,
+				short_description: short_description,
+				long_description: long_description,
+				club_owner: email
+			});
+			alert("Club added.")
+		}
+	}
 
 	const getClubs = async() => {
 		clubLoading = true
@@ -183,7 +197,7 @@
 		</div>
 		<div class="modal-footer">
 		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		  <button type="button" class="btn btn-primary">Add</button>
+		  <button type="button" class="btn btn-primary" on:click={() => addClub()}>Add</button>
 		</div>
 	  </div>
 	</div>

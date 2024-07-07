@@ -28121,17 +28121,17 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[18] = list[i];
+    	child_ctx[20] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[21] = list[i];
+    	child_ctx[23] = list[i];
     	return child_ctx;
     }
 
-    // (108:5) {#if userLoading == true}
+    // (122:5) {#if userLoading == true}
     function create_if_block_1$1(ctx) {
     	let div;
     	let span;
@@ -28142,14 +28142,14 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Loading...";
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1, 109, 7, 2839);
+    			add_location(span, file$1, 123, 7, 3202);
     			attr_dev(div, "class", "spinner-border");
     			attr_dev(div, "role", "status");
     			set_style(div, "margin-left", "auto");
     			set_style(div, "margin-right", "auto");
     			set_style(div, "display", "block");
     			set_style(div, "margin-top", "50px");
-    			add_location(div, file$1, 108, 6, 2708);
+    			add_location(div, file$1, 122, 6, 3071);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -28164,22 +28164,22 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(108:5) {#if userLoading == true}",
+    		source: "(122:5) {#if userLoading == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (113:5) {#each users as user}
+    // (127:5) {#each users as user}
     function create_each_block_1$1(ctx) {
     	let div2;
     	let div0;
-    	let t0_value = /*user*/ ctx[21].name + "";
+    	let t0_value = /*user*/ ctx[23].name + "";
     	let t0;
     	let t1;
     	let div1;
-    	let t2_value = /*user*/ ctx[21].email + "";
+    	let t2_value = /*user*/ ctx[23].email + "";
     	let t2;
     	let t3;
 
@@ -28194,10 +28194,10 @@ var app = (function () {
     			t3 = space();
     			set_style(div0, "font-size", "17px");
     			set_style(div0, "font-weight", "bold");
-    			add_location(div0, file$1, 114, 7, 2987);
-    			add_location(div1, file$1, 115, 7, 3061);
+    			add_location(div0, file$1, 128, 7, 3350);
+    			add_location(div1, file$1, 129, 7, 3424);
     			attr_dev(div2, "class", "profile_meeting_inner");
-    			add_location(div2, file$1, 113, 6, 2944);
+    			add_location(div2, file$1, 127, 6, 3307);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -28209,8 +28209,8 @@ var app = (function () {
     			append_dev(div2, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*users*/ 1 && t0_value !== (t0_value = /*user*/ ctx[21].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*users*/ 1 && t2_value !== (t2_value = /*user*/ ctx[21].email + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*users*/ 1 && t0_value !== (t0_value = /*user*/ ctx[23].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*users*/ 1 && t2_value !== (t2_value = /*user*/ ctx[23].email + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
@@ -28221,14 +28221,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(113:5) {#each users as user}",
+    		source: "(127:5) {#each users as user}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (134:5) {#if clubLoading == true}
+    // (148:5) {#if clubLoading == true}
     function create_if_block$1(ctx) {
     	let div;
     	let span;
@@ -28239,14 +28239,14 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Loading...";
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1, 135, 7, 3649);
+    			add_location(span, file$1, 149, 7, 4012);
     			attr_dev(div, "class", "spinner-border");
     			attr_dev(div, "role", "status");
     			set_style(div, "margin-left", "auto");
     			set_style(div, "margin-right", "auto");
     			set_style(div, "display", "block");
     			set_style(div, "margin-top", "50px");
-    			add_location(div, file$1, 134, 6, 3518);
+    			add_location(div, file$1, 148, 6, 3881);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -28261,25 +28261,25 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(134:5) {#if clubLoading == true}",
+    		source: "(148:5) {#if clubLoading == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:5) {#each clubs as club}
+    // (153:5) {#each clubs as club}
     function create_each_block$1(ctx) {
     	let div3;
     	let div2;
     	let div1;
     	let h5;
-    	let t0_value = /*club*/ ctx[18].name + "";
+    	let t0_value = /*club*/ ctx[20].name + "";
     	let t0;
     	let t1;
     	let div0;
     	let p;
-    	let t2_value = /*club*/ ctx[18].short_description + "";
+    	let t2_value = /*club*/ ctx[20].short_description + "";
     	let t2;
     	let t3;
 
@@ -28296,17 +28296,17 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(h5, "class", "card-title");
-    			add_location(h5, file$1, 142, 9, 3851);
+    			add_location(h5, file$1, 156, 9, 4214);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 144, 10, 3942);
+    			add_location(p, file$1, 158, 10, 4305);
     			attr_dev(div0, "class", "mypage-inner-body");
-    			add_location(div0, file$1, 143, 9, 3900);
+    			add_location(div0, file$1, 157, 9, 4263);
     			attr_dev(div1, "class", "card-body");
-    			add_location(div1, file$1, 141, 8, 3818);
+    			add_location(div1, file$1, 155, 8, 4181);
     			attr_dev(div2, "class", "card mypage-card");
-    			add_location(div2, file$1, 140, 7, 3779);
+    			add_location(div2, file$1, 154, 7, 4142);
     			attr_dev(div3, "class", "col");
-    			add_location(div3, file$1, 139, 6, 3754);
+    			add_location(div3, file$1, 153, 6, 4117);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -28321,8 +28321,8 @@ var app = (function () {
     			append_dev(div3, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*clubs*/ 4 && t0_value !== (t0_value = /*club*/ ctx[18].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*clubs*/ 4 && t2_value !== (t2_value = /*club*/ ctx[18].short_description + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*clubs*/ 4 && t0_value !== (t0_value = /*club*/ ctx[20].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*clubs*/ 4 && t2_value !== (t2_value = /*club*/ ctx[20].short_description + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
@@ -28333,7 +28333,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(139:5) {#each clubs as club}",
+    		source: "(153:5) {#each clubs as club}",
     		ctx
     	});
 
@@ -28495,108 +28495,108 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
-    			add_location(img, file$1, 83, 5, 2121);
-    			add_location(li0, file$1, 82, 4, 2111);
+    			add_location(img, file$1, 97, 5, 2484);
+    			add_location(li0, file$1, 96, 4, 2474);
     			attr_dev(a, "href", "/admin");
     			attr_dev(a, "class", "nav-link px-2 text-secondary text-black");
     			set_style(a, "font-weight", "bold");
-    			add_location(a, file$1, 90, 5, 2233);
-    			add_location(li1, file$1, 89, 4, 2223);
+    			add_location(a, file$1, 104, 5, 2596);
+    			add_location(li1, file$1, 103, 4, 2586);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
     			set_style(ul, "align-items", "center");
-    			add_location(ul, file$1, 78, 3, 1984);
+    			add_location(ul, file$1, 92, 3, 2347);
     			attr_dev(div0, "class", "px-2 text-secondary");
     			set_style(div0, "cursor", "pointer");
-    			add_location(div0, file$1, 93, 3, 2357);
+    			add_location(div0, file$1, 107, 3, 2720);
     			set_style(div1, "height", "auto");
     			set_style(div1, "display", "flex");
     			set_style(div1, "align-items", "center");
-    			add_location(div1, file$1, 77, 2, 1918);
+    			add_location(div1, file$1, 91, 2, 2281);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$1, 76, 1, 1872);
+    			add_location(header, file$1, 90, 1, 2235);
     			attr_dev(div2, "class", "profile_sub_title");
-    			add_location(div2, file$1, 106, 5, 2618);
+    			add_location(div2, file$1, 120, 5, 2981);
     			attr_dev(div3, "class", "profile_background");
-    			add_location(div3, file$1, 105, 4, 2580);
+    			add_location(div3, file$1, 119, 4, 2943);
     			attr_dev(div4, "class", "col-sm");
-    			add_location(div4, file$1, 104, 3, 2555);
+    			add_location(div4, file$1, 118, 3, 2918);
     			attr_dev(div5, "class", "profile_sub_title");
-    			add_location(div5, file$1, 123, 6, 3228);
+    			add_location(div5, file$1, 137, 6, 3591);
     			attr_dev(button0, "class", "btn btn-primary margin");
     			attr_dev(button0, "data-bs-toggle", "modal");
     			attr_dev(button0, "data-bs-target", "#staticBackdrop");
-    			add_location(button0, file$1, 124, 6, 3287);
+    			add_location(button0, file$1, 138, 6, 3650);
     			attr_dev(div6, "class", "admin_add");
-    			add_location(div6, file$1, 122, 5, 3198);
+    			add_location(div6, file$1, 136, 5, 3561);
     			attr_dev(div7, "class", "profile_background");
-    			add_location(div7, file$1, 121, 4, 3160);
+    			add_location(div7, file$1, 135, 4, 3523);
     			attr_dev(div8, "class", "col-sm");
-    			add_location(div8, file$1, 120, 3, 3135);
+    			add_location(div8, file$1, 134, 3, 3498);
     			attr_dev(div9, "class", "row");
-    			add_location(div9, file$1, 103, 2, 2534);
+    			add_location(div9, file$1, 117, 2, 2897);
     			attr_dev(div10, "class", "container-fluid");
-    			add_location(div10, file$1, 102, 1, 2502);
+    			add_location(div10, file$1, 116, 1, 2865);
     			attr_dev(div11, "class", "MypageBody");
-    			add_location(div11, file$1, 75, 0, 1846);
+    			add_location(div11, file$1, 89, 0, 2209);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "staticBackdropLabel");
-    			add_location(h5, file$1, 162, 4, 4405);
+    			add_location(h5, file$1, 176, 4, 4768);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn-close");
     			attr_dev(button1, "data-bs-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$1, 163, 4, 4471);
+    			add_location(button1, file$1, 177, 4, 4834);
     			attr_dev(div12, "class", "modal-header");
-    			add_location(div12, file$1, 161, 2, 4374);
+    			add_location(div12, file$1, 175, 2, 4737);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Email");
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "aria-label", "Sizing example input");
     			attr_dev(input0, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input0, file$1, 168, 4, 4769);
+    			add_location(input0, file$1, 182, 4, 5132);
     			attr_dev(div13, "class", "input-group mb-3 mt-3");
-    			add_location(div13, file$1, 166, 3, 4619);
+    			add_location(div13, file$1, 180, 3, 4982);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "placeholder", "Club Name");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "aria-label", "Sizing example input");
     			attr_dev(input1, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input1, file$1, 172, 4, 5091);
+    			add_location(input1, file$1, 186, 4, 5454);
     			attr_dev(div14, "class", "input-group mb-3 mt-3");
-    			add_location(div14, file$1, 170, 3, 4941);
+    			add_location(div14, file$1, 184, 3, 5304);
     			attr_dev(textarea0, "type", "text");
     			attr_dev(textarea0, "placeholder", "Short Description");
     			attr_dev(textarea0, "class", "form-control");
     			attr_dev(textarea0, "aria-label", "Sizing example input");
     			attr_dev(textarea0, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(textarea0, file$1, 176, 4, 5421);
+    			add_location(textarea0, file$1, 190, 4, 5784);
     			attr_dev(div15, "class", "input-group mb-3 mt-3");
-    			add_location(div15, file$1, 174, 3, 5271);
+    			add_location(div15, file$1, 188, 3, 5634);
     			attr_dev(textarea1, "type", "text");
     			attr_dev(textarea1, "placeholder", "Long Description");
     			attr_dev(textarea1, "class", "form-control");
     			attr_dev(textarea1, "aria-label", "Sizing example input");
     			attr_dev(textarea1, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(textarea1, file$1, 180, 4, 5781);
+    			add_location(textarea1, file$1, 194, 4, 6144);
     			attr_dev(div16, "class", "input-group mb-3 mt-3");
-    			add_location(div16, file$1, 178, 3, 5631);
+    			add_location(div16, file$1, 192, 3, 5994);
     			attr_dev(div17, "class", "modal-body");
     			attr_dev(div17, "id", "modal-body");
-    			add_location(div17, file$1, 165, 2, 4575);
+    			add_location(div17, file$1, 179, 2, 4938);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-secondary");
     			attr_dev(button2, "data-bs-dismiss", "modal");
-    			add_location(button2, file$1, 184, 4, 6028);
+    			add_location(button2, file$1, 198, 4, 6391);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-primary");
-    			add_location(button3, file$1, 185, 4, 6119);
+    			add_location(button3, file$1, 199, 4, 6482);
     			attr_dev(div18, "class", "modal-footer");
-    			add_location(div18, file$1, 183, 2, 5997);
+    			add_location(div18, file$1, 197, 2, 6360);
     			attr_dev(div19, "class", "modal-content");
-    			add_location(div19, file$1, 160, 3, 4344);
+    			add_location(div19, file$1, 174, 3, 4707);
     			attr_dev(div20, "class", "modal-dialog");
-    			add_location(div20, file$1, 159, 1, 4314);
+    			add_location(div20, file$1, 173, 1, 4677);
     			attr_dev(div21, "class", "modal fade");
     			attr_dev(div21, "id", "staticBackdrop");
     			attr_dev(div21, "data-bs-backdrop", "static");
@@ -28604,7 +28604,7 @@ var app = (function () {
     			attr_dev(div21, "tabindex", "-1");
     			attr_dev(div21, "aria-labelledby", "staticBackdropLabel");
     			attr_dev(div21, "aria-hidden", "true");
-    			add_location(div21, file$1, 158, 0, 4146);
+    			add_location(div21, file$1, 172, 0, 4509);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -28687,12 +28687,13 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(div0, "click", /*click_handler*/ ctx[9], false, false, false, false),
+    					listen_dev(div0, "click", /*click_handler*/ ctx[10], false, false, false, false),
     					listen_dev(button0, "click", click_handler_1, false, false, false, false),
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[11]),
-    					listen_dev(textarea0, "input", /*textarea0_input_handler*/ ctx[12]),
-    					listen_dev(textarea1, "input", /*textarea1_input_handler*/ ctx[13])
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[11]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[12]),
+    					listen_dev(textarea0, "input", /*textarea0_input_handler*/ ctx[13]),
+    					listen_dev(textarea1, "input", /*textarea1_input_handler*/ ctx[14]),
+    					listen_dev(button3, "click", /*click_handler_2*/ ctx[15], false, false, false, false)
     				];
 
     				mounted = true;
@@ -28829,6 +28830,21 @@ var app = (function () {
     	let long_description;
     	let club_name;
 
+    	const addClub = async () => {
+    		var shouldAdd = confirm("Are you sure you would like to add this club?");
+
+    		if (shouldAdd) {
+    			await addDoc(collection(db, "applications"), {
+    				name: club_name,
+    				short_description,
+    				long_description,
+    				club_owner: email
+    			});
+
+    			alert("Club added.");
+    		}
+    	};
+
     	const getClubs = async () => {
     		$$invalidate(3, clubLoading = true);
     		const querySnapshot = await getDocs(collection(db, "clubs"));
@@ -28916,6 +28932,8 @@ var app = (function () {
     		$$invalidate(6, long_description);
     	}
 
+    	const click_handler_2 = () => addClub();
+
     	$$self.$capture_state = () => ({
     		Link,
     		Navbar,
@@ -28924,6 +28942,7 @@ var app = (function () {
     		db,
     		collection,
     		getDocs,
+    		addDoc,
     		signInWithEmailAndPassword,
     		onAuthStateChanged,
     		onMount,
@@ -28937,6 +28956,7 @@ var app = (function () {
     		short_description,
     		long_description,
     		club_name,
+    		addClub,
     		getClubs,
     		getUsers,
     		logout
@@ -28968,12 +28988,14 @@ var app = (function () {
     		short_description,
     		long_description,
     		club_name,
+    		addClub,
     		logout,
     		click_handler,
     		input0_input_handler,
     		input1_input_handler,
     		textarea0_input_handler,
-    		textarea1_input_handler
+    		textarea1_input_handler,
+    		click_handler_2
     	];
     }
 

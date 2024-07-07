@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "firebase": "^10.12.2",
     "sirv-cli": "^2.0.2",
     "svelte-spa-router": "^4.0.1"

@@ -25961,6 +25961,20 @@ var app = (function () {
     }
 
     /**
+     * Add a new document to specified `CollectionReference` with the given data,
+     * assigning it a document ID automatically.
+     *
+     * @param reference - A reference to the collection to add this document to.
+     * @param data - An Object containing the data for the new document.
+     * @returns A `Promise` resolved with a `DocumentReference` pointing to the
+     * newly created document after it has been written to the backend (Note that it
+     * won't resolve while you're offline).
+     */ function addDoc(e, t) {
+        const n = __PRIVATE_cast(e.firestore, Firestore), r = doc(e), i = __PRIVATE_applyFirestoreDataConverter(e.converter, t);
+        return executeWrite(n, [ __PRIVATE_parseSetData(__PRIVATE_newUserDataReader(e.firestore), "addDoc", r._key, i, null !== e.converter, {}).toMutation(r._key, Precondition.exists(!1)) ]).then((() => r));
+    }
+
+    /**
      * Locally writes `mutations` on the async queue.
      * @internal
      */ function executeWrite(e, t) {
@@ -26143,11 +26157,11 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
-    // (108:2) {#if loading == true}
+    // (141:2) {#if loading == true}
     function create_if_block$2(ctx) {
     	let div;
     	let span;
@@ -26158,14 +26172,14 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Loading...";
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$6, 109, 4, 2835);
+    			add_location(span, file$6, 142, 4, 3765);
     			attr_dev(div, "class", "spinner-border");
     			attr_dev(div, "role", "status");
     			set_style(div, "margin-left", "auto");
     			set_style(div, "margin-right", "auto");
     			set_style(div, "display", "block");
     			set_style(div, "margin-top", "50px");
-    			add_location(div, file$6, 108, 3, 2706);
+    			add_location(div, file$6, 141, 3, 3636);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -26180,25 +26194,25 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(108:2) {#if loading == true}",
+    		source: "(141:2) {#if loading == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (115:3) {#each clubs as club}
+    // (148:3) {#each clubs as club}
     function create_each_block$2(ctx) {
     	let div4;
     	let div3;
     	let div2;
     	let h5;
-    	let t0_value = /*club*/ ctx[7].name + "";
+    	let t0_value = /*club*/ ctx[9].name + "";
     	let t0;
     	let t1;
     	let div1;
     	let p;
-    	let t2_value = /*club*/ ctx[7].short_description + "";
+    	let t2_value = /*club*/ ctx[9].short_description + "";
     	let t2;
     	let t3;
     	let div0;
@@ -26210,7 +26224,11 @@ var app = (function () {
     	let dispose;
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[4](/*club*/ ctx[7]);
+    		return /*click_handler_1*/ ctx[5](/*club*/ ctx[9]);
+    	}
+
+    	function click_handler_2() {
+    		return /*click_handler_2*/ ctx[6](/*club*/ ctx[9]);
     	}
 
     	const block = {
@@ -26233,27 +26251,27 @@ var app = (function () {
     			button1.textContent = "Details";
     			t7 = space();
     			attr_dev(h5, "class", "card-title");
-    			add_location(h5, file$6, 118, 7, 3087);
+    			add_location(h5, file$6, 151, 7, 4017);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$6, 120, 8, 3174);
+    			add_location(p, file$6, 153, 8, 4104);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary width");
-    			add_location(button0, file$6, 124, 9, 3295);
+    			add_location(button0, file$6, 157, 9, 4225);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary width");
     			attr_dev(button1, "data-bs-toggle", "modal");
     			attr_dev(button1, "data-bs-target", "#staticBackdrop");
-    			add_location(button1, file$6, 128, 9, 3405);
+    			add_location(button1, file$6, 164, 9, 4408);
     			attr_dev(div0, "class", "button-container");
-    			add_location(div0, file$6, 123, 8, 3254);
+    			add_location(div0, file$6, 156, 8, 4184);
     			attr_dev(div1, "class", "card-inner-body");
-    			add_location(div1, file$6, 119, 7, 3135);
+    			add_location(div1, file$6, 152, 7, 4065);
     			attr_dev(div2, "class", "card-body");
-    			add_location(div2, file$6, 117, 6, 3055);
+    			add_location(div2, file$6, 150, 6, 3985);
     			attr_dev(div3, "class", "card home-card");
-    			add_location(div3, file$6, 116, 5, 3019);
+    			add_location(div3, file$6, 149, 5, 3949);
     			attr_dev(div4, "class", "col");
-    			add_location(div4, file$6, 115, 4, 2995);
+    			add_location(div4, file$6, 148, 4, 3925);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -26273,19 +26291,23 @@ var app = (function () {
     			append_dev(div4, t7);
 
     			if (!mounted) {
-    				dispose = listen_dev(button1, "click", click_handler_1, false, false, false, false);
+    				dispose = [
+    					listen_dev(button0, "click", click_handler_1, false, false, false, false),
+    					listen_dev(button1, "click", click_handler_2, false, false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*clubs*/ 1 && t0_value !== (t0_value = /*club*/ ctx[7].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*clubs*/ 1 && t2_value !== (t2_value = /*club*/ ctx[7].short_description + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*clubs*/ 1 && t0_value !== (t0_value = /*club*/ ctx[9].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*clubs*/ 1 && t2_value !== (t2_value = /*club*/ ctx[9].short_description + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div4);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -26293,7 +26315,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(115:3) {#each clubs as club}",
+    		source: "(148:3) {#each clubs as club}",
     		ctx
     	});
 
@@ -26421,76 +26443,76 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
-    			add_location(img, file$6, 61, 5, 1680);
-    			add_location(li0, file$6, 60, 4, 1669);
+    			add_location(img, file$6, 94, 5, 2610);
+    			add_location(li0, file$6, 93, 4, 2599);
     			attr_dev(a0, "href", "/");
     			attr_dev(a0, "class", "nav-link px-2 text-black");
     			set_style(a0, "font-weight", "bold");
-    			add_location(a0, file$6, 68, 5, 1799);
-    			add_location(li1, file$6, 67, 4, 1788);
+    			add_location(a0, file$6, 101, 5, 2729);
+    			add_location(li1, file$6, 100, 4, 2718);
     			attr_dev(a1, "href", "/mypage");
     			attr_dev(a1, "class", "nav-link px-2 text-secondary");
-    			add_location(a1, file$6, 75, 5, 1935);
-    			add_location(li2, file$6, 74, 4, 1924);
+    			add_location(a1, file$6, 108, 5, 2865);
+    			add_location(li2, file$6, 107, 4, 2854);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
     			set_style(ul, "align-items", "center");
-    			add_location(ul, file$6, 56, 3, 1539);
+    			add_location(ul, file$6, 89, 3, 2469);
     			attr_dev(div0, "class", "px-2 text-secondary");
     			set_style(div0, "cursor", "pointer");
-    			add_location(div0, file$6, 80, 3, 2041);
+    			add_location(div0, file$6, 113, 3, 2971);
     			set_style(div1, "height", "auto");
     			set_style(div1, "display", "flex");
     			set_style(div1, "align-items", "center");
-    			add_location(div1, file$6, 55, 2, 1472);
+    			add_location(div1, file$6, 88, 2, 2402);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$6, 54, 1, 1425);
+    			add_location(header, file$6, 87, 1, 2355);
     			attr_dev(div2, "class", "home_title");
-    			add_location(div2, file$6, 91, 3, 2252);
+    			add_location(div2, file$6, 124, 3, 3182);
     			attr_dev(div3, "class", "home_description");
-    			add_location(div3, file$6, 92, 3, 2310);
+    			add_location(div3, file$6, 125, 3, 3240);
     			attr_dev(div4, "class", "home_button");
     			attr_dev(div4, "onclick", "document.getElementById('home_detail').scrollIntoView();");
-    			add_location(div4, file$6, 96, 3, 2439);
+    			add_location(div4, file$6, 129, 3, 3369);
     			attr_dev(div5, "class", "home_inner");
-    			add_location(div5, file$6, 90, 2, 2223);
+    			add_location(div5, file$6, 123, 2, 3153);
     			attr_dev(div6, "class", "home_image");
-    			add_location(div6, file$6, 89, 1, 2195);
+    			add_location(div6, file$6, 122, 1, 3125);
     			attr_dev(h1, "class", "middle");
-    			add_location(h1, file$6, 106, 2, 2647);
+    			add_location(h1, file$6, 139, 2, 3577);
     			attr_dev(div7, "class", "row row-cols-1 row-cols-md-3 g-4 float");
-    			add_location(div7, file$6, 112, 2, 2906);
+    			add_location(div7, file$6, 145, 2, 3836);
     			set_style(div8, "padding", "50px");
     			attr_dev(div8, "id", "home_detail");
-    			add_location(div8, file$6, 105, 1, 2598);
+    			add_location(div8, file$6, 138, 1, 3528);
     			attr_dev(div9, "class", "home-body");
-    			add_location(div9, file$6, 53, 0, 1399);
+    			add_location(div9, file$6, 86, 0, 2329);
     			attr_dev(h5, "class", "modal-title");
     			attr_dev(h5, "id", "staticBackdropLabel");
-    			add_location(h5, file$6, 152, 4, 4067);
+    			add_location(h5, file$6, 188, 4, 5070);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn-close");
     			attr_dev(button0, "data-bs-dismiss", "modal");
     			attr_dev(button0, "aria-label", "Close");
-    			add_location(button0, file$6, 153, 4, 4134);
+    			add_location(button0, file$6, 189, 4, 5137);
     			attr_dev(div10, "class", "modal-header");
-    			add_location(div10, file$6, 151, 2, 4035);
+    			add_location(div10, file$6, 187, 2, 5038);
     			attr_dev(div11, "class", "modal-body");
     			attr_dev(div11, "id", "modal-body");
-    			add_location(div11, file$6, 155, 2, 4240);
+    			add_location(div11, file$6, 191, 2, 5243);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary");
     			attr_dev(button1, "data-bs-dismiss", "modal");
-    			add_location(button1, file$6, 159, 4, 4335);
+    			add_location(button1, file$6, 195, 4, 5338);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-primary");
-    			add_location(button2, file$6, 160, 4, 4427);
+    			add_location(button2, file$6, 196, 4, 5430);
     			attr_dev(div12, "class", "modal-footer");
-    			add_location(div12, file$6, 158, 2, 4303);
+    			add_location(div12, file$6, 194, 2, 5306);
     			attr_dev(div13, "class", "modal-content");
-    			add_location(div13, file$6, 150, 3, 4004);
+    			add_location(div13, file$6, 186, 3, 5007);
     			attr_dev(div14, "class", "modal-dialog");
-    			add_location(div14, file$6, 149, 1, 3973);
+    			add_location(div14, file$6, 185, 1, 4976);
     			attr_dev(div15, "class", "modal fade");
     			attr_dev(div15, "id", "staticBackdrop");
     			attr_dev(div15, "data-bs-backdrop", "static");
@@ -26498,7 +26520,7 @@ var app = (function () {
     			attr_dev(div15, "tabindex", "-1");
     			attr_dev(div15, "aria-labelledby", "staticBackdropLabel");
     			attr_dev(div15, "aria-hidden", "true");
-    			add_location(div15, file$6, 148, 0, 3804);
+    			add_location(div15, file$6, 184, 0, 4807);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -26557,7 +26579,7 @@ var app = (function () {
     			append_dev(div12, button2);
 
     			if (!mounted) {
-    				dispose = listen_dev(div0, "click", /*click_handler*/ ctx[3], false, false, false, false);
+    				dispose = listen_dev(div0, "click", /*click_handler*/ ctx[4], false, false, false, false);
     				mounted = true;
     			}
     		},
@@ -26573,7 +26595,7 @@ var app = (function () {
     				if_block = null;
     			}
 
-    			if (dirty & /*openModal, clubs*/ 1) {
+    			if (dirty & /*openModal, clubs, apply*/ 5) {
     				each_value = /*clubs*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -26621,6 +26643,26 @@ var app = (function () {
     	return block;
     }
 
+    function getCookie$4(cname) {
+    	let name = cname + "=";
+    	let decodedCookie = decodeURIComponent(document.cookie);
+    	let ca = decodedCookie.split(";");
+
+    	for (let i = 0; i < ca.length; i++) {
+    		let c = ca[i];
+
+    		while (c.charAt(0) == " ") {
+    			c = c.substring(1);
+    		}
+
+    		if (c.indexOf(name) == 0) {
+    			return c.substring(name.length, c.length);
+    		}
+    	}
+
+    	return "";
+    }
+
     function openModal(text) {
     	document.getElementById("modal-body").innerHTML = text;
     }
@@ -26632,14 +26674,32 @@ var app = (function () {
     	var clubs = [];
     	var loading = false;
 
+    	const apply = async club_id => {
+    		var shouldApply = confirm("Are you sure you would like to apply to this club?");
+
+    		if (shouldApply) {
+    			var cookieEmail = getCookie$4('email');
+
+    			await addDoc(collection(db, "applications"), {
+    				club_id,
+    				email: cookieEmail,
+    				status: "pending"
+    			});
+
+    			alert("Applied to club.");
+    		}
+    	};
+
     	const getClubs = async () => {
     		$$invalidate(1, loading = true);
     		const querySnapshot = await getDocs(collection(db, "clubs"));
 
     		querySnapshot.forEach(doc => {
     			// doc.data() is never undefined for query doc snapshots
-    			clubs.push(doc.data());
+    			var data = doc.data();
 
+    			data['club_id'] = doc.id;
+    			clubs.push(data);
     			$$invalidate(0, clubs);
     		});
 
@@ -26681,6 +26741,10 @@ var app = (function () {
     	};
 
     	const click_handler_1 = club => {
+    		apply(club.club_id);
+    	};
+
+    	const click_handler_2 = club => {
     		openModal(club.long_description);
     	};
 
@@ -26691,6 +26755,7 @@ var app = (function () {
     		db,
     		collection,
     		getDocs,
+    		addDoc,
     		Navbar,
     		signInWithEmailAndPassword,
     		onAuthStateChanged,
@@ -26698,6 +26763,8 @@ var app = (function () {
     		baseUrl,
     		clubs,
     		loading,
+    		getCookie: getCookie$4,
+    		apply,
     		getClubs,
     		openModal,
     		logout
@@ -26713,7 +26780,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [clubs, loading, logout, click_handler, click_handler_1];
+    	return [clubs, loading, apply, logout, click_handler, click_handler_1, click_handler_2];
     }
 
     class Default extends SvelteComponentDev {
@@ -26875,58 +26942,58 @@ var app = (function () {
     			span1.textContent = "Signup";
     			if (!src_url_equal(img.src, img_src_value = "https://cdn.koreaconsumer.or.kr/news/photo/202306/642_1408_3024.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
-    			add_location(img, file$4, 82, 8, 2330);
+    			add_location(img, file$4, 89, 8, 3080);
     			attr_dev(div0, "class", "signin-logo");
-    			add_location(div0, file$4, 79, 4, 2280);
+    			add_location(div0, file$4, 88, 4, 3045);
     			attr_dev(div1, "class", "signin-title");
-    			add_location(div1, file$4, 87, 16, 2560);
+    			add_location(div1, file$4, 97, 16, 3346);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Email");
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "aria-label", "Sizing example input");
     			attr_dev(input0, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input0, file$4, 92, 20, 2841);
+    			add_location(input0, file$4, 100, 20, 3587);
     			attr_dev(div2, "class", "input-group mb-3 mt-3");
-    			add_location(div2, file$4, 90, 16, 2657);
+    			add_location(div2, file$4, 98, 16, 3403);
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "placeholder", "Password");
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "aria-label", "Sizing example input");
     			attr_dev(input1, "aria-describedby", "inputGroup-sizing-default");
-    			add_location(input1, file$4, 96, 20, 3223);
+    			add_location(input1, file$4, 111, 20, 4142);
     			attr_dev(div3, "class", "input-group mb-3");
-    			add_location(div3, file$4, 94, 16, 3041);
+    			add_location(div3, file$4, 109, 16, 3960);
     			attr_dev(input2, "class", "form-check-input");
     			attr_dev(input2, "type", "checkbox");
     			input2.value = "";
     			attr_dev(input2, "id", "flexCheckDefault");
-    			add_location(input2, file$4, 99, 20, 3484);
+    			add_location(input2, file$4, 121, 20, 4576);
     			attr_dev(label, "class", "form-check-label");
     			attr_dev(label, "for", "flexCheckDefault");
-    			add_location(label, file$4, 100, 20, 3585);
+    			add_location(label, file$4, 127, 20, 4800);
     			attr_dev(div4, "class", "form-check mb-5");
-    			add_location(div4, file$4, 98, 16, 3433);
+    			add_location(div4, file$4, 120, 16, 4525);
     			attr_dev(span0, "id", "button_loading");
     			attr_dev(span0, "class", "spinner-border spinner-border-sm");
     			attr_dev(span0, "role", "status");
     			attr_dev(span0, "aria-hidden", "true");
     			set_style(span0, "display", "none");
-    			add_location(span0, file$4, 105, 20, 3878);
+    			add_location(span0, file$4, 135, 20, 5153);
     			attr_dev(button, "class", "btn btn-primary margin login_button");
-    			add_location(button, file$4, 104, 16, 3760);
+    			add_location(button, file$4, 131, 16, 4975);
     			set_style(span1, "font-weight", "bold");
     			set_style(span1, "cursor", "pointer");
     			attr_dev(span1, "onclick", "window.location.href='http://localhost:8080/signup'");
-    			add_location(span1, file$4, 111, 43, 4197);
+    			add_location(span1, file$4, 145, 43, 5580);
     			set_style(div5, "text-align", "center");
-    			add_location(div5, file$4, 108, 16, 4081);
+    			add_location(div5, file$4, 144, 16, 5503);
     			attr_dev(div6, "class", "card-body");
-    			add_location(div6, file$4, 86, 12, 2519);
+    			add_location(div6, file$4, 96, 12, 3305);
     			attr_dev(div7, "class", "header");
-    			add_location(div7, file$4, 85, 8, 2485);
+    			add_location(div7, file$4, 95, 8, 3271);
     			attr_dev(div8, "class", "card align signin-card");
-    			add_location(div8, file$4, 84, 4, 2439);
-    			add_location(body, file$4, 74, 0, 2123);
+    			add_location(div8, file$4, 94, 4, 3225);
+    			add_location(body, file$4, 83, 0, 2888);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -27004,12 +27071,12 @@ var app = (function () {
     function getCookie$3(cname) {
     	let name = cname + "=";
     	let decodedCookie = decodeURIComponent(document.cookie);
-    	let ca = decodedCookie.split(';');
+    	let ca = decodedCookie.split(";");
 
     	for (let i = 0; i < ca.length; i++) {
     		let c = ca[i];
 
-    		while (c.charAt(0) == ' ') {
+    		while (c.charAt(0) == " ") {
     			c = c.substring(1);
     		}
 
@@ -27031,10 +27098,10 @@ var app = (function () {
     		onAuthStateChanged(auth, user => {
     			if (user) {
     				user.uid;
-    				var cookieEmail = getCookie$3('email');
+    				var cookieEmail = getCookie$3("email");
 
     				if (user.email == cookieEmail) {
-    					window.location.href = 'http://localhost:8080/';
+    					window.location.href = "http://localhost:8080/";
     				} else {
     					signOut(auth).then(() => {
     						
@@ -27053,11 +27120,23 @@ var app = (function () {
     	const doRequest = async (email, password) => {
     		document.getElementById("button_loading").style.display = "inline-block";
 
-    		signInWithEmailAndPassword(auth, email, password).then(userCredential => {
-    			// Signed in 
+    		signInWithEmailAndPassword(auth, email, password).then(async userCredential => {
+    			// Signed in
     			userCredential.user;
 
-    			window.location.href = 'http://localhost:8080/';
+    			const docRef = doc(db, "users", email);
+    			const docSnap = await getDoc(docRef);
+
+    			if (docSnap.exists()) {
+    				var name = docSnap.data()['name'];
+    			} else {
+    				// docSnap.data() will be undefined in this case
+    				console.log("No such document!");
+    			}
+
+    			document.cookie = "email=" + email;
+    			document.cookie = "name=" + name;
+    			window.location.href = "http://localhost:8080/";
     			document.getElementById("button_loading").style.display = "none";
     		}).catch(error => {
     			error.code; // ...
@@ -27087,8 +27166,12 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		auth,
+    		db,
     		signInWithEmailAndPassword,
     		onAuthStateChanged,
+    		doc,
+    		setDoc,
+    		getDoc,
     		onMount,
     		email,
     		password,
@@ -28038,17 +28121,17 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[18] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
+    	child_ctx[21] = list[i];
     	return child_ctx;
     }
 
-    // (104:5) {#if userLoading == true}
+    // (108:5) {#if userLoading == true}
     function create_if_block_1$1(ctx) {
     	let div;
     	let span;
@@ -28059,14 +28142,14 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Loading...";
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1, 105, 7, 2764);
+    			add_location(span, file$1, 109, 7, 2839);
     			attr_dev(div, "class", "spinner-border");
     			attr_dev(div, "role", "status");
     			set_style(div, "margin-left", "auto");
     			set_style(div, "margin-right", "auto");
     			set_style(div, "display", "block");
     			set_style(div, "margin-top", "50px");
-    			add_location(div, file$1, 104, 6, 2633);
+    			add_location(div, file$1, 108, 6, 2708);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -28081,22 +28164,22 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(104:5) {#if userLoading == true}",
+    		source: "(108:5) {#if userLoading == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:5) {#each users as user}
+    // (113:5) {#each users as user}
     function create_each_block_1$1(ctx) {
     	let div2;
     	let div0;
-    	let t0_value = /*user*/ ctx[13].name + "";
+    	let t0_value = /*user*/ ctx[21].name + "";
     	let t0;
     	let t1;
     	let div1;
-    	let t2_value = /*user*/ ctx[13].email + "";
+    	let t2_value = /*user*/ ctx[21].email + "";
     	let t2;
     	let t3;
 
@@ -28111,10 +28194,10 @@ var app = (function () {
     			t3 = space();
     			set_style(div0, "font-size", "17px");
     			set_style(div0, "font-weight", "bold");
-    			add_location(div0, file$1, 110, 7, 2912);
-    			add_location(div1, file$1, 111, 7, 2986);
+    			add_location(div0, file$1, 114, 7, 2987);
+    			add_location(div1, file$1, 115, 7, 3061);
     			attr_dev(div2, "class", "profile_meeting_inner");
-    			add_location(div2, file$1, 109, 6, 2869);
+    			add_location(div2, file$1, 113, 6, 2944);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -28126,8 +28209,8 @@ var app = (function () {
     			append_dev(div2, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*users*/ 1 && t0_value !== (t0_value = /*user*/ ctx[13].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*users*/ 1 && t2_value !== (t2_value = /*user*/ ctx[13].email + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*users*/ 1 && t0_value !== (t0_value = /*user*/ ctx[21].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*users*/ 1 && t2_value !== (t2_value = /*user*/ ctx[21].email + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
@@ -28138,14 +28221,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(109:5) {#each users as user}",
+    		source: "(113:5) {#each users as user}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (121:5) {#if clubLoading == true}
+    // (134:5) {#if clubLoading == true}
     function create_if_block$1(ctx) {
     	let div;
     	let span;
@@ -28156,14 +28239,14 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Loading...";
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1, 122, 7, 3391);
+    			add_location(span, file$1, 135, 7, 3649);
     			attr_dev(div, "class", "spinner-border");
     			attr_dev(div, "role", "status");
     			set_style(div, "margin-left", "auto");
     			set_style(div, "margin-right", "auto");
     			set_style(div, "display", "block");
     			set_style(div, "margin-top", "50px");
-    			add_location(div, file$1, 121, 6, 3260);
+    			add_location(div, file$1, 134, 6, 3518);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -28178,25 +28261,25 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(121:5) {#if clubLoading == true}",
+    		source: "(134:5) {#if clubLoading == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (126:5) {#each clubs as club}
+    // (139:5) {#each clubs as club}
     function create_each_block$1(ctx) {
     	let div3;
     	let div2;
     	let div1;
     	let h5;
-    	let t0_value = /*club*/ ctx[10].name + "";
+    	let t0_value = /*club*/ ctx[18].name + "";
     	let t0;
     	let t1;
     	let div0;
     	let p;
-    	let t2_value = /*club*/ ctx[10].short_description + "";
+    	let t2_value = /*club*/ ctx[18].short_description + "";
     	let t2;
     	let t3;
 
@@ -28213,17 +28296,17 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(h5, "class", "card-title");
-    			add_location(h5, file$1, 129, 9, 3593);
+    			add_location(h5, file$1, 142, 9, 3851);
     			attr_dev(p, "class", "card-text");
-    			add_location(p, file$1, 131, 10, 3684);
+    			add_location(p, file$1, 144, 10, 3942);
     			attr_dev(div0, "class", "mypage-inner-body");
-    			add_location(div0, file$1, 130, 9, 3642);
+    			add_location(div0, file$1, 143, 9, 3900);
     			attr_dev(div1, "class", "card-body");
-    			add_location(div1, file$1, 128, 8, 3560);
+    			add_location(div1, file$1, 141, 8, 3818);
     			attr_dev(div2, "class", "card mypage-card");
-    			add_location(div2, file$1, 127, 7, 3521);
+    			add_location(div2, file$1, 140, 7, 3779);
     			attr_dev(div3, "class", "col");
-    			add_location(div3, file$1, 126, 6, 3496);
+    			add_location(div3, file$1, 139, 6, 3754);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -28238,8 +28321,8 @@ var app = (function () {
     			append_dev(div3, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*clubs*/ 4 && t0_value !== (t0_value = /*club*/ ctx[10].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*clubs*/ 4 && t2_value !== (t2_value = /*club*/ ctx[10].short_description + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*clubs*/ 4 && t0_value !== (t0_value = /*club*/ ctx[18].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*clubs*/ 4 && t2_value !== (t2_value = /*club*/ ctx[18].short_description + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
@@ -28250,7 +28333,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(126:5) {#each clubs as club}",
+    		source: "(139:5) {#each clubs as club}",
     		ctx
     	});
 
@@ -28281,11 +28364,38 @@ var app = (function () {
     	let t8;
     	let div8;
     	let div7;
+    	let div6;
     	let div5;
     	let t10;
-    	let div6;
+    	let button0;
     	let t12;
     	let t13;
+    	let t14;
+    	let div21;
+    	let div20;
+    	let div19;
+    	let div12;
+    	let h5;
+    	let t16;
+    	let button1;
+    	let t17;
+    	let div17;
+    	let div13;
+    	let input0;
+    	let t18;
+    	let div14;
+    	let input1;
+    	let t19;
+    	let div15;
+    	let textarea0;
+    	let t20;
+    	let div16;
+    	let textarea1;
+    	let t21;
+    	let div18;
+    	let button2;
+    	let t23;
+    	let button3;
     	let mounted;
     	let dispose;
     	let if_block0 = /*userLoading*/ ctx[1] == true && create_if_block_1$1(ctx);
@@ -28339,11 +28449,12 @@ var app = (function () {
     			t8 = space();
     			div8 = element("div");
     			div7 = element("div");
+    			div6 = element("div");
     			div5 = element("div");
     			div5.textContent = "Club Management";
     			t10 = space();
-    			div6 = element("div");
-    			div6.textContent = "Make a New Club";
+    			button0 = element("button");
+    			button0.textContent = "Add";
     			t12 = space();
     			if (if_block1) if_block1.c();
     			t13 = space();
@@ -28352,48 +28463,148 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
+    			t14 = space();
+    			div21 = element("div");
+    			div20 = element("div");
+    			div19 = element("div");
+    			div12 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Details";
+    			t16 = space();
+    			button1 = element("button");
+    			t17 = space();
+    			div17 = element("div");
+    			div13 = element("div");
+    			input0 = element("input");
+    			t18 = space();
+    			div14 = element("div");
+    			input1 = element("input");
+    			t19 = space();
+    			div15 = element("div");
+    			textarea0 = element("textarea");
+    			t20 = space();
+    			div16 = element("div");
+    			textarea1 = element("textarea");
+    			t21 = space();
+    			div18 = element("div");
+    			button2 = element("button");
+    			button2.textContent = "Close";
+    			t23 = space();
+    			button3 = element("button");
+    			button3.textContent = "Add";
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			set_style(img, "height", "50px");
-    			add_location(img, file$1, 79, 5, 2046);
-    			add_location(li0, file$1, 78, 4, 2036);
+    			add_location(img, file$1, 83, 5, 2121);
+    			add_location(li0, file$1, 82, 4, 2111);
     			attr_dev(a, "href", "/admin");
     			attr_dev(a, "class", "nav-link px-2 text-secondary text-black");
     			set_style(a, "font-weight", "bold");
-    			add_location(a, file$1, 86, 5, 2158);
-    			add_location(li1, file$1, 85, 4, 2148);
+    			add_location(a, file$1, 90, 5, 2233);
+    			add_location(li1, file$1, 89, 4, 2223);
     			attr_dev(ul, "class", "nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0");
     			set_style(ul, "align-items", "center");
-    			add_location(ul, file$1, 74, 3, 1909);
+    			add_location(ul, file$1, 78, 3, 1984);
     			attr_dev(div0, "class", "px-2 text-secondary");
     			set_style(div0, "cursor", "pointer");
-    			add_location(div0, file$1, 89, 3, 2282);
+    			add_location(div0, file$1, 93, 3, 2357);
     			set_style(div1, "height", "auto");
     			set_style(div1, "display", "flex");
     			set_style(div1, "align-items", "center");
-    			add_location(div1, file$1, 73, 2, 1843);
+    			add_location(div1, file$1, 77, 2, 1918);
     			attr_dev(header, "class", "p-3");
     			set_style(header, "height", "100px");
-    			add_location(header, file$1, 72, 1, 1797);
+    			add_location(header, file$1, 76, 1, 1872);
     			attr_dev(div2, "class", "profile_sub_title");
-    			add_location(div2, file$1, 102, 5, 2543);
+    			add_location(div2, file$1, 106, 5, 2618);
     			attr_dev(div3, "class", "profile_background");
-    			add_location(div3, file$1, 101, 4, 2505);
+    			add_location(div3, file$1, 105, 4, 2580);
     			attr_dev(div4, "class", "col-sm");
-    			add_location(div4, file$1, 100, 3, 2480);
+    			add_location(div4, file$1, 104, 3, 2555);
     			attr_dev(div5, "class", "profile_sub_title");
-    			add_location(div5, file$1, 118, 5, 3123);
-    			add_location(div6, file$1, 119, 20, 3196);
+    			add_location(div5, file$1, 123, 6, 3228);
+    			attr_dev(button0, "class", "btn btn-primary margin");
+    			attr_dev(button0, "data-bs-toggle", "modal");
+    			attr_dev(button0, "data-bs-target", "#staticBackdrop");
+    			add_location(button0, file$1, 124, 6, 3287);
+    			attr_dev(div6, "class", "admin_add");
+    			add_location(div6, file$1, 122, 5, 3198);
     			attr_dev(div7, "class", "profile_background");
-    			add_location(div7, file$1, 117, 4, 3085);
+    			add_location(div7, file$1, 121, 4, 3160);
     			attr_dev(div8, "class", "col-sm");
-    			add_location(div8, file$1, 116, 3, 3060);
+    			add_location(div8, file$1, 120, 3, 3135);
     			attr_dev(div9, "class", "row");
-    			add_location(div9, file$1, 99, 2, 2459);
+    			add_location(div9, file$1, 103, 2, 2534);
     			attr_dev(div10, "class", "container-fluid");
-    			add_location(div10, file$1, 98, 1, 2427);
+    			add_location(div10, file$1, 102, 1, 2502);
     			attr_dev(div11, "class", "MypageBody");
-    			add_location(div11, file$1, 71, 0, 1771);
+    			add_location(div11, file$1, 75, 0, 1846);
+    			attr_dev(h5, "class", "modal-title");
+    			attr_dev(h5, "id", "staticBackdropLabel");
+    			add_location(h5, file$1, 162, 4, 4405);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "class", "btn-close");
+    			attr_dev(button1, "data-bs-dismiss", "modal");
+    			attr_dev(button1, "aria-label", "Close");
+    			add_location(button1, file$1, 163, 4, 4471);
+    			attr_dev(div12, "class", "modal-header");
+    			add_location(div12, file$1, 161, 2, 4374);
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "placeholder", "Email");
+    			attr_dev(input0, "class", "form-control");
+    			attr_dev(input0, "aria-label", "Sizing example input");
+    			attr_dev(input0, "aria-describedby", "inputGroup-sizing-default");
+    			add_location(input0, file$1, 168, 4, 4769);
+    			attr_dev(div13, "class", "input-group mb-3 mt-3");
+    			add_location(div13, file$1, 166, 3, 4619);
+    			attr_dev(input1, "type", "text");
+    			attr_dev(input1, "placeholder", "Club Name");
+    			attr_dev(input1, "class", "form-control");
+    			attr_dev(input1, "aria-label", "Sizing example input");
+    			attr_dev(input1, "aria-describedby", "inputGroup-sizing-default");
+    			add_location(input1, file$1, 172, 4, 5091);
+    			attr_dev(div14, "class", "input-group mb-3 mt-3");
+    			add_location(div14, file$1, 170, 3, 4941);
+    			attr_dev(textarea0, "type", "text");
+    			attr_dev(textarea0, "placeholder", "Short Description");
+    			attr_dev(textarea0, "class", "form-control");
+    			attr_dev(textarea0, "aria-label", "Sizing example input");
+    			attr_dev(textarea0, "aria-describedby", "inputGroup-sizing-default");
+    			add_location(textarea0, file$1, 176, 4, 5421);
+    			attr_dev(div15, "class", "input-group mb-3 mt-3");
+    			add_location(div15, file$1, 174, 3, 5271);
+    			attr_dev(textarea1, "type", "text");
+    			attr_dev(textarea1, "placeholder", "Long Description");
+    			attr_dev(textarea1, "class", "form-control");
+    			attr_dev(textarea1, "aria-label", "Sizing example input");
+    			attr_dev(textarea1, "aria-describedby", "inputGroup-sizing-default");
+    			add_location(textarea1, file$1, 180, 4, 5781);
+    			attr_dev(div16, "class", "input-group mb-3 mt-3");
+    			add_location(div16, file$1, 178, 3, 5631);
+    			attr_dev(div17, "class", "modal-body");
+    			attr_dev(div17, "id", "modal-body");
+    			add_location(div17, file$1, 165, 2, 4575);
+    			attr_dev(button2, "type", "button");
+    			attr_dev(button2, "class", "btn btn-secondary");
+    			attr_dev(button2, "data-bs-dismiss", "modal");
+    			add_location(button2, file$1, 184, 4, 6028);
+    			attr_dev(button3, "type", "button");
+    			attr_dev(button3, "class", "btn btn-primary");
+    			add_location(button3, file$1, 185, 4, 6119);
+    			attr_dev(div18, "class", "modal-footer");
+    			add_location(div18, file$1, 183, 2, 5997);
+    			attr_dev(div19, "class", "modal-content");
+    			add_location(div19, file$1, 160, 3, 4344);
+    			attr_dev(div20, "class", "modal-dialog");
+    			add_location(div20, file$1, 159, 1, 4314);
+    			attr_dev(div21, "class", "modal fade");
+    			attr_dev(div21, "id", "staticBackdrop");
+    			attr_dev(div21, "data-bs-backdrop", "static");
+    			attr_dev(div21, "data-bs-keyboard", "false");
+    			attr_dev(div21, "tabindex", "-1");
+    			attr_dev(div21, "aria-labelledby", "staticBackdropLabel");
+    			attr_dev(div21, "aria-hidden", "true");
+    			add_location(div21, file$1, 158, 0, 4146);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -28429,9 +28640,10 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, div8);
     			append_dev(div8, div7);
-    			append_dev(div7, div5);
-    			append_dev(div7, t10);
     			append_dev(div7, div6);
+    			append_dev(div6, div5);
+    			append_dev(div6, t10);
+    			append_dev(div6, button0);
     			append_dev(div7, t12);
     			if (if_block1) if_block1.m(div7, null);
     			append_dev(div7, t13);
@@ -28442,8 +28654,47 @@ var app = (function () {
     				}
     			}
 
+    			insert_dev(target, t14, anchor);
+    			insert_dev(target, div21, anchor);
+    			append_dev(div21, div20);
+    			append_dev(div20, div19);
+    			append_dev(div19, div12);
+    			append_dev(div12, h5);
+    			append_dev(div12, t16);
+    			append_dev(div12, button1);
+    			append_dev(div19, t17);
+    			append_dev(div19, div17);
+    			append_dev(div17, div13);
+    			append_dev(div13, input0);
+    			set_input_value(input0, /*email*/ ctx[4]);
+    			append_dev(div17, t18);
+    			append_dev(div17, div14);
+    			append_dev(div14, input1);
+    			set_input_value(input1, /*club_name*/ ctx[7]);
+    			append_dev(div17, t19);
+    			append_dev(div17, div15);
+    			append_dev(div15, textarea0);
+    			set_input_value(textarea0, /*short_description*/ ctx[5]);
+    			append_dev(div17, t20);
+    			append_dev(div17, div16);
+    			append_dev(div16, textarea1);
+    			set_input_value(textarea1, /*long_description*/ ctx[6]);
+    			append_dev(div19, t21);
+    			append_dev(div19, div18);
+    			append_dev(div18, button2);
+    			append_dev(div18, t23);
+    			append_dev(div18, button3);
+
     			if (!mounted) {
-    				dispose = listen_dev(div0, "click", /*click_handler*/ ctx[5], false, false, false, false);
+    				dispose = [
+    					listen_dev(div0, "click", /*click_handler*/ ctx[9], false, false, false, false),
+    					listen_dev(button0, "click", click_handler_1, false, false, false, false),
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[10]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[11]),
+    					listen_dev(textarea0, "input", /*textarea0_input_handler*/ ctx[12]),
+    					listen_dev(textarea1, "input", /*textarea1_input_handler*/ ctx[13])
+    				];
+
     				mounted = true;
     			}
     		},
@@ -28517,6 +28768,22 @@ var app = (function () {
 
     				each_blocks.length = each_value.length;
     			}
+
+    			if (dirty & /*email*/ 16 && input0.value !== /*email*/ ctx[4]) {
+    				set_input_value(input0, /*email*/ ctx[4]);
+    			}
+
+    			if (dirty & /*club_name*/ 128 && input1.value !== /*club_name*/ ctx[7]) {
+    				set_input_value(input1, /*club_name*/ ctx[7]);
+    			}
+
+    			if (dirty & /*short_description*/ 32) {
+    				set_input_value(textarea0, /*short_description*/ ctx[5]);
+    			}
+
+    			if (dirty & /*long_description*/ 64) {
+    				set_input_value(textarea1, /*long_description*/ ctx[6]);
+    			}
     		},
     		i: noop$1,
     		o: noop$1,
@@ -28526,8 +28793,10 @@ var app = (function () {
     			destroy_each(each_blocks_1, detaching);
     			if (if_block1) if_block1.d();
     			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t14);
+    			if (detaching) detach_dev(div21);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -28542,6 +28811,10 @@ var app = (function () {
     	return block;
     }
 
+    const click_handler_1 = () => {
+    	
+    };
+
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Admin', slots, []);
@@ -28551,6 +28824,10 @@ var app = (function () {
     	var userLoading = false;
     	var clubs = [];
     	var clubLoading = false;
+    	let email;
+    	let short_description;
+    	let long_description;
+    	let club_name;
 
     	const getClubs = async () => {
     		$$invalidate(3, clubLoading = true);
@@ -28619,6 +28896,26 @@ var app = (function () {
     		logout();
     	};
 
+    	function input0_input_handler() {
+    		email = this.value;
+    		$$invalidate(4, email);
+    	}
+
+    	function input1_input_handler() {
+    		club_name = this.value;
+    		$$invalidate(7, club_name);
+    	}
+
+    	function textarea0_input_handler() {
+    		short_description = this.value;
+    		$$invalidate(5, short_description);
+    	}
+
+    	function textarea1_input_handler() {
+    		long_description = this.value;
+    		$$invalidate(6, long_description);
+    	}
+
     	$$self.$capture_state = () => ({
     		Link,
     		Navbar,
@@ -28636,6 +28933,10 @@ var app = (function () {
     		userLoading,
     		clubs,
     		clubLoading,
+    		email,
+    		short_description,
+    		long_description,
+    		club_name,
     		getClubs,
     		getUsers,
     		logout
@@ -28648,13 +28949,32 @@ var app = (function () {
     		if ('userLoading' in $$props) $$invalidate(1, userLoading = $$props.userLoading);
     		if ('clubs' in $$props) $$invalidate(2, clubs = $$props.clubs);
     		if ('clubLoading' in $$props) $$invalidate(3, clubLoading = $$props.clubLoading);
+    		if ('email' in $$props) $$invalidate(4, email = $$props.email);
+    		if ('short_description' in $$props) $$invalidate(5, short_description = $$props.short_description);
+    		if ('long_description' in $$props) $$invalidate(6, long_description = $$props.long_description);
+    		if ('club_name' in $$props) $$invalidate(7, club_name = $$props.club_name);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [users, userLoading, clubs, clubLoading, logout, click_handler];
+    	return [
+    		users,
+    		userLoading,
+    		clubs,
+    		clubLoading,
+    		email,
+    		short_description,
+    		long_description,
+    		club_name,
+    		logout,
+    		click_handler,
+    		input0_input_handler,
+    		input1_input_handler,
+    		textarea0_input_handler,
+    		textarea1_input_handler
+    	];
     }
 
     class Admin extends SvelteComponentDev {
@@ -29355,7 +29675,7 @@ var app = (function () {
 
     /* src/App.svelte generated by Svelte v3.59.2 */
 
-    // (18:0) <Router>
+    // (19:0) <Router>
     function create_default_slot(ctx) {
     	let route0;
     	let t0;
@@ -29485,7 +29805,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(18:0) <Router>",
+    		source: "(19:0) <Router>",
     		ctx
     	});
 

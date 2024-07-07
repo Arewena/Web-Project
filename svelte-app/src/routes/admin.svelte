@@ -12,6 +12,10 @@
 	var userLoading = false
 	var clubs = []
 	var clubLoading = false
+	let email;
+	let short_description;
+	let long_description;
+	let club_name;
 
 	const getClubs = async() => {
 		clubLoading = true
@@ -116,8 +120,17 @@
 			</div>
 			<div class="col-sm">
 				<div class="profile_background">
-					<div class="profile_sub_title">Club Management</div>
-                    <div>Make a New Club</div>
+					<div class="admin_add">
+						<div class="profile_sub_title">Club Management</div>
+						<button 
+							on:click={() => {}} 
+							class="btn btn-primary margin"
+							data-bs-toggle="modal" 
+							data-bs-target="#staticBackdrop"	
+						>
+							Add
+						</button>
+					</div>
 					{#if clubLoading == true}
 						<div class="spinner-border" role="status" style="margin-left: auto; margin-right: auto; display: block; margin-top: 50px;">
 							<span class="visually-hidden">Loading...</span>
@@ -142,6 +155,39 @@
 		</div>
 	</div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="staticBackdropLabel">Details</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body" id="modal-body">
+			<div class="input-group mb-3 mt-3">
+				<!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
+				<input bind:value={email} type="text" placeholder="Email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+			</div>
+			<div class="input-group mb-3 mt-3">
+				<!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
+				<input bind:value={club_name} type="text" placeholder="Club Name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+			</div>
+			<div class="input-group mb-3 mt-3">
+				<!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
+				<textarea bind:value={short_description} type="text" placeholder="Short Description" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+			</div>
+			<div class="input-group mb-3 mt-3">
+				<!-- <span class="input-group-text" id="inputGroup-sizing-default" style="width: 100px;">Email</span> -->
+				<textarea bind:value={long_description} type="text" placeholder="Long Description" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+			</div>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-primary">Add</button>
+		</div>
+	  </div>
+	</div>
+  </div>
 
 
 <style>

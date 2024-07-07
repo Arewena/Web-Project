@@ -1,6 +1,6 @@
 nav ul.svelte-1931dmp li.svelte-1931dmp{display:inline;margin-right:10px}
 @import "../app.css";
-@import '../app.css';
+@import "../app.css";
 @import "../app.css";
 @import '../app.css';
 @import "../app.css";
@@ -287,4 +287,10 @@ table {
     margin-right: auto;
     display: block;
     width: 230px;
+}
+
+.admin_add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

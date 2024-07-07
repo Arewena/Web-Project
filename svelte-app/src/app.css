@@ -274,3 +274,9 @@ table {
     display: block;
     width: 230px;
 }
+
+.admin_add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

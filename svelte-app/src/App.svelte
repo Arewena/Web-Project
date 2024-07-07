@@ -1,3 +1,8 @@
+
+<style>
+	@import './main.css';
+</style>
+
 <script>
 	import { Router, Route } from 'svelte-routing';
 	import Default from './routes/Default.svelte';
@@ -10,10 +15,6 @@
 
 
 </script>
-
-<style>
-	@import './main.css';
-</style>
 
 <Router>
 		<Route path="/" component={Default} />

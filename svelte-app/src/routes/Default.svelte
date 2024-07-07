@@ -2,20 +2,53 @@
 	import { Link } from "svelte-routing";
     import { signOut } from "firebase/auth";
 	import { auth, db } from "../firebase/firebase";
-	import { collection, getDocs } from "firebase/firestore";
+	import { collection, getDocs, addDoc } from "firebase/firestore";
 	import Navbar from "../Navbar.svelte";
     import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
     import { onMount } from 'svelte';
+
 	let baseUrl = document.baseURI;
 	var clubs = []
 	var loading = false
+
+	function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == " ") {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+	const apply = async (club_id) => {
+		var shouldApply = confirm("Are you sure you would like to apply to this club?")
+		if(shouldApply)
+		{
+			var cookieEmail = getCookie('email')
+			const docRef = await addDoc(collection(db, "applications"), {
+				club_id: club_id,
+				email: cookieEmail,
+				status: "pending"
+			});
+			alert("Applied to club.")
+		}
+	}
 
 	const getClubs = async() => {
 		loading = true
 		const querySnapshot = await getDocs(collection(db, "clubs"));
 		querySnapshot.forEach((doc) => {
 		// doc.data() is never undefined for query doc snapshots
-			clubs.push(doc.data())
+			var data = doc.data();
+			data['club_id'] = doc.id;
+			clubs.push(data)
 			clubs = clubs;
 		})
 		loading = false
@@ -124,8 +157,11 @@
 								<div class="button-container">
 									<button
 										type="button"
-										class="btn btn-primary width">Apply</button
+										class="btn btn-primary width"
+										on:click={() => {apply(club.club_id)}}
 									>
+										Apply
+									</button>
 									<button 
 										type="button"
 										class="btn btn-secondary width" 
